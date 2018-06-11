@@ -20,7 +20,7 @@
 
 #import "UIColor+Category.h"
 
-#import "UIView+Frame.h"
+#import "UIView+Frame.h"
 #import "UIView+CurrentViewController.h" // 获取当前View的控制器对象
 
 #import "UIFont+fontSize.h"
