@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) MBProgressHUD *hud; // 加载动画控件
 @property (nonatomic, assign) BOOL isDisplay; // 判断HUD是否正在显示,默认为NO;
+@property (nonatomic, copy, readwrite) NSDictionary *parameter;
 
 @end
 
@@ -24,7 +25,7 @@
     return nil;
 }
 
-- (void)initWithParameter:(NSDictionary *)parameter {
+- (instancetype)initWithParameter:(NSDictionary *)parameter {
     if (self = [super init]) {
         if (parameter != nil) {
             self.parameter = [parameter copy];
@@ -64,7 +65,7 @@
 
 - (void)dealloc {
     NSArray *arrayChildClass = [self findAllof:[self class]];
-    NSString *name = [NSString stringWithString:object_getClassName([arrayChildClass lastObject]) encoding:NSUTF8StringEncoding];
+    NSString *name = [NSString stringWithCString:object_getClassName([arrayChildClass lastObject]) encoding:NSUTF8StringEncoding];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     NSLog(@"-------- %@ 已释放 ---------", name);
 }
@@ -74,6 +75,7 @@
     self.isDisplay = NO;
 }
 - (void)initView {
+    self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.hud];
 }
 
@@ -93,7 +95,7 @@
     }
     
     NSMutableArray *output = [NSMutableArray arrayWithObject:defaultClass];
-    Class *classes = (Class *)malloc(sizeof((Class) * count));
+    Class *classes = (Class *) malloc(sizeof(Class) * count);
     objc_getClassList(classes, count);
     for (int i = 0; i < count; i ++) {
         if (defaultClass == class_getSuperclass(classes[i])) {
@@ -120,17 +122,31 @@
 }
 
 - (void)showIndicatorView {
-    if (self.hud != nil && self.isDisplay == NO) {
-        [self.hud showAnimated:YES];
-        self.isDisplay = YES;
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.hud != nil && self.isDisplay == NO) {
+            [self.hud showAnimated:YES];
+            self.isDisplay = YES;
+        }
+    });
+}
+
+- (void)showIndicatorViewWithMessage:(NSString *)message {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.hud != nil && self.isDisplay == NO) {
+            self.hud.label.text = message;
+            [self.hud showAnimated:YES];
+            self.isDisplay = YES;
+        }
+    });
 }
 
 - (void)dismissIndicatorView {
-    if (self.hud != nil && self.isDisplay == YES) {
-        [self.hud hideAnimated:YES];
-        self.isDisplay = NO;
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.hud != nil && self.isDisplay == YES) {
+            [self.hud hideAnimated:YES];
+            self.isDisplay = NO;
+        }
+    });
 }
 
 #pragma mark ----- 懒加载 -----
@@ -142,9 +158,22 @@
         _hud.bezelView.color = [UIColor blackColor];
         _hud.bezelView.color = [_hud.bezelView.color colorWithAlphaComponent:1];
         _hud.bezelView.layer.cornerRadius = 8.0f;
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_9_0
         [UIActivityIndicatorView appearanceWhenContainedIn:[MBProgressHUD class], nil].color = [UIColor whiteColor];
+#else
+        [UIActivityIndicatorView appearanceWhenContainedInInstancesOfClasses:@[[MBProgressHUD class]]].color = [UIColor whiteColor];
+#endif
+        _hud.removeFromSuperViewOnHide = NO;
+        _hud.userInteractionEnabled = YES;
+        _hud.label.textColor = [UIColor whiteColor];
+        _hud.label.font = [UIFont systemFontOfSize:14.0f];
     }
     return _hud;
+}
+// 设置加载动画文字描述
+- (void)setLodingMessage:(NSString *)lodingMessage {
+    _lodingMessage = lodingMessage;
+    self.hud.label.text = lodingMessage;
 }
 
 @end

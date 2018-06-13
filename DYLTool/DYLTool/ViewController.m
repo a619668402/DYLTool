@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Category.h"
+#import "MacrosTools.h"
 
 @interface ViewController ()
 
@@ -23,6 +24,13 @@
     NSString *str = @"1231";
     NSLog(@"%@", [str md5String]);
      */
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(50, 100, 50, 50)];
+    view.backgroundColor = [UIColor greenColor];
+    [self.view addSubview:view];
+    
+    kCornerRadius(view, 25.0f);
+    kBorderWithAndColor(view, 10, [UIColor redColor]);
 }
 
 

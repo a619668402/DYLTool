@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "PlaceholderView.h"
 
 @interface ViewController ()
 
@@ -19,6 +20,10 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    PlaceholderView *placeHolderView = [[PlaceholderView alloc] initWithFrame:self.view.frame type:PlaceholderViewTypeNoData delegate:nil];
+    [self.view addSubview:placeHolderView];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

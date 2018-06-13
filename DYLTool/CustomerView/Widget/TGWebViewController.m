@@ -6,7 +6,7 @@
 //  Copyright © 2018年 DYL. All rights reserved.
 //
 
-#import "TGViewController.h"
+#import "TGWebViewController.h"
 
 @interface WeakScriptMessageDelegate : NSObject<WKScriptMessageHandler>
 
@@ -32,7 +32,7 @@
 
 @end
 
-@interface TGViewController ()<WKUIDelegate,WKNavigationDelegate,WKScriptMessageHandler>
+@interface TGWebViewController ()<WKUIDelegate,WKNavigationDelegate,WKScriptMessageHandler>
 
 @property (nonatomic,strong) WKWebView *wkWebView;  //  WKWebView
 @property (nonatomic,strong) UIRefreshControl *refreshControl;  //刷新
@@ -44,7 +44,7 @@
 
 @end
 
-@implementation TGViewController
+@implementation TGWebViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

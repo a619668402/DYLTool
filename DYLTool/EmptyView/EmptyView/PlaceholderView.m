@@ -21,7 +21,7 @@
     if (self = [super initWithFrame:frame]) {
         _type = type;
         _delegate = delegate;
-        [self setUpUI]
+        [self setUpUI];
     }
     return self;
 }
@@ -29,9 +29,9 @@
 #pragma mark ---- UI 搭建 ----
 /** UI搭建 */
 - (void)setUpUI {
-    self.backgroundColor = [UIColor whiteColor];
+    self.backgroundColor = [UIColor greenColor];
     
-    UIImageView *imageView = [UIImageView alloc] initWithFrame:CGRectZero;
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
     [self addSubview:imageView];
     
     UILabel *descLabel = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -47,9 +47,13 @@
 /** 重新加载按钮点击事件 */
 - (void)reloadButtonClick:(UIButton *)sender {
     if ([_delegate respondsToSelector:@selector(placeholderView:reloadButtonDidClick:)]) {
-        [_delegate placehoderview:self reloadButtonDidClick:sender];
+        [_delegate placeholderView:self reloadButtonDidClick:sender];
     }
     [self removeFromSuperview];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"----%s----", __func__);
 }
 
 @end

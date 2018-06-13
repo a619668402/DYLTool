@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "MBProgressHUD+Toast.h"
+#import "TestViewController.h"
 
 @interface ViewController ()
 
@@ -17,13 +19,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor whiteColor];
+
+    [MBProgressHUD showMessageWithView:self.view message:@"测试Toast"];
+
+    [self performSelector:@selector(show) withObject:nil afterDelay:1];
 }
 
+- (void)show {
+    [MBProgressHUD showMessageWithView:self.view message:@"测"];
+}
+
+- (void)initValue {
+    NSLog(@"---%s", __func__);
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    TestViewController *vc    = [[TestViewController alloc] initWithParameter:nil];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
 @end
+

@@ -15,6 +15,8 @@
 		0D08B77520A922B800827D56 /* BaseUrlArgumentsFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D08B77420A922B800827D56 /* BaseUrlArgumentsFilter.m */; };
 		0D08B77820A92BD300827D56 /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D08B77720A92BD300827D56 /* LoginRequest.m */; };
 		0D08B78B20A943B500827D56 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D08B78A20A943B500827D56 /* FirstViewController.m */; };
+		0D0B67C420CF9A320008C4EE /* MBProgressHUD+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B67C320CF9A320008C4EE /* MBProgressHUD+Toast.m */; };
+		0D0B67CA20CFB0460008C4EE /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B67C920CFB0460008C4EE /* TestViewController.m */; };
 		0D17F64E20B7EB880082D67D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D17F64D20B7EB880082D67D /* AppDelegate.m */; };
 		0D17F65120B7EB880082D67D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D17F65020B7EB880082D67D /* ViewController.m */; };
 		0D17F65420B7EB880082D67D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D17F65220B7EB880082D67D /* Main.storyboard */; };
@@ -46,7 +48,7 @@
 		0DF4186C20C91EB1004A8E11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DF4186B20C91EB1004A8E11 /* Assets.xcassets */; };
 		0DF4186F20C91EB1004A8E11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DF4186D20C91EB1004A8E11 /* LaunchScreen.storyboard */; };
 		0DF4187220C91EB1004A8E11 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF4187120C91EB1004A8E11 /* main.m */; };
-		0DF4187920C91ECF004A8E11 /* TGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF4187820C91ECF004A8E11 /* TGViewController.m */; };
+		0DF4187920C91ECF004A8E11 /* TGWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF4187820C91ECF004A8E11 /* TGWebViewController.m */; };
 		0DF4188020C93CFF004A8E11 /* UIImage+CompressImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF4187F20C93CFF004A8E11 /* UIImage+CompressImage.m */; };
 		0DFABE3720A59B7300876945 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFABE3620A59B7300876945 /* AppDelegate.m */; };
 		0DFABE3A20A59B7300876945 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFABE3920A59B7300876945 /* ViewController.m */; };
@@ -60,8 +62,8 @@
 		0DFABE6120A59BB600876945 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFABE6020A59BB600876945 /* main.m */; };
 		0DFABE6920A5A30900876945 /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFABE6820A5A30900876945 /* BaseRequest.m */; };
 		0DFABE6C20A5A52E00876945 /* RequestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFABE6B20A5A52E00876945 /* RequestTool.m */; };
+		8A3E5B8F94645777408F4F6E /* libPods-NetWorkTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C82D9C664C9AAA1667BE661A /* libPods-NetWorkTool.a */; };
 		B37BA84E1208E2716E7D567F /* libPods-DYLTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FB24F52CB7A67865C7B9E3 /* libPods-DYLTool.a */; };
-		DE25D23194BB2C20BE6F2B78 /* libPods-NetWorkTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C82D9C664C9AAA1667BE661A /* libPods-NetWorkTool.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,11 @@
 		0D08B77720A92BD300827D56 /* LoginRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginRequest.m; sourceTree = "<group>"; };
 		0D08B78920A943B500827D56 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		0D08B78A20A943B500827D56 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		0D0B67C220CF9A320008C4EE /* MBProgressHUD+Toast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Toast.h"; sourceTree = "<group>"; };
+		0D0B67C320CF9A320008C4EE /* MBProgressHUD+Toast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Toast.m"; sourceTree = "<group>"; };
+		0D0B67C820CFB0460008C4EE /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		0D0B67C920CFB0460008C4EE /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		0D0B67CD20CFB6150008C4EE /* MacrosTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacrosTools.h; sourceTree = "<group>"; };
 		0D17F64A20B7EB880082D67D /* EmptyView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmptyView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D17F64C20B7EB880082D67D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0D17F64D20B7EB880082D67D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -113,6 +120,7 @@
 		0D17F68B20B816400082D67D /* CustomerAlertView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomerAlertView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D20D18D20C1570300D1EC1D /* RACNetWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACNetWork.h; sourceTree = "<group>"; };
 		0D20D18E20C1570300D1EC1D /* RACNetWork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACNetWork.m; sourceTree = "<group>"; };
+		0D2B404320D12B4B00199564 /* MacrosNetWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacrosNetWork.h; sourceTree = "<group>"; };
 		0D5C7F2720CE4E1F008F3795 /* Base.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Base.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D5C7F2920CE4E1F008F3795 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0D5C7F2A20CE4E1F008F3795 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -139,8 +147,8 @@
 		0DF4186E20C91EB1004A8E11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DF4187020C91EB1004A8E11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DF4187120C91EB1004A8E11 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0DF4187720C91ECF004A8E11 /* TGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGViewController.h; sourceTree = "<group>"; };
-		0DF4187820C91ECF004A8E11 /* TGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		0DF4187720C91ECF004A8E11 /* TGWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGWebViewController.h; sourceTree = "<group>"; };
+		0DF4187820C91ECF004A8E11 /* TGWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGWebViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		0DF4187E20C93CFF004A8E11 /* UIImage+CompressImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+CompressImage.h"; sourceTree = "<group>"; };
 		0DF4187F20C93CFF004A8E11 /* UIImage+CompressImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CompressImage.m"; sourceTree = "<group>"; };
 		0DFABE3220A59B7300876945 /* DYLTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYLTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,7 +221,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE25D23194BB2C20BE6F2B78 /* libPods-NetWorkTool.a in Frameworks */,
+				8A3E5B8F94645777408F4F6E /* libPods-NetWorkTool.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +244,14 @@
 				0D04E77320BD0C870040C4AF /* UIFont+fontSize.m */,
 			);
 			path = UIFont_Category;
+			sourceTree = "<group>";
+		};
+		0D0B67CB20CFB5E70008C4EE /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				0D0B67CD20CFB6150008C4EE /* MacrosTools.h */,
+			);
+			path = Macros;
 			sourceTree = "<group>";
 		};
 		0D17F64B20B7EB880082D67D /* EmptyView */ = {
@@ -318,6 +334,8 @@
 				0D5C7F3420CE4E1F008F3795 /* LaunchScreen.storyboard */,
 				0D5C7F3720CE4E1F008F3795 /* Info.plist */,
 				0D5C7F3820CE4E1F008F3795 /* main.m */,
+				0D0B67C820CFB0460008C4EE /* TestViewController.h */,
+				0D0B67C920CFB0460008C4EE /* TestViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -337,6 +355,8 @@
 			children = (
 				0D5C7F4220CE7E99008F3795 /* MBProgressHUD.h */,
 				0D5C7F4320CE7E99008F3795 /* MBProgressHUD.m */,
+				0D0B67C220CF9A320008C4EE /* MBProgressHUD+Toast.h */,
+				0D0B67C320CF9A320008C4EE /* MBProgressHUD+Toast.m */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -361,8 +381,8 @@
 		0DF4187620C91EBE004A8E11 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
-				0DF4187720C91ECF004A8E11 /* TGViewController.h */,
-				0DF4187820C91ECF004A8E11 /* TGViewController.m */,
+				0DF4187720C91ECF004A8E11 /* TGWebViewController.h */,
+				0DF4187820C91ECF004A8E11 /* TGWebViewController.m */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -406,6 +426,7 @@
 		0DFABE3420A59B7300876945 /* DYLTool */ = {
 			isa = PBXGroup;
 			children = (
+				0D0B67CB20CFB5E70008C4EE /* Macros */,
 				0DF4187A20C93CC9004A8E11 /* UIImage_Category */,
 				0D010A4220C78D670083175C /* SandBoxTool */,
 				0D04E77120BD0C690040C4AF /* UIFont_Category */,
@@ -458,6 +479,7 @@
 				0D029B9020AA767B005F5D18 /* BaseResponse.m */,
 				0D20D18D20C1570300D1EC1D /* RACNetWork.h */,
 				0D20D18E20C1570300D1EC1D /* RACNetWork.m */,
+				0D2B404320D12B4B00199564 /* MacrosNetWork.h */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -843,7 +865,9 @@
 			files = (
 				0D5C7F2E20CE4E1F008F3795 /* ViewController.m in Sources */,
 				0D5C7F4020CE4E42008F3795 /* BaseViewController.m in Sources */,
+				0D0B67CA20CFB0460008C4EE /* TestViewController.m in Sources */,
 				0D5C7F4420CE7E99008F3795 /* MBProgressHUD.m in Sources */,
+				0D0B67C420CF9A320008C4EE /* MBProgressHUD+Toast.m in Sources */,
 				0D5C7F3920CE4E1F008F3795 /* main.m in Sources */,
 				0D5C7F2B20CE4E1F008F3795 /* AppDelegate.m in Sources */,
 			);
@@ -856,7 +880,7 @@
 				0DF4186720C91EB1004A8E11 /* ViewController.m in Sources */,
 				0DF4187220C91EB1004A8E11 /* main.m in Sources */,
 				0DF4186420C91EB1004A8E11 /* AppDelegate.m in Sources */,
-				0DF4187920C91ECF004A8E11 /* TGViewController.m in Sources */,
+				0DF4187920C91ECF004A8E11 /* TGWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1009,6 +1033,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CustomerAlertView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dyl.tool.CustomerAlertView;
@@ -1022,6 +1047,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CustomerAlertView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dyl.tool.CustomerAlertView;
@@ -1221,7 +1247,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = PRF43DAUH7;
 				INFOPLIST_FILE = NetWorkTool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1239,7 +1265,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = PRF43DAUH7;
 				INFOPLIST_FILE = NetWorkTool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

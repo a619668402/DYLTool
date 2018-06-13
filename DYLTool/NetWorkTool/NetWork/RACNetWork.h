@@ -7,10 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <AFNetworking.h>
+#import <YTKNetwork.h>
+#import <ReactiveObjC.h>
+
+#import "MacrosNetWork.h"
+#import "BaseRequest.h"
 
 @interface RACNetWork : NSObject
 
 
++ (RACSignal *)rac_Action:(BaseRequest *)request;
 
 @end

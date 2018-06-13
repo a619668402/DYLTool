@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 
-@interface TGViewController : UIViewController
+@interface TGWebViewController : UIViewController
 
 /**
  请求的url

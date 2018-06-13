@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "TGViewController.h"
+#import "TGWebViewController.h"
 
 @interface ViewController ()
 
@@ -22,7 +22,7 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    TGViewController *vc = [[TGViewController alloc] init];
+    TGWebViewController *vc = [[TGWebViewController alloc] init];
     vc.urlString = @"https://www.baidu.com";
 //    vc.jsString = @"alert('1')";
     vc.loadingProgressColor = [UIColor grayColor];
