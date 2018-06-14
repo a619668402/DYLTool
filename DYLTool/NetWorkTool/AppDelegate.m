@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import <YTKNetwork.h>
 #import "FirstViewController.h"
+#import "AppDelegate+Net.h"
 
 @interface AppDelegate ()
 
@@ -23,7 +23,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
-    [YTKNetworkConfig sharedConfig].baseUrl = @"http://tj2admin.tigonetwork.com";
+    [self configYTKNetWork];
     return YES;
 }
 

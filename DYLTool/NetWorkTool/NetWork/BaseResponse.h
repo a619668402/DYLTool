@@ -14,4 +14,6 @@
 
 @property (nonatomic, copy) NSString *code;
 
+@property (nonatomic, strong) id data;
+
 @end

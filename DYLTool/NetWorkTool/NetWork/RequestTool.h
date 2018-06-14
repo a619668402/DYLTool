@@ -7,9 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BaseRequest.h"
-#import <YTKBatchRequest.h>
-#import <MJExtension.h>
+#import "MacrosNetWork.h"
 
 typedef void(^Success_Block)(id result);
 typedef void(^Failure_Block)(NSError *error);

@@ -7,14 +7,15 @@
 //
 
 #import "FirstViewController.h"
-#import "RequestTool.h"
 #import "LoginRequest.h"
-#import "UserModel.h"
-#import <AFNetworkReachabilityManager.h>
-
+#import "MacrosNetWork.h"
 #import "RACNetWork.h"
+#import "UserModel.h"
+#import "TestDownRequest.h"
 
 @interface FirstViewController ()
+
+@property (nonatomic, strong) TestDownRequest *request;
 
 @end
 
@@ -29,70 +30,48 @@
     btn.backgroundColor = [UIColor greenColor];
     [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
+    
+    UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn1.frame = CGRectMake(100, 180, 60, 30);
+    btn1.backgroundColor = [UIColor redColor];
+    [btn1 addTarget:self action:@selector(cancleClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn1];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)cancleClick:(id)sender {
+    [self.request stop];
+}
+
 - (void)btnClick:(id)sender {
     
-    LoginRequest *loginAPI = [LoginRequest requestWithParameter:@{@"ua_mobile":@"13500130013", @"ua_pwd":@"1"} requestMethod:YTKRequestMethodPOST];
-    
-    [[RACNetWork rac_Action:loginAPI] subscribeNext:^(id  _Nullable x) {
-        NSLog(@"-----%@-----", x);
+    self.request = [[TestDownRequest alloc] init];
+    NSLog(@"%@", self.request.resumableDownloadPath);
+//    [self.request start];
+    [[RACNetWork rac_DownLoadAction:self.request] subscribeNext:^(NSProgress * _Nonnull progress) {
+        NSLog(@"\n 下载进度>>>> 文件总大小：%lld 已下载：%lld",progress.totalUnitCount,progress.completedUnitCount);
+    }];
+//    request.resumableDownloadProgressBlock = ^(NSProgress * _Nonnull progress) {
+//        NSLog(@"\n 下载进度>>>> 文件总大小：%lld 已下载：%lld",progress.totalUnitCount,progress.completedUnitCount);
+//    };
+    /*
+    LoginRequest *request1 = [LoginRequest requestWithParameter:@{@"ua_mobile":@"13500190019", @"ua_pwd":@"1"} requestMethod:YTKRequestMethodPOST];
+    LoginRequest *request2 = [LoginRequest requestWithParameter:@{@"ua_mobile":@"13500190019", @"ua_pwd":@"1"} requestMethod:YTKRequestMethodPOST];
+    LoginRequest *request3 = [LoginRequest requestWithParameter:@{@"ua_mobile":@"13500200020", @"ua_pwd":@"1"} requestMethod:YTKRequestMethodPOST];
+    LoginRequest *request4 = [LoginRequest requestWithParameter:@{@"ua_mobile":@"13500200020", @"ua_pwd":@"1"} requestMethod:YTKRequestMethodPOST];
+    YTKBatchRequest *batchRequest = [[YTKBatchRequest alloc] initWithRequestArray:@[request1,request2,request3,request4]];
+    [[RACNetWork rac_BatchAction:batchRequest resultClasses:@[[UserInfoModel class],[UserInfoModel class],[UserInfoModel class], [UserInfoModel class]]] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@", x);
     } error:^(NSError * _Nullable error) {
-        // 接收错误信息
-        NSLog(@"-----%@-----", error);
+        NSLog(@"----%@", error);
     } completed:^{
-        // 取消菊花
-        NSLog(@"---completed---");
+        NSLog(@"----completed----");
     }];
-    /*
-    AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
-    [mgr setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-        switch (status) {
-            case AFNetworkReachabilityStatusUnknown:
-                NSLog(@"未知网络");
-                break;
-            case AFNetworkReachabilityStatusNotReachable:
-                NSLog(@"没有网络");
-                break;
-            case AFNetworkReachabilityStatusReachableViaWWAN:
-                NSLog(@"手机自带网络");
-                break;
-            case AFNetworkReachabilityStatusReachableViaWiFi:
-                NSLog(@"WIFI");
-                break;
-            default:
-                break;
-        }
-    }];
-    [mgr startMonitoring];
-    /*
-    LoginRequest *loginAPI1 = [LoginRequest requestWithParameter:@{@"ua_mobile":@"13500130013", @"ua_pwd":@"1"} requestMethod:YTKRequestMethodGET];
-//    [RequestTool sendRequest:loginAPI resultClass:[UserModel class] success:^(UserModel *result) {
-//        NSLog(@"---%@", result);
-//    } failure:^(NSError *error) {
-//
-//    }];
-    [RequestTool sendRequest:loginAPI1 resultClass:[UserModel class] cache:^(id result) {
-        NSLog(@"----%@", result);
-    } success:^(id result) {
-        NSLog(@"-----%@", result);
-    } failure:^(NSError *error) {
-
-    }];
-//    LoginRequest *loginAPI2 = [LoginRequest requestWithParameter:@{@"ua_mobile":@"13500120012", @"ua_pwd":@"2"} requestMethod:YTKRequestMethodGET];
-//    LoginRequest *loginAPI3 = [LoginRequest requestWithParameter:@{@"ua_mobile":@"13500130013", @"ua_pwd":@"1"} requestMethod:YTKRequestMethodGET];
-//    LoginRequest *loginAPI4 = [LoginRequest requestWithParameter:@{@"ua_mobile":@"13500120012", @"ua_pwd":@"2"} requestMethod:YTKRequestMethodGET];
-//
-//    YTKBatchRequest *batchRequest = [[YTKBatchRequest alloc] initWithRequestArray:@[loginAPI1,loginAPI2,loginAPI3,loginAPI4]];
-//    [RequestTool sendBatchRequest:batchRequest resultClass:@[[UserModel class], [UserModel class], [UserModel class], [UserModel class]] success:^(NSArray *result) {
-//        NSLog(@"----%@", result);
-//    } failure:^(NSError *error) {
-//
-//    }];
-    */
+     */
 }
 @end

@@ -42,6 +42,9 @@
 		0D5C7F4020CE4E42008F3795 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5C7F3F20CE4E42008F3795 /* BaseViewController.m */; };
 		0D5C7F4420CE7E99008F3795 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5C7F4320CE7E99008F3795 /* MBProgressHUD.m */; };
 		0DEE546120CA942C00749A2C /* UIView+CurrentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEE546020CA942C00749A2C /* UIView+CurrentViewController.m */; };
+		0DEF8E0220D20F2F0050F325 /* AppDelegate+Net.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEF8E0120D20F2F0050F325 /* AppDelegate+Net.m */; };
+		0DEF8E0520D24F230050F325 /* TestDownRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEF8E0420D24F230050F325 /* TestDownRequest.m */; };
+		0DEF8E0820D2779A0050F325 /* BaseUploadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEF8E0720D2779A0050F325 /* BaseUploadRequest.m */; };
 		0DF4186420C91EB1004A8E11 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF4186320C91EB1004A8E11 /* AppDelegate.m */; };
 		0DF4186720C91EB1004A8E11 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF4186620C91EB1004A8E11 /* ViewController.m */; };
 		0DF4186A20C91EB1004A8E11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DF4186820C91EB1004A8E11 /* Main.storyboard */; };
@@ -137,6 +140,12 @@
 		0D5C7F4320CE7E99008F3795 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		0DEE545F20CA942C00749A2C /* UIView+CurrentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CurrentViewController.h"; sourceTree = "<group>"; };
 		0DEE546020CA942C00749A2C /* UIView+CurrentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CurrentViewController.m"; sourceTree = "<group>"; };
+		0DEF8E0020D20F2F0050F325 /* AppDelegate+Net.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Net.h"; sourceTree = "<group>"; };
+		0DEF8E0120D20F2F0050F325 /* AppDelegate+Net.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Net.m"; sourceTree = "<group>"; };
+		0DEF8E0320D24F230050F325 /* TestDownRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestDownRequest.h; sourceTree = "<group>"; };
+		0DEF8E0420D24F230050F325 /* TestDownRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestDownRequest.m; sourceTree = "<group>"; };
+		0DEF8E0620D2779A0050F325 /* BaseUploadRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseUploadRequest.h; sourceTree = "<group>"; };
+		0DEF8E0720D2779A0050F325 /* BaseUploadRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseUploadRequest.m; sourceTree = "<group>"; };
 		0DF4186020C91EB1004A8E11 /* CustomerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DF4186220C91EB1004A8E11 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0DF4186320C91EB1004A8E11 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -453,6 +462,8 @@
 				0DFABE6520A5A2B400876945 /* NetWork */,
 				0DFABE5120A59BB600876945 /* AppDelegate.h */,
 				0DFABE5220A59BB600876945 /* AppDelegate.m */,
+				0DEF8E0020D20F2F0050F325 /* AppDelegate+Net.h */,
+				0DEF8E0120D20F2F0050F325 /* AppDelegate+Net.m */,
 				0D08B78920A943B500827D56 /* FirstViewController.h */,
 				0D08B78A20A943B500827D56 /* FirstViewController.m */,
 				0DFABE5A20A59BB600876945 /* Assets.xcassets */,
@@ -463,6 +474,8 @@
 				0D08B77720A92BD300827D56 /* LoginRequest.m */,
 				0D029B9220AA76DA005F5D18 /* UserModel.h */,
 				0D029B9320AA76DA005F5D18 /* UserModel.m */,
+				0DEF8E0320D24F230050F325 /* TestDownRequest.h */,
+				0DEF8E0420D24F230050F325 /* TestDownRequest.m */,
 			);
 			path = NetWorkTool;
 			sourceTree = "<group>";
@@ -489,6 +502,8 @@
 			children = (
 				0DFABE6720A5A30900876945 /* BaseRequest.h */,
 				0DFABE6820A5A30900876945 /* BaseRequest.m */,
+				0DEF8E0620D2779A0050F325 /* BaseUploadRequest.h */,
+				0DEF8E0720D2779A0050F325 /* BaseUploadRequest.m */,
 			);
 			path = BaseRequest;
 			sourceTree = "<group>";
@@ -913,8 +928,11 @@
 			files = (
 				0D08B77820A92BD300827D56 /* LoginRequest.m in Sources */,
 				0DFABE6920A5A30900876945 /* BaseRequest.m in Sources */,
+				0DEF8E0220D20F2F0050F325 /* AppDelegate+Net.m in Sources */,
+				0DEF8E0820D2779A0050F325 /* BaseUploadRequest.m in Sources */,
 				0D08B78B20A943B500827D56 /* FirstViewController.m in Sources */,
 				0D029B9120AA767B005F5D18 /* BaseResponse.m in Sources */,
+				0DEF8E0520D24F230050F325 /* TestDownRequest.m in Sources */,
 				0D08B77520A922B800827D56 /* BaseUrlArgumentsFilter.m in Sources */,
 				0D20D18F20C1570300D1EC1D /* RACNetWork.m in Sources */,
 				0DFABE6C20A5A52E00876945 /* RequestTool.m in Sources */,
