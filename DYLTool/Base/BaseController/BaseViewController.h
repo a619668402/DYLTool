@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseControllerProtocol.h"
 #import "MBProgressHUD.h"
 
-@interface BaseViewController : UIViewController
+@interface BaseViewController : UIViewController<BaseControllerProtocol>
 
 - (instancetype)init DEPRECATED_MSG_ATTRIBUTE("use initWithParameter: instead");
 
@@ -46,16 +47,6 @@
  移除加载动画
  */
 - (void)dismissIndicatorView;
-
-/**
- 赋默认值
- */
-- (void)initValue;
-
-/**
- 初始化控件
- */
-- (void)initView;
 
 /**
  网络请求错误处理

@@ -21,17 +21,13 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor whiteColor];
 
-    [MBProgressHUD showMessageWithView:self.view message:@"测试Toast"];
+    [MBProgressHUD showMessageWithView:self.view message:@"测试Toast测试Toast测试Toast测试Toast测试Toast测试Toast测试Toast测试Toast测试Toast测试Toast测试Toast"];
 
     [self performSelector:@selector(show) withObject:nil afterDelay:1];
 }
 
 - (void)show {
     [MBProgressHUD showMessageWithView:self.view message:@"测"];
-}
-
-- (void)initValue {
-    NSLog(@"---%s", __func__);
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

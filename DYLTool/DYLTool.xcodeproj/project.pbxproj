@@ -19,6 +19,8 @@
 		0D08B78B20A943B500827D56 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D08B78A20A943B500827D56 /* FirstViewController.m */; };
 		0D0B67C420CF9A320008C4EE /* MBProgressHUD+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B67C320CF9A320008C4EE /* MBProgressHUD+Toast.m */; };
 		0D0B67CA20CFB0460008C4EE /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B67C920CFB0460008C4EE /* TestViewController.m */; };
+		0D10998320DB5E1600799DD0 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D10998220DB5E1600799DD0 /* BaseTableViewCell.m */; };
+		0D10998820DB7BA100799DD0 /* BaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D10998720DB7BA100799DD0 /* BaseCollectionViewCell.m */; };
 		0D17F64E20B7EB880082D67D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D17F64D20B7EB880082D67D /* AppDelegate.m */; };
 		0D17F65120B7EB880082D67D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D17F65020B7EB880082D67D /* ViewController.m */; };
 		0D17F65420B7EB880082D67D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D17F65220B7EB880082D67D /* Main.storyboard */; };
@@ -98,6 +100,13 @@
 		0D0B67C820CFB0460008C4EE /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		0D0B67C920CFB0460008C4EE /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		0D0B67CD20CFB6150008C4EE /* MacrosTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacrosTools.h; sourceTree = "<group>"; };
+		0D10997E20DB502900799DD0 /* BaseControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseControllerProtocol.h; sourceTree = "<group>"; };
+		0D10998020DB5DFB00799DD0 /* BaseTableCellProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableCellProtocol.h; sourceTree = "<group>"; };
+		0D10998120DB5E1600799DD0 /* BaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		0D10998220DB5E1600799DD0 /* BaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
+		0D10998520DB7ADB00799DD0 /* BaseCollectionViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseCollectionViewProtocol.h; sourceTree = "<group>"; };
+		0D10998620DB7BA100799DD0 /* BaseCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseCollectionViewCell.h; sourceTree = "<group>"; };
+		0D10998720DB7BA100799DD0 /* BaseCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCollectionViewCell.m; sourceTree = "<group>"; };
 		0D17F64A20B7EB880082D67D /* EmptyView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmptyView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D17F64C20B7EB880082D67D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0D17F64D20B7EB880082D67D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -280,6 +289,26 @@
 			path = Macros;
 			sourceTree = "<group>";
 		};
+		0D10997F20DB5DDE00799DD0 /* BaseTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				0D10998020DB5DFB00799DD0 /* BaseTableCellProtocol.h */,
+				0D10998120DB5E1600799DD0 /* BaseTableViewCell.h */,
+				0D10998220DB5E1600799DD0 /* BaseTableViewCell.m */,
+			);
+			path = BaseTableCell;
+			sourceTree = "<group>";
+		};
+		0D10998420DB7AC100799DD0 /* BaseCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0D10998520DB7ADB00799DD0 /* BaseCollectionViewProtocol.h */,
+				0D10998620DB7BA100799DD0 /* BaseCollectionViewCell.h */,
+				0D10998720DB7BA100799DD0 /* BaseCollectionViewCell.m */,
+			);
+			path = BaseCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		0D17F64B20B7EB880082D67D /* EmptyView */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +379,8 @@
 		0D5C7F2820CE4E1F008F3795 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				0D10998420DB7AC100799DD0 /* BaseCollectionViewCell */,
+				0D10997F20DB5DDE00799DD0 /* BaseTableCell */,
 				0D5C7F3D20CE4E28008F3795 /* BaseController */,
 				0D5C7F2920CE4E1F008F3795 /* AppDelegate.h */,
 				0D5C7F2A20CE4E1F008F3795 /* AppDelegate.m */,
@@ -372,6 +403,7 @@
 				0D5C7F4120CE7E05008F3795 /* Widget */,
 				0D5C7F3E20CE4E42008F3795 /* BaseViewController.h */,
 				0D5C7F3F20CE4E42008F3795 /* BaseViewController.m */,
+				0D10997E20DB502900799DD0 /* BaseControllerProtocol.h */,
 			);
 			path = BaseController;
 			sourceTree = "<group>";
@@ -897,9 +929,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D5C7F2E20CE4E1F008F3795 /* ViewController.m in Sources */,
+				0D10998820DB7BA100799DD0 /* BaseCollectionViewCell.m in Sources */,
 				0D5C7F4020CE4E42008F3795 /* BaseViewController.m in Sources */,
 				0D0B67CA20CFB0460008C4EE /* TestViewController.m in Sources */,
 				0D5C7F4420CE7E99008F3795 /* MBProgressHUD.m in Sources */,
+				0D10998320DB5E1600799DD0 /* BaseTableViewCell.m in Sources */,
 				0D0B67C420CF9A320008C4EE /* MBProgressHUD+Toast.m in Sources */,
 				0D5C7F3920CE4E1F008F3795 /* main.m in Sources */,
 				0D5C7F2B20CE4E1F008F3795 /* AppDelegate.m in Sources */,

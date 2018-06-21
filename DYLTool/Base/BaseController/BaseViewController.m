@@ -34,13 +34,24 @@
     return self;
 }
 
+#pragma mark ----- 协议方法 -----
+
+- (void)yd_initViews {
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.hud];
+}
+
+- (void)yd_initValues {
+    self.isDisplay = NO;
+}
+
 #pragma mark ----- 生命周期方法 -----
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 赋默认值
-    [self initValue];
+    [self yd_initValues];
     // 初始化控件
-    [self initView];
+    [self yd_initViews];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -116,24 +127,10 @@
 
 - (void)ProcessRequestError:(NSError *)error {
     switch (error.code) {
-        case :
-            
-            break;
-            
-        default:
-            break;
     }
 }
 
 #pragma mark ----- 私有方法 -----
-- (void)initValue {
-    self.isDisplay = NO;
-}
-- (void)initView {
-    self.view.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:self.hud];
-}
-
 - (void)backBtnClick {
     NSArray *viewControllers = self.navigationController.viewControllers;
     if (viewControllers.count == 1) {

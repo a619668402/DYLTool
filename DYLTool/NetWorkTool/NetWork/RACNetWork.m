@@ -38,6 +38,7 @@
             [subscriber sendError:[NSError errorWithDomain:NetWorkFailureDomain code:NetWorkFailureCode userInfo:@{NetWorkFailure:NetWorkErrorInfo}]];
         }];
         return [RACDisposable disposableWithBlock:^{
+            [request stop];
             NSLog(@"----%s----, 信号被销毁", __func__);
         }];
     }] timeout:30 onScheduler:[RACScheduler mainThreadScheduler]];
@@ -76,6 +77,7 @@
             [subscriber sendError:[NSError errorWithDomain:NetWorkFailureDomain code:NetWorkFailureCode userInfo:@{NetWorkFailure:NetWorkFailureInfo}]];
         }];
         return [RACDisposable disposableWithBlock:^{
+            [batchRequest stop];
             NSLog(@"----%s----, 信号被销毁", __func__);
         }];
     }] timeout:30 onScheduler:[RACScheduler mainThreadScheduler]];

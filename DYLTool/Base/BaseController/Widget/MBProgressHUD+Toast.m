@@ -18,7 +18,10 @@
     hud.label.font = [UIFont systemFontOfSize:14.0f];
     hud.label.textColor = [UIColor whiteColor];
     hud.label.textAlignment = NSTextAlignmentCenter;
-    hud.label.text = message;
+//    hud.label.text = message;
+    hud.detailsLabel.text = message;
+    hud.detailsLabel.textColor = [UIColor whiteColor];
+    hud.detailsLabel.numberOfLines = 0;
     hud.margin = 10.0f;
     hud.animationType = MBProgressHUDAnimationFade;
     hud.bezelView.layer.cornerRadius = 4.0f;

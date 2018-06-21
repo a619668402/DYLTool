@@ -5,7 +5,9 @@
 //  Created by sky on 2018/6/13.
 //  Copyright © 2018年 DYL. All rights reserved.
 //
-
+/*********************************************
+                网络请求相关
+ *********************************************/
 #ifndef                           MacrosNetWork_h
 #define                           MacrosNetWork_h
 

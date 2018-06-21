@@ -74,24 +74,26 @@
 //        NSLog(@"----completed----%d", [[NSThread currentThread] isMainThread]);
 //    }];
     
-    RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+//    RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+//
+//        [[RACNetWork rac_Action:request1 resultClass:nil] subscribeNext:^(id  _Nullable x) {
+//            [subscriber sendNext:x];
+//        } error:^(NSError * _Nullable error) {
+//            [subscriber sendError:error];
+//        } completed:^{
+//            NSLog(@"----------");
+//            [subscriber sendCompleted];
+//            NSLog(@"-------------------------");
+//        }];
+//
+//        return [RACDisposable disposableWithBlock:^{
+//
+//        }];
+//    }];
 
-        [[RACNetWork rac_Action:request1 resultClass:nil] subscribeNext:^(id  _Nullable x) {
-            [subscriber sendNext:x];
-        } error:^(NSError * _Nullable error) {
-            [subscriber sendError:error];
-        } completed:^{
-            NSLog(@"----------");
-            [subscriber sendCompleted];
-            NSLog(@"-------------------------");
-        }];
-
-        return [RACDisposable disposableWithBlock:^{
-
-        }];
-    }];
-
-    [signal subscribeNext:^(id  _Nullable x) {
+    RACSignal *singal = [RACNetWork rac_Action:request1 resultClass:nil];
+    
+    [singal subscribeNext:^(id  _Nullable x) {
         NSLog(@"----%@", x);
     } error:^(NSError * _Nullable error) {
         NSLog(@"----%@,", error);
