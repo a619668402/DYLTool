@@ -15,10 +15,10 @@
     if (0 != 0) {
         return [RACSignal error:[NSError errorWithDomain:NerworkErrorDomain code:NetWorkErrorCode userInfo:@{NetWorkError:NetWorkErrorInfo}]];
     }
-    return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+    return [[RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
         [request startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
-//            NSLog(@"\n 请求url %@/%@\n 请求参数 %@\n 结果 %@\n", [YTKNetworkConfig sharedConfig].baseUrl, request.requestUrl, request.requestArgument, request.responseJSONObject);
-            NSLog(@"%@ \n ,结果: %@ \n", request.description, request.responseJSONObject);
+            NSLog(@"\n 请求url %@/%@\n 请求参数 %@\n 结果 %@\n", [YTKNetworkConfig sharedConfig].baseUrl, request.requestUrl, request.requestArgument, request.responseJSONObject);
+            //            NSLog(@"%@ \n ,结果: %@ \n", request.description, request.responseJSONObject);
             BaseResponse *response = [BaseResponse mj_objectWithKeyValues:request.responseData];
             if (resultClass != nil) { // 泛型不为空
                 if ([response.code isEqualToString:CODE_SUCCESS]) { // 请求成功
@@ -40,7 +40,7 @@
         return [RACDisposable disposableWithBlock:^{
             NSLog(@"----%s----, 信号被销毁", __func__);
         }];
-    }];
+    }] timeout:30 onScheduler:[RACScheduler mainThreadScheduler]];
 }
 
 + (RACSignal *)rac_BatchAction:(YTKBatchRequest *)batchRequest resultClasses:(NSArray<Class> *)resultClasses {
@@ -48,7 +48,7 @@
     if (0 != 0) {
         return [RACSignal error:[NSError errorWithDomain:NetWorkError code:NetWorkErrorCode userInfo:@{NetWorkError:NetWorkErrorInfo}]];
     }
-    return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+    return [[RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
         [batchRequest startWithCompletionBlockWithSuccess:^(YTKBatchRequest * _Nonnull batchRequest) {
             NSArray *requests = batchRequest.requestArray;
             NSMutableArray *results = [NSMutableArray arrayWithCapacity:requests.count];
@@ -78,7 +78,7 @@
         return [RACDisposable disposableWithBlock:^{
             NSLog(@"----%s----, 信号被销毁", __func__);
         }];
-    }];
+    }] timeout:30 onScheduler:[RACScheduler mainThreadScheduler]];
 }
 
 @end

@@ -31,6 +31,8 @@
     
     kCornerRadius(view, 25.0f);
     kBorderWithAndColor(view, 10, [UIColor redColor]);
+    
+    self.navigationController.navigationBar.frame.size.height + [[UIApplication sharedApplication] statusBarFrame].size.height;
 }
 
 

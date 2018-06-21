@@ -20,9 +20,12 @@
 
 #import "UIColor+Category.h"
 
-#import "UIView+Frame.h"
-#import "UIView+CurrentViewController.h" // 获取当前View的控制器对象
-
+#import "UIView+Frame.h"
+// 获取当前View的控制器对象
+#import "UIView+CurrentViewController.h"
+// 字体适配
 #import "UIFont+fontSize.h"
+
+#import "UIImage+CompressImage.h"
 
 #endif /* Category_h */

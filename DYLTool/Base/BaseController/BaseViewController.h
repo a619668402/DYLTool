@@ -57,4 +57,11 @@
  */
 - (void)initView;
 
+/**
+ 网络请求错误处理
+
+ @param error 错误信息
+ */
+- (void)ProcessRequestError:(NSError *)error;
+
 @end

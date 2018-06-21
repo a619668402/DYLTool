@@ -10,24 +10,48 @@
 
 @interface BaseRequest()
 
-@property (nonatomic, strong) NSMutableDictionary *parameter;
+@property (nonatomic, strong) NSMutableDictionary *parameter; // 请求参数
 
-@property (nonatomic, assign) YTKRequestMethod method;
+@property (nonatomic, strong) NSString *url; // 请求URL
+
+@property (nonatomic, assign) YTKRequestMethod method; // 请求方法
 
 @end
 
 @implementation BaseRequest
 
-+ (instancetype)requestWithParameter:(NSDictionary *)parameter requestMethod:(YTKRequestMethod)method{
++ (instancetype)requestWithParameter:(NSDictionary *)parameter requestMethod:(YTKRequestMethod)method {
     return [[self alloc] initWithParameter:parameter requestMethod:method];
 }
 
-- (instancetype)initWithParameter:(NSDictionary *)parameter requestMethod:(YTKRequestMethod)method{
+- (instancetype)initWithParameter:(NSDictionary *)parameter requestMethod:(YTKRequestMethod)method {
     if (self = [super init]) {
-        if (parameter == nil) { 
+        if (parameter == nil) {
             self.parameter = [NSMutableDictionary dictionary];
         } else {
-            self.parameter = [parameter mutableCopy];
+            self.parameter = [parameter copy];
+        }
+        self.method = method;
+    }
+    return self;
+}
+
++ (instancetype)requestWithUrl:(NSString *)url parameter:(NSDictionary *)parameter requestMethod:(YTKRequestMethod)method{
+    return [[self alloc] initWithUrl:url parameter:parameter requestMethod:method];
+}
+
+- (instancetype)initWithUrl:(NSString *)url parameter:(NSDictionary *)parameter requestMethod:(YTKRequestMethod)method{
+    if (self = [super init]) {
+        if (url.length == 0 || url == nil) {
+            NSLog(@"request URL is must not be null");
+            return nil;
+        } else {
+            self.url = [url copy];
+        }
+        if (parameter == nil) {
+            self.parameter = [NSMutableDictionary dictionary];
+        } else {
+            self.parameter = [parameter copy];
         }
         self.method = method;
     }
@@ -42,6 +66,15 @@
  */
 - (YTKRequestMethod)requestMethod {
     return self.method;
+}
+
+/**
+ 请求URL
+
+ @return 请求URL地址
+ */
+- (NSString *)requestUrl {
+    return self.url == nil ? @"" : self.url;
 }
 
 /**

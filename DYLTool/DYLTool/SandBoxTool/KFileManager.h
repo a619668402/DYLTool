@@ -4,7 +4,7 @@
 //
 //  Created by sky on 2018/6/6.
 //  Copyright © 2018年 DYL. All rights reserved.
-//
+//  文件管理
 
 #import <Foundation/Foundation.h>
 
@@ -13,35 +13,35 @@
 /**
  获取 HomeDirectory
 
- @return <#return value description#>
+ @return HomeDirectory Path
  */
 + (NSString *)getHomeDirectory;
 
 /**
  获取 Document path
 
- @return <#return value description#>
+ @return Document Path
  */
 + (NSString *)getDocumentPath;
 
 /**
  获取 Cache path
 
- @return <#return value description#>
+ @return Cache Path
  */
 + (NSString *)getCachePath;
 
 /**
  获取 Library path
 
- @return <#return value description#>
+ @return Library Path
  */
 + (NSString *)getLibraryPath;
 
 /**
  获取 Tmp path
 
- @return <#return value description#>
+ @return Tmp Path
  */
 + (NSString *)getTmpPath;
 
@@ -84,5 +84,72 @@
  @return YES / NO
  */
 + (BOOL)deleteFileAtPath:(NSString *)path;
+
+/**
+ 创建文件夹
+
+ @param dirPath 文件夹名称(绝对路劲)
+ @return YES / NO
+ */
++ (BOOL)createDir:(NSString *)dirPath;
+
+/**
+ 删除文件夹
+
+ @param dirPath 文件夹名称
+ @return YES / NO
+ */
++ (BOOL)deleteDir:(NSString *)dirPath;
+
+/**
+ 移动文件夹
+
+ @param srcPath 源路径
+ @param desPath 目标路径
+ @return YES / NO
+ */
++ (BOOL)moveDir:(NSString *)srcPath to:(NSString *)desPath;
+
+/**
+ 创建文件
+
+ @param filePath 文件路径
+ @param data 存储的数据
+ @return YES / NO
+ */
++ (BOOL)createFile:(NSString *)filePath withData:(NSData *)data;
+
+/**
+ 读取文件
+
+ @param filePath 文件路径
+ @return NSData
+ */
++ (NSData *)readFile:(NSString *)filePath;
+
+/**
+ 获取Document文件夹下文件的绝对路径
+
+ @param fileName 文件名
+ @return 绝对路径
+ */
++ (NSString *)getFilePath:(NSString *)fileName;
+
+/**
+ 在对应的文件保存数据(Document 目录下)
+
+ @param fileName 文件名(相对路径[不需要添加 Document])
+ @param data 数据
+ @return YES / NO
+ */
++ (BOOL)writeDataToFile:(NSString *)fileName data:(NSData *)data;
+
+/**
+ 从对应的文件读取数据(Document 目录下)
+
+ @param fileName 文件名(相对路径[不需要添加 Document])
+ @return NSData
+ */
++ (NSData *)readDataFromFile:(NSString *)fileName;
 
 @end

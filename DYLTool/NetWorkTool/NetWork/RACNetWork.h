@@ -29,7 +29,4 @@
  */
 + (RACSignal *_Nonnull)rac_BatchAction:(YTKBatchRequest *_Nonnull)batchRequest resultClasses:(NSArray<Class> *_Nonnull)resultClasses;
 
-
-+ (RACSignal *_Nonnull)rac_DownLoadAction:(BaseRequest *_Nonnull)request;
-
 @end

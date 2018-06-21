@@ -16,7 +16,7 @@
 }
 
 - (NSInteger)cacheTimeInSeconds {
-    return NSIntegerMax;
+    return -1;
 }
 
 @end

@@ -70,6 +70,61 @@
     NSLog(@"-------- %@ 已释放 ---------", name);
 }
 
+#pragma mark ----- 公共方法 -----
+
+// 设置导航栏顶部字体
+- (void)setTitle:(NSString *)title {
+    [super setTitle:title];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    titleLabel.backgroundColor = [UIColor clearColor];
+    titleLabel.font = [UIFont systemFontOfSize:17];
+    titleLabel.text = title;
+    titleLabel.textColor = [UIColor blackColor];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    [titleLabel sizeToFit];
+    self.navigationItem.titleView = titleLabel;
+}
+
+- (void)showIndicatorView {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.hud != nil && self.isDisplay == NO) {
+            self.hud.label.text = @"正在加载";
+            [self.hud showAnimated:YES];
+            self.isDisplay = YES;
+        }
+    });
+}
+
+- (void)showIndicatorViewWithMessage:(NSString *)message {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.hud != nil && self.isDisplay == NO) {
+            self.hud.label.text = message;
+            [self.hud showAnimated:YES];
+            self.isDisplay = YES;
+        }
+    });
+}
+
+- (void)dismissIndicatorView {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.hud != nil && self.isDisplay == YES) {
+            [self.hud hideAnimated:YES];
+            self.isDisplay = NO;
+        }
+    });
+}
+
+- (void)ProcessRequestError:(NSError *)error {
+    switch (error.code) {
+        case :
+            
+            break;
+            
+        default:
+            break;
+    }
+}
+
 #pragma mark ----- 私有方法 -----
 - (void)initValue {
     self.isDisplay = NO;
@@ -104,49 +159,6 @@
     }
     free(classes);
     return [NSArray arrayWithArray:output];
-}
-
-#pragma mark ----- 公共方法 -----
-
-// 设置导航栏顶部字体
-- (void)setTitle:(NSString *)title {
-    [super setTitle:title];
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-    titleLabel.backgroundColor = [UIColor clearColor];
-    titleLabel.font = [UIFont systemFontOfSize:17];
-    titleLabel.text = title;
-    titleLabel.textColor = [UIColor blackColor];
-    titleLabel.textAlignment = NSTextAlignmentCenter;
-    [titleLabel sizeToFit];
-    self.navigationItem.titleView = titleLabel;
-}
-
-- (void)showIndicatorView {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        if (self.hud != nil && self.isDisplay == NO) {
-            [self.hud showAnimated:YES];
-            self.isDisplay = YES;
-        }
-    });
-}
-
-- (void)showIndicatorViewWithMessage:(NSString *)message {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        if (self.hud != nil && self.isDisplay == NO) {
-            self.hud.label.text = message;
-            [self.hud showAnimated:YES];
-            self.isDisplay = YES;
-        }
-    });
-}
-
-- (void)dismissIndicatorView {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        if (self.hud != nil && self.isDisplay == YES) {
-            [self.hud hideAnimated:YES];
-            self.isDisplay = NO;
-        }
-    });
 }
 
 #pragma mark ----- 懒加载 -----

@@ -9,6 +9,9 @@
 #ifndef MacrosTools_h
 #define MacrosTools_h
 
+#import "KFileManager.h"
+#import "KSaveHelper.h"
+
 /**
  判断字符串是否为空
 
@@ -61,6 +64,11 @@
  */
 #define kScreenSize \
 ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)] ? CGSizeMake([UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale,[UIScreen mainScreen].nativeBounds.size.height/[UIScreen mainScreen].nativeScale) : [UIScreen mainScreen].bounds.size)
+
+/**
+ 状态栏+导航栏高度
+ */
+#define kNavAndStatusHeight self.navigationController.navigationBar.frame.size.height + [[UIApplication sharedApplication] statusBarFrame].size.height
 
 
 // Application 对象

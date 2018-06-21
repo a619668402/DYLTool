@@ -13,8 +13,8 @@
 - (void)configYTKNetWork {
     YTKNetworkAgent *agent = [YTKNetworkAgent sharedAgent];
     [agent setValue:[NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json",@"text/html",@"text/css", nil] forKeyPath:@"_manager.responseSerializer.acceptableContentTypes"];
-//    [YTKNetworkConfig sharedConfig].baseUrl = @"http://tj2admin.tigonetwork.com";
-    [YTKNetworkConfig sharedConfig].baseUrl = @"https://dl.google.com";
+    [YTKNetworkConfig sharedConfig].baseUrl = @"http://tj2admin.tigonetwork.com";
+//    [YTKNetworkConfig sharedConfig].baseUrl = @"https://dl.google.com";
 }
 
 - (void)monitorNetwork {

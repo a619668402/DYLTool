@@ -15,11 +15,11 @@
  * @return YTKRequest 对象
  */
 + (instancetype)requestWithParameter:(NSDictionary *)parameter requestMethod:(YTKRequestMethod)method;
-
++ (instancetype)requestWithUrl:(NSString *)url parameter:(NSDictionary *)parameter requestMethod:(YTKRequestMethod)method;
 /**
  * @param parameter 请求参数
  * @return YTKRequest 对象
  */
-- (instancetype)initWithParameter:(NSDictionary *)parameter requestMethod:(YTKRequestMethod)method; 
-
+- (instancetype)initWithParameter:(NSDictionary *)parameter requestMethod:(YTKRequestMethod)method;
+- (instancetype)initWithUrl:(NSString *)url parameter:(NSDictionary *)parameter requestMethod:(YTKRequestMethod)method;
 @end
