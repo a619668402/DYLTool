@@ -11,7 +11,7 @@
 
 @implementation NSMutableString (Category)
 
-- (CGFloat)heightWithContainWidth:(CGFloat)width{
+- (CGFloat)yl_heightWithContainWidth:(CGFloat)width{
     int total_height = 0;
     CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)self);
     CGRect drawingRect = CGRectMake(0, 0, width, 100000);

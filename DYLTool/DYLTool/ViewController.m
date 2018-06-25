@@ -19,7 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
     /*
     NSString *str = @"1231";
     NSLog(@"%@", [str md5String]);
@@ -32,7 +31,6 @@
     kCornerRadius(view, 25.0f);
     kBorderWithAndColor(view, 10, [UIColor redColor]);
     
-    self.navigationController.navigationBar.frame.size.height + [[UIApplication sharedApplication] statusBarFrame].size.height;
 }
 
 

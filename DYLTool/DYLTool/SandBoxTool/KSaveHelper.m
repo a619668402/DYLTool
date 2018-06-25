@@ -11,54 +11,54 @@
 @implementation KSaveHelper
 
 #pragma mark ----- NSUserDefaults 保存操作 -----
-+ (BOOL)saveValue:(id)value key:(NSString *)key {
++ (BOOL)yl_saveValue:(id)value key:(NSString *)key {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:value forKey:key];
     return [defaults synchronize];
 }
 
-+ (BOOL)saveInteger:(NSInteger)value key:(NSString *)key {
++ (BOOL)yl_saveInteger:(NSInteger)value key:(NSString *)key {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setInteger:value forKey:key];
     return [defaults synchronize];
 }
 
-+ (BOOL)saveFloat:(float)value key:(NSString *)key {
++ (BOOL)yl_saveFloat:(float)value key:(NSString *)key {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setFloat:value forKey:key];
     return [defaults synchronize];
 }
 
-+ (BOOL)saveDouble:(double)value key:(NSString *)key {
++ (BOOL)yl_saveDouble:(double)value key:(NSString *)key {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setDouble:value forKey:key];
     return [defaults synchronize];
 }
 
-+ (BOOL)saveBool:(BOOL)value key:(NSString *)key {
++ (BOOL)yl_saveBool:(BOOL)value key:(NSString *)key {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setBool:value forKey:key];
     return [defaults synchronize];
 }
 
 #pragma mark ----- NSUserDefaults 读取操作 -----
-+ (id)readObjectWithKey:(NSString *)key {
++ (id)yl_readObjectWithKey:(NSString *)key {
     return [[NSUserDefaults standardUserDefaults] objectForKey:key];
 }
 
-+ (NSInteger)readIntegerWithKey:(NSString *)key {
++ (NSInteger)yl_readIntegerWithKey:(NSString *)key {
     return [[NSUserDefaults standardUserDefaults] integerForKey:key];
 }
 
-+ (float)readFloagWithKey:(NSString *)key {
++ (float)yl_readFloagWithKey:(NSString *)key {
     return [[NSUserDefaults standardUserDefaults] floatForKey:key];
 }
 
-+ (double)readDoubleWithKey:(NSString *)key {
++ (double)yl_readDoubleWithKey:(NSString *)key {
     return [[NSUserDefaults standardUserDefaults] doubleForKey:key];
 }
 
-+ (BOOL)readBoolWithKey:(NSString *)key {
++ (BOOL)yl_readBoolWithKey:(NSString *)key {
     return [[NSUserDefaults standardUserDefaults] boolForKey:key];
 }
 

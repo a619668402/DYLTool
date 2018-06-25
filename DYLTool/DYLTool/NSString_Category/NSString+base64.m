@@ -10,13 +10,13 @@
 
 @implementation NSString (base64)
 
-- (NSString *)imageToBase64String:(UIImage *)image {
+- (NSString *)yl_imageToBase64String:(UIImage *)image {
     NSData *data = UIImageJPEGRepresentation(image, 1.0f);
     NSString *base64String = [data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
     return base64String;
 }
 
-- (UIImage *)base64StringToImage:(NSString *)str {
+- (UIImage *)yl_base64StringToImage:(NSString *)str {
     NSData *data = [[NSData alloc] initWithBase64EncodedString:str options:NSDataBase64DecodingIgnoreUnknownCharacters];
     return [UIImage imageWithData:data];
 }

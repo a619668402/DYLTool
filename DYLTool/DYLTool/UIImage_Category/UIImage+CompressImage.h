@@ -24,8 +24,8 @@ typedef NSData PNGData;
  @param scale 压缩比例 0.0 - 1.0
  @return 压缩后的图片
  */
-+ (JPEGImage *)needCompressImage:(UIImage *)image size:(CGSize)size scale:(CGFloat)scale;
-+ (JPEGImage *)needCompressImageData:(NSData *)imageData size:(CGSize)size scale:(CGFloat)scale;
++ (JPEGImage *)yl_needCompressImage:(UIImage *)image size:(CGSize)size scale:(CGFloat)scale;
++ (JPEGImage *)yl_needCompressImageData:(NSData *)imageData size:(CGSize)size scale:(CGFloat)scale;
 
 /**
  传入图片,获取中间部分,需要的大小,压缩比例
@@ -35,7 +35,7 @@ typedef NSData PNGData;
  @param scale 压缩的比例 0.0 - 1.0
  @return 返回新的图片
  */
-+ (JPEGImage *)needCenterImage:(UIImage *)image size:(CGSize)size scale:(CGFloat)scale;
++ (JPEGImage *)yl_needCenterImage:(UIImage *)image size:(CGSize)size scale:(CGFloat)scale;
 
 /**
  png 图片转为jpeg图片
@@ -43,8 +43,8 @@ typedef NSData PNGData;
  @param pngImage 需要转为jpeg的图片
  @return 返回jpeg图片
  */
-+ (JPEGImage *)jpegImageToPNGImage:(PNGImage *)pngImage;
-+ (JPEGImage *)jpegImageWithPNGData:(PNGData *)pngData;
-+ (JPEGData *)jpegDataWithPNGData:(PNGData *)pngData;
-+ (JPEGData *)jpegDataWithPNGImage:(PNGImage *)pngImage;
++ (JPEGImage *)yl_jpegImageToPNGImage:(PNGImage *)pngImage;
++ (JPEGImage *)yl_jpegImageWithPNGData:(PNGData *)pngData;
++ (JPEGData *)yl_jpegDataWithPNGData:(PNGData *)pngData;
++ (JPEGData *)yl_jpegDataWithPNGImage:(PNGImage *)pngImage;
 @end

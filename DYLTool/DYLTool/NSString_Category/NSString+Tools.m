@@ -16,7 +16,7 @@
  @param phoneNumber 电话号码
  @return eg:135****0001
  */
-+ (NSString *)getSecrectStringWithPhoneNumber:(NSString *)phoneNumber {
++ (NSString *)yl_getSecrectStringWithPhoneNumber:(NSString *)phoneNumber {
     if (phoneNumber.length == 11) {
         NSMutableString *newStr = [NSMutableString stringWithString:phoneNumber];
         NSRange range = NSMakeRange(3, 7);
@@ -33,7 +33,7 @@
  @param accountNumber 银行卡号
  @return <#return value description#>
  */
-+ (NSString *)getSecrectStringWithAccountNumber:(NSString *)accountNumber {
++ (NSString *)yl_getSecrectStringWithAccountNumber:(NSString *)accountNumber {
     NSMutableString *newStr = [NSMutableString stringWithString:accountNumber];
     NSRange range = NSMakeRange(4, 8);
     if (newStr.length > 12) {
@@ -49,7 +49,7 @@
  @param mobile 手机号
  @return <#return value description#>
  */
-+ (NSString *)stringMobileFormat:(NSString *)mobile {
++ (NSString *)yl_stringMobileFormat:(NSString *)mobile {
     if (mobile.length == 11) {
         NSMutableString *newStr = [[NSMutableString alloc] initWithString:mobile];
         [newStr insertString:@"-" atIndex:3];
@@ -66,7 +66,7 @@
  @param value 金额
  @return <#return value description#>
  */
-+ (NSString *)stringChineseFormat:(double)value {
++ (NSString *)yl_stringChineseFormat:(double)value {
     if (value / 100000000 >= 1) {
         return [NSString stringWithFormat:@"%.0f亿", value / 100000000];
     } else if (value / 10000 >= 1 && value / 100000000 < 1) {
@@ -83,7 +83,7 @@
  @param num <#num description#>
  @return <#return value description#>
  */
-+ (NSString *)countNumAndChangeFormat:(NSString *)num {
++ (NSString *)yl_countNumAndChangeFormat:(NSString *)num {
     NSNumberFormatter *moneyFormatter = [[NSNumberFormatter alloc] init];
     moneyFormatter.positiveFormat = @"###,###";
     return [moneyFormatter stringFromNumber:[num toNumber]];
@@ -105,7 +105,7 @@
  @param maxHeight 最大高度
  @return <#return value description#>
  */
-- (CGFloat)widthWithFontSize:(CGFloat)fontSize height:(CGFloat)maxHeight {
+- (CGFloat)yl_widthWithFontSize:(CGFloat)fontSize height:(CGFloat)maxHeight {
     NSDictionary *attr = @{NSFontAttributeName:[UIFont systemFontOfSize:fontSize]};
     return [self boundingRectWithSize:CGSizeMake(0, maxHeight) options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attr context:nil].size.width;
 }
@@ -117,7 +117,7 @@
  @param width 最大宽度
  @return <#return value description#>
  */
-- (CGFloat)heightWithFontSize:(CGFloat)fontSize width:(CGFloat)width {
+- (CGFloat)yl_heightWithFontSize:(CGFloat)fontSize width:(CGFloat)width {
     NSDictionary *attr = @{NSFontAttributeName:[UIFont systemFontOfSize:fontSize]};
     return  [self boundingRectWithSize:CGSizeMake(width, 0) options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attr context:nil].size.height;
 }
@@ -127,7 +127,7 @@
  
  @return <#return value description#>
  */
-- (NSString *)removeUnwantedZero {
+- (NSString *)yl_removeUnwantedZero {
     if ([[self substringWithRange:NSMakeRange(self.length- 3, 3)] isEqualToString:@"000"]) {
         return [self substringWithRange:NSMakeRange(0, self.length-4)]; // 多一个小数点
     } else if ([[self substringWithRange:NSMakeRange(self.length- 2, 2)] isEqualToString:@"00"]) {
@@ -145,7 +145,7 @@
  
  @return <#return value description#>
  */
-- (NSString *)trimmedString {
+- (NSString *)yl_trimmedString {
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet decimalDigitCharacterSet]];
 }
 

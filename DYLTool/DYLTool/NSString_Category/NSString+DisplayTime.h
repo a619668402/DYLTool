@@ -17,7 +17,7 @@
  @param compareDate <#compareDate description#>
  @return <#return value description#>
  */
-+ (NSString *)compareCurrentTime:(NSTimeInterval)compareDate;
++ (NSString *)yl_compareCurrentTime:(NSTimeInterval)compareDate;
 
 
 /**
@@ -25,7 +25,7 @@
  @param timestamp 时间戳
  @return eg: 2018年12月12日
  */
-+ (NSString *) getDateStringWithTimestamp:(NSTimeInterval)timestamp;
++ (NSString *)yl_getDateStringWithTimestamp:(NSTimeInterval)timestamp;
 
 
 /**
@@ -34,7 +34,7 @@
  @param formatter 格式
  @return <#return value description#>
  */
-+ (NSString *) getStringWithTimestamp:(NSTimeInterval)timestamp formatter:(NSString*)formatter;
++ (NSString *)yl_getStringWithTimestamp:(NSTimeInterval)timestamp formatter:(NSString*)formatter;
 
 
 /**
@@ -42,6 +42,6 @@
 
  @return <#return value description#>
  */
-+ (NSString *)getTimeInterval;
++ (NSString *)yl_getTimeInterval;
 
 @end

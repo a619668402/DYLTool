@@ -19,6 +19,6 @@
  @param mainColor 倒计时结束后按钮背景颜色
  @param countDownColor 倒计时进行中按钮背景颜色
  */
-- (void)countDownWithTotalTime:(NSInteger)totalTime title:(NSString *)title countDownTitle:(NSString *)countDownTitle mainColor:(UIColor *)mainColor countDownColor:(UIColor *)countDownColor;
+- (void)yl_countDownWithTotalTime:(NSInteger)totalTime title:(NSString *)title countDownTitle:(NSString *)countDownTitle mainColor:(UIColor *)mainColor countDownColor:(UIColor *)countDownColor;
 
 @end

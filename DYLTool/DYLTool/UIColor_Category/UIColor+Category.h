@@ -67,7 +67,7 @@ UIColor *rgbA(CGFloat red, CGFloat green, CGFloat blue, CGFloat alpha);
  @param delta 明亮度
  @return <#return value description#>
  */
-+ (UIColor*) colorRGBonvertToHSB:(UIColor*)color withBrighnessDelta:(CGFloat)delta;
++ (UIColor *)colorRGBonvertToHSB:(UIColor*)color withBrighnessDelta:(CGFloat)delta;
 
 
 /**
@@ -76,6 +76,6 @@ UIColor *rgbA(CGFloat red, CGFloat green, CGFloat blue, CGFloat alpha);
  @param delta 透明度
  @return <#return value description#>
  */
-+ (UIColor*) colorRGBonvertToHSB:(UIColor*)color withAlphaDelta:(CGFloat)delta;
++ (UIColor *)colorRGBonvertToHSB:(UIColor*)color withAlphaDelta:(CGFloat)delta;
 
 @end

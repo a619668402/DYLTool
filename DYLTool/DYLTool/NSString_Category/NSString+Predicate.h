@@ -15,7 +15,7 @@
 
  @return <#return value description#>
  */
-- (BOOL)isValidMobileNumber;
+- (BOOL)yl_isValidMobileNumber;
 
 
 /**
@@ -23,7 +23,7 @@
 
  @return <#return value description#>
  */
-- (BOOL)isValidRealName;
+- (BOOL)yl_isValidRealName;
 
 
 /**
@@ -31,7 +31,7 @@
 
  @return <#return value description#>
  */
-- (BOOL)isOnlyChinese;
+- (BOOL)yl_isOnlyChinese;
 
 
 /**
@@ -39,7 +39,7 @@
 
  @return <#return value description#>
  */
-- (BOOL)isValidVerifyCode;
+- (BOOL)yl_isValidVerifyCode;
 
 
 /**
@@ -47,7 +47,7 @@
 
  @return <#return value description#>
  */
-- (BOOL)isValidBankCardNumber;
+- (BOOL)yl_isValidBankCardNumber;
 
 
 
@@ -56,7 +56,7 @@
 
  @return <#return value description#>
  */
-- (BOOL)isValidEmail;
+- (BOOL)yl_isValidEmail;
 
 
 /**
@@ -64,7 +64,7 @@
 
  @return <#return value description#>
  */
-- (BOOL)isValidNumberpassword;
+- (BOOL)yl_isValidNumberpassword;
 
 
 /**
@@ -72,7 +72,7 @@
 
  @return <#return value description#>
  */
-- (BOOL)isValidIDCard15;
+- (BOOL)yl_isValidIDCard15;
 
 
 /**
@@ -80,7 +80,7 @@
 
  @return <#return value description#>
  */
-- (BOOL)idValidIDCard18;
+- (BOOL)yl_idValidIDCard18;
 
 
 /**
@@ -88,5 +88,5 @@
 
  @return <#return value description#>
  */
-- (BOOL)isOnlyNumber;
+- (BOOL)yl_isOnlyNumber;
 @end

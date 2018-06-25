@@ -16,6 +16,6 @@
 
  @return View所在的控制器
  */
-- (UIViewController *)getCurrentViewController;
+- (UIViewController *)yl_getCurrentViewController;
 
 @end

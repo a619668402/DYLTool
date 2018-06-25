@@ -16,7 +16,7 @@
  
  @return 加密后的字符串
  */
-- (NSString *)md5String {
+- (NSString *)yl_md5String {
     if (self == nil || [self length] == 0) {
         return nil;
     }

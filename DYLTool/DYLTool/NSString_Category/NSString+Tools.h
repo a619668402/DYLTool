@@ -18,7 +18,7 @@
  @param phoneNumber 电话号码
  @return eg:135****0001
  */
-+ (NSString *)getSecrectStringWithPhoneNumber:(NSString *)phoneNumber;
++ (NSString *)yl_getSecrectStringWithPhoneNumber:(NSString *)phoneNumber;
 
 
 /**
@@ -27,7 +27,7 @@
  @param accountNumber 银行卡号
  @return <#return value description#>
  */
-+ (NSString *)getSecrectStringWithAccountNumber:(NSString *)accountNumber;
++ (NSString *)yl_getSecrectStringWithAccountNumber:(NSString *)accountNumber;
 
 
 /**
@@ -36,7 +36,7 @@
  @param mobile 手机号
  @return <#return value description#>
  */
-+ (NSString *)stringMobileFormat:(NSString *)mobile;
++ (NSString *)yl_stringMobileFormat:(NSString *)mobile;
 
 
 /**
@@ -45,7 +45,7 @@
  @param value 金额
  @return <#return value description#>
  */
-+ (NSString *)stringChineseFormat:(double)value;
++ (NSString *)yl_stringChineseFormat:(double)value;
 
 
 /**
@@ -54,7 +54,7 @@
  @param num <#num description#>
  @return eg:###,###,##
  */
-+ (NSString *)countNumAndChangeFormat:(NSString *)num;
++ (NSString *)yl_countNumAndChangeFormat:(NSString *)num;
 
 
 /**
@@ -64,7 +64,7 @@
  @param maxHeight 最大高度
  @return <#return value description#>
  */
-- (CGFloat)widthWithFontSize:(CGFloat)fontSize height:(CGFloat)maxHeight;
+- (CGFloat)yl_widthWithFontSize:(CGFloat)fontSize height:(CGFloat)maxHeight;
 
 
 /**
@@ -74,14 +74,14 @@
  @param width 最大宽度
  @return <#return value description#>
  */
-- (CGFloat)heightWithFontSize:(CGFloat)fontSize width:(CGFloat)width;
+- (CGFloat)yl_heightWithFontSize:(CGFloat)fontSize width:(CGFloat)width;
 
 /**
  移除小数末尾的0
 
  @return <#return value description#>
  */
-- (NSString *)removeUnwantedZero;
+- (NSString *)yl_removeUnwantedZero;
 
 
 /**
@@ -89,6 +89,6 @@
 
  @return <#return value description#>
  */
-- (NSString *)trimmedString;
+- (NSString *)yl_trimmedString;
 
 @end

@@ -61,10 +61,13 @@
         // 返回按钮
         UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [backBtn setBackgroundImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
-        [backBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
+        [backBtn addTarget:self action:@selector(_backBtnClick) forControlEvents:UIControlEventTouchUpInside];
         backBtn.frame = CGRectMake(0, 0, 10, 18);
         UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
-        self.navigationItem.leftBarButtonItem = backItem;
+        // 创建UIBarButtonSystemItemFixedSpace
+        UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+        spaceItem.width = -15;
+        self.navigationItem.leftBarButtonItems = @[spaceItem, backItem];
     }
     // 设置导航栏不覆盖内容
     self.navigationController.navigationBar.translucent = NO;
@@ -75,7 +78,7 @@
 }
 
 - (void)dealloc {
-    NSArray *arrayChildClass = [self findAllof:[self class]];
+    NSArray *arrayChildClass = [self _findAllof:[self class]];
     NSString *name = [NSString stringWithCString:object_getClassName([arrayChildClass lastObject]) encoding:NSUTF8StringEncoding];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     NSLog(@"-------- %@ 已释放 ---------", name);
@@ -131,7 +134,7 @@
 }
 
 #pragma mark ----- 私有方法 -----
-- (void)backBtnClick {
+- (void)_backBtnClick {
     NSArray *viewControllers = self.navigationController.viewControllers;
     if (viewControllers.count == 1) {
         return;
@@ -140,7 +143,7 @@
 }
 
 // 获取当前控制器下的子类
-- (NSArray *)findAllof:(Class)defaultClass {
+- (NSArray *)_findAllof:(Class)defaultClass {
     int count = objc_getClassList(NULL, 0);
     if (count <= 0) {
         return [NSArray arrayWithObject:defaultClass];

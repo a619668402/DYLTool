@@ -17,6 +17,6 @@
  @param width <#width description#>
  @return <#return value description#>
  */
-- (CGFloat)heightWithContainWidth:(CGFloat)width;
+- (CGFloat)yl_heightWithContainWidth:(CGFloat)width;
 
 @end

@@ -10,7 +10,7 @@
 
 @implementation NSString (Safe) 
 
-- (NSString *)safeSubstringFromIndex:(NSUInteger)from
+- (NSString *)yl_safeSubstringFromIndex:(NSUInteger)from
 {
     if (from > self.length) {
         return nil;
@@ -19,7 +19,7 @@
     }
 }
 
-- (NSString *)safeSubstringToIndex:(NSUInteger)to
+- (NSString *)yl_safeSubstringToIndex:(NSUInteger)to
 {
     if (to > self.length) {
         return nil;
@@ -28,7 +28,7 @@
     }
 }
 
-- (NSString *)safeSubstringWithRange:(NSRange)range
+- (NSString *)yl_safeSubstringWithRange:(NSRange)range
 {
     NSUInteger location = range.location;
     NSUInteger length = range.length;
@@ -39,7 +39,7 @@
     }
 }
 
-- (NSRange)safeRangeOfString:(NSString *)aString
+- (NSRange)yl_safeRangeOfString:(NSString *)aString
 {
     if (aString == nil) {
         return NSMakeRange(NSNotFound, 0);
@@ -48,7 +48,7 @@
     }
 }
 
-- (NSRange)safeRangeOfString:(NSString *)aString options:(NSStringCompareOptions)mask
+- (NSRange)yl_safeRangeOfString:(NSString *)aString options:(NSStringCompareOptions)mask
 {
     if (aString == nil) {
         return NSMakeRange(NSNotFound, 0);
@@ -57,7 +57,7 @@
     }
 }
 
-- (NSString *)safeStringByAppendingString:(NSString *)aString
+- (NSString *)yl_safeStringByAppendingString:(NSString *)aString
 {
     if (aString == nil) {
         return [self stringByAppendingString:@""];

@@ -16,6 +16,6 @@
 
  @return 加密后的字符串
  */
-- (NSString *)md5String;
+- (NSString *)yl_md5String;
 
 @end

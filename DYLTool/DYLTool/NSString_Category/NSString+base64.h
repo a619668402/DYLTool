@@ -18,7 +18,7 @@
  @param image 图片
  @return <#return value description#>
  */
-- (NSString *)imageToBase64String:(UIImage *)image;
+- (NSString *)yl_imageToBase64String:(UIImage *)image;
 
 
 /**
@@ -27,6 +27,6 @@
  @param str base64 字符串
  @return <#return value description#>
  */
-- (UIImage *)base64StringToImage:(NSString *)str;
+- (UIImage *)yl_base64StringToImage:(NSString *)str;
 
 @end

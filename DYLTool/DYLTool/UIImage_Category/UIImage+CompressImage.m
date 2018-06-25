@@ -10,7 +10,7 @@
 
 @implementation UIImage (CompressImage)
 
-+ (JPEGImage *)needCompressImage:(UIImage *)image size:(CGSize)size scale:(CGFloat)scale {
++ (JPEGImage *)yl_needCompressImage:(UIImage *)image size:(CGSize)size scale:(CGFloat)scale {
     JPEGImage *newImage = nil;
     // 创建画板
     UIGraphicsBeginImageContext(size);
@@ -25,13 +25,13 @@
     return newImage;
 }
 
-+ (JPEGImage *)needCompressImageData:(NSData *)imageData size:(CGSize)size scale:(CGFloat)scale {
++ (JPEGImage *)yl_needCompressImageData:(NSData *)imageData size:(CGSize)size scale:(CGFloat)scale {
     UIImage *image = [UIImage imageWithData:imageData];
-    return [UIImage needCompressImage:image size:size scale:scale];
+    return [UIImage yl_needCompressImage:image size:size scale:scale];
 }
 
 // 暂未实现裁剪中间
-+ (JPEGImage *)needCenterImage:(UIImage *)image size:(CGSize)size scale:(CGFloat)scale {
++ (JPEGImage *)yl_needCenterImage:(UIImage *)image size:(CGSize)size scale:(CGFloat)scale {
     JPEGImage *newImage = nil;
     // 创建画板
     UIGraphicsBeginImageContext(size);
@@ -44,20 +44,20 @@
     return newImage;
 }
 
-+ (JPEGImage *)jpegImageToPNGImage:(PNGImage *)pngImage {
-    return [UIImage needCompressImage:pngImage size:pngImage.size scale:1.0];
++ (JPEGImage *)yl_jpegImageToPNGImage:(PNGImage *)pngImage {
+    return [UIImage yl_needCompressImage:pngImage size:pngImage.size scale:1.0];
 }
 
-+ (JPEGImage *)jpegImageWithPNGData:(PNGData *)pngData {
++ (JPEGImage *)yl_jpegImageWithPNGData:(PNGData *)pngData {
     PNGImage *pngImage = [UIImage imageWithData:pngData];
-    return [UIImage needCompressImage:pngImage size:pngImage.size scale:1.0];
+    return [UIImage yl_needCompressImage:pngImage size:pngImage.size scale:1.0];
 }
 
-+ (JPEGData *)jpegDataWithPNGData:(PNGData *)pngData {
-    return UIImageJPEGRepresentation([UIImage jpegImageWithPNGData:pngData], 1.0);
++ (JPEGData *)yl_jpegDataWithPNGData:(PNGData *)pngData {
+    return UIImageJPEGRepresentation([UIImage yl_jpegImageWithPNGData:pngData], 1.0);
 }
 
-+ (JPEGData *)jpegDataWithPNGImage:(PNGImage *)pngImage {
-    return UIImageJPEGRepresentation([UIImage jpegDataWithPNGImage:pngImage], 1.0);
++ (JPEGData *)yl_jpegDataWithPNGImage:(PNGImage *)pngImage {
+    return UIImageJPEGRepresentation(pngImage, 1.0);
 }
 @end

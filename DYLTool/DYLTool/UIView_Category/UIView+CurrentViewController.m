@@ -10,7 +10,7 @@
 
 @implementation UIView (CurrentViewController)
 
-- (UIViewController *)getCurrentViewController {
+- (UIViewController *)yl_getCurrentViewController {
     UIResponder *next = [self nextResponder];
     do {
         if ([next isKindOfClass:[UIViewController class]]) {

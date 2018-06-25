@@ -37,6 +37,11 @@
 		0D17F68220B80C0E0082D67D /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D17F68120B80C0E0082D67D /* UIColor+Category.m */; };
 		0D17F68620B80DAD0082D67D /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D17F68520B80DAD0082D67D /* UIView+Frame.m */; };
 		0D20D18F20C1570300D1EC1D /* RACNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D20D18E20C1570300D1EC1D /* RACNetWork.m */; };
+		0D53F40620E0D6DB00B07B50 /* UIImageView+LoadImg.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D53F40520E0D6DB00B07B50 /* UIImageView+LoadImg.m */; };
+		0D53F40A20E0F28500B07B50 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D53F40920E0F28500B07B50 /* BaseTabBarController.m */; };
+		0D53F40D20E0F37700B07B50 /* BaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D53F40C20E0F37700B07B50 /* BaseTabBar.m */; };
+		0D53F41120E0F58600B07B50 /* NSDateFormatter+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D53F41020E0F58600B07B50 /* NSDateFormatter+Extension.m */; };
+		0D53F41420E0FAAD00B07B50 /* UIImage+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D53F41320E0FAAD00B07B50 /* UIImage+Tool.m */; };
 		0D5C7F2B20CE4E1F008F3795 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5C7F2A20CE4E1F008F3795 /* AppDelegate.m */; };
 		0D5C7F2E20CE4E1F008F3795 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5C7F2D20CE4E1F008F3795 /* ViewController.m */; };
 		0D5C7F3120CE4E1F008F3795 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D5C7F2F20CE4E1F008F3795 /* Main.storyboard */; };
@@ -139,6 +144,16 @@
 		0D20D18D20C1570300D1EC1D /* RACNetWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACNetWork.h; sourceTree = "<group>"; };
 		0D20D18E20C1570300D1EC1D /* RACNetWork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACNetWork.m; sourceTree = "<group>"; };
 		0D2B404320D12B4B00199564 /* MacrosNetWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacrosNetWork.h; sourceTree = "<group>"; };
+		0D53F40420E0D6DB00B07B50 /* UIImageView+LoadImg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LoadImg.h"; sourceTree = "<group>"; };
+		0D53F40520E0D6DB00B07B50 /* UIImageView+LoadImg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LoadImg.m"; sourceTree = "<group>"; };
+		0D53F40820E0F28500B07B50 /* BaseTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
+		0D53F40920E0F28500B07B50 /* BaseTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
+		0D53F40B20E0F37700B07B50 /* BaseTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTabBar.h; sourceTree = "<group>"; };
+		0D53F40C20E0F37700B07B50 /* BaseTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTabBar.m; sourceTree = "<group>"; };
+		0D53F40F20E0F58600B07B50 /* NSDateFormatter+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+Extension.h"; sourceTree = "<group>"; };
+		0D53F41020E0F58600B07B50 /* NSDateFormatter+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+Extension.m"; sourceTree = "<group>"; };
+		0D53F41220E0FAAD00B07B50 /* UIImage+Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tool.h"; sourceTree = "<group>"; };
+		0D53F41320E0FAAD00B07B50 /* UIImage+Tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tool.m"; sourceTree = "<group>"; };
 		0D5C7F2720CE4E1F008F3795 /* Base.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Base.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D5C7F2920CE4E1F008F3795 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0D5C7F2A20CE4E1F008F3795 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -372,13 +387,36 @@
 				0D17F68520B80DAD0082D67D /* UIView+Frame.m */,
 				0DEE545F20CA942C00749A2C /* UIView+CurrentViewController.h */,
 				0DEE546020CA942C00749A2C /* UIView+CurrentViewController.m */,
+				0D53F40420E0D6DB00B07B50 /* UIImageView+LoadImg.h */,
+				0D53F40520E0D6DB00B07B50 /* UIImageView+LoadImg.m */,
 			);
 			path = UIView_Category;
+			sourceTree = "<group>";
+		};
+		0D53F40720E0F27400B07B50 /* BaseTabbarController */ = {
+			isa = PBXGroup;
+			children = (
+				0D53F40820E0F28500B07B50 /* BaseTabBarController.h */,
+				0D53F40920E0F28500B07B50 /* BaseTabBarController.m */,
+				0D53F40B20E0F37700B07B50 /* BaseTabBar.h */,
+				0D53F40C20E0F37700B07B50 /* BaseTabBar.m */,
+			);
+			path = BaseTabbarController;
+			sourceTree = "<group>";
+		};
+		0D53F40E20E0F4C900B07B50 /* NSDate_Category */ = {
+			isa = PBXGroup;
+			children = (
+				0D53F40F20E0F58600B07B50 /* NSDateFormatter+Extension.h */,
+				0D53F41020E0F58600B07B50 /* NSDateFormatter+Extension.m */,
+			);
+			path = NSDate_Category;
 			sourceTree = "<group>";
 		};
 		0D5C7F2820CE4E1F008F3795 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				0D53F40720E0F27400B07B50 /* BaseTabbarController */,
 				0D10998420DB7AC100799DD0 /* BaseCollectionViewCell */,
 				0D10997F20DB5DDE00799DD0 /* BaseTableCell */,
 				0D5C7F3D20CE4E28008F3795 /* BaseController */,
@@ -450,6 +488,8 @@
 			children = (
 				0DF4187E20C93CFF004A8E11 /* UIImage+CompressImage.h */,
 				0DF4187F20C93CFF004A8E11 /* UIImage+CompressImage.m */,
+				0D53F41220E0FAAD00B07B50 /* UIImage+Tool.h */,
+				0D53F41320E0FAAD00B07B50 /* UIImage+Tool.m */,
 			);
 			path = UIImage_Category;
 			sourceTree = "<group>";
@@ -484,6 +524,7 @@
 		0DFABE3420A59B7300876945 /* DYLTool */ = {
 			isa = PBXGroup;
 			children = (
+				0D53F40E20E0F4C900B07B50 /* NSDate_Category */,
 				0D03885520DA2989000FFCBF /* UIButton_Category */,
 				0D0B67CB20CFB5E70008C4EE /* Macros */,
 				0DF4187A20C93CC9004A8E11 /* UIImage_Category */,
@@ -928,6 +969,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D53F40A20E0F28500B07B50 /* BaseTabBarController.m in Sources */,
 				0D5C7F2E20CE4E1F008F3795 /* ViewController.m in Sources */,
 				0D10998820DB7BA100799DD0 /* BaseCollectionViewCell.m in Sources */,
 				0D5C7F4020CE4E42008F3795 /* BaseViewController.m in Sources */,
@@ -935,6 +977,7 @@
 				0D5C7F4420CE7E99008F3795 /* MBProgressHUD.m in Sources */,
 				0D10998320DB5E1600799DD0 /* BaseTableViewCell.m in Sources */,
 				0D0B67C420CF9A320008C4EE /* MBProgressHUD+Toast.m in Sources */,
+				0D53F40D20E0F37700B07B50 /* BaseTabBar.m in Sources */,
 				0D5C7F3920CE4E1F008F3795 /* main.m in Sources */,
 				0D5C7F2B20CE4E1F008F3795 /* AppDelegate.m in Sources */,
 			);
@@ -968,9 +1011,12 @@
 				0D17F66720B7F5870082D67D /* NSString+MD5.m in Sources */,
 				0D17F67020B807870082D67D /* NSString+Safe.m in Sources */,
 				0DF4188020C93CFF004A8E11 /* UIImage+CompressImage.m in Sources */,
+				0D53F40620E0D6DB00B07B50 /* UIImageView+LoadImg.m in Sources */,
 				0DFABE3720A59B7300876945 /* AppDelegate.m in Sources */,
+				0D53F41420E0FAAD00B07B50 /* UIImage+Tool.m in Sources */,
 				0D17F68220B80C0E0082D67D /* UIColor+Category.m in Sources */,
 				0D010A4520C78DEA0083175C /* KFileManager.m in Sources */,
+				0D53F41120E0F58600B07B50 /* NSDateFormatter+Extension.m in Sources */,
 				0DEE546120CA942C00749A2C /* UIView+CurrentViewController.m in Sources */,
 				0D03885820DA29E8000FFCBF /* UIButton+CountDown.m in Sources */,
 			);

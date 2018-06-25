@@ -18,15 +18,15 @@
  @param key 键
  @return YES / NO
  */
-+ (BOOL)saveValue:(id)value key:(NSString *)key;
++ (BOOL)yl_saveValue:(id)value key:(NSString *)key;
 
-+ (BOOL)saveInteger:(NSInteger)value key:(NSString *)key;
++ (BOOL)yl_saveInteger:(NSInteger)value key:(NSString *)key;
 
-+ (BOOL)saveFloat:(float)value key:(NSString *)key;
++ (BOOL)yl_saveFloat:(float)value key:(NSString *)key;
 
-+ (BOOL)saveDouble:(double)value key:(NSString *)key;
++ (BOOL)yl_saveDouble:(double)value key:(NSString *)key;
 
-+ (BOOL)saveBool:(BOOL)value key:(NSString *)key;
++ (BOOL)yl_saveBool:(BOOL)value key:(NSString *)key;
 
 /**
  读取保存的数据(NSUserDefaults)
@@ -34,14 +34,14 @@
  @param key value 对应的 key
  @return value
  */
-+ (id)readObjectWithKey:(NSString *)key;
++ (id)yl_readObjectWithKey:(NSString *)key;
 
-+ (NSInteger)readIntegerWithKey:(NSString *)key;
++ (NSInteger)yl_readIntegerWithKey:(NSString *)key;
 
-+ (float)readFloagWithKey:(NSString *)key;
++ (float)yl_readFloagWithKey:(NSString *)key;
 
-+ (double)readDoubleWithKey:(NSString *)key;
++ (double)yl_readDoubleWithKey:(NSString *)key;
 
-+ (BOOL)readBoolWithKey:(NSString *)key;
++ (BOOL)yl_readBoolWithKey:(NSString *)key;
 
 @end
