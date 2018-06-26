@@ -12,9 +12,6 @@
 #ifndef MacrosTools_h
 #define MacrosTools_h
 
-#import "KFileManager.h"
-#import "KSaveHelper.h"
-
 /**
  判断字符串是否为空
 

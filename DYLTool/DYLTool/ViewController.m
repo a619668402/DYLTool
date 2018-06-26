@@ -7,8 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "Category.h"
-#import "MacrosTools.h"
+#import "MacrosHeader.h"
 
 @interface ViewController ()
 
@@ -30,6 +29,12 @@
     
     kCornerRadius(view, 25.0f);
     kBorderWithAndColor(view, 10, [UIColor redColor]);
+ 
+//     NSString *str = @"ONE";
+//    NSLog(@"%x", &str);
+//    str = @"TWO";
+//    NSLog(@"%x", &str);
+//    NSLog(@"%@", str);
     
 }
 
