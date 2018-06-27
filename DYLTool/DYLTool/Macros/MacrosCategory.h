@@ -53,5 +53,8 @@
 #import "UIImage+Tool.h"
 // 日期格式化
 #import "NSDateFormatter+Extension.h"
+// Toast 显示
+#import "UIViewController+Toast.h"
+#import "MBProgressHUD+Toast.h"
 
 #endif /* Category_h */

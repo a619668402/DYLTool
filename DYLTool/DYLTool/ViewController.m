@@ -35,6 +35,8 @@
 //    str = @"TWO";
 //    NSLog(@"%x", &str);
 //    NSLog(@"%@", str);
+    [MBProgressHUD showMessageWithView:self.view message:@"Teestsdfsfdsafdsfsdfafdaferaefasfsdfsdfsefrsfdsersdfsersdfsfefsfsdfs"];
+//    [self yl_toast:@"Teestsdfsfdsafdsfsdfafdaferaefasfsdfsdfsefrsfdsersdfsersdfsfefsfsdfs"];
     
 }
 

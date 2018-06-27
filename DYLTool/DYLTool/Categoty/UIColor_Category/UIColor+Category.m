@@ -63,7 +63,7 @@
     return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:alpha];
 }
 
-+ (UIColor*) colorRGBonvertToHSB:(UIColor*)color withAlphaDelta:(CGFloat)delta {
++ (UIColor *)colorRGBonvertToHSB:(UIColor*)color withAlphaDelta:(CGFloat)delta {
     CGFloat hue = 0.0f;
     CGFloat saturation = 0.0f;
     CGFloat brightness = 0.0f;

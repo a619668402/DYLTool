@@ -19,12 +19,14 @@ PODS:
   - ReactiveObjC (3.1.0)
   - YTKNetwork (2.0.4):
     - AFNetworking (~> 3.0)
+  - YYKeyboardManager (1.0.1)
 
 DEPENDENCIES:
   - MJExtension (~> 3.0)
   - MJRefresh (~> 3.1.15.3)
   - ReactiveObjC (~> 3.1.0)
   - YTKNetwork
+  - YYKeyboardManager (~> 1.0.1)
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -32,7 +34,8 @@ SPEC CHECKSUMS:
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
+  YYKeyboardManager: ff53d2e80d1808567a7f004028bd200d9469a89f
 
-PODFILE CHECKSUM: f3fc50a8b037afef056ce4be46135329532ef3b1
+PODFILE CHECKSUM: bf3537e21596b09b97639a19bb750146d72bed21
 
 COCOAPODS: 1.4.0

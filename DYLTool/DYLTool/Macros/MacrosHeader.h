@@ -15,6 +15,7 @@
 
 #import "KFileManager.h"  // 沙盒路径
 #import "KSaveHelper.h"   // 数据持久化相关
+#import "KRouter.h"       // 路由
 
 #endif /* MacrosHeader_h */
 
