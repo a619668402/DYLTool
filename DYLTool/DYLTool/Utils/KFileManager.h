@@ -4,8 +4,10 @@
 //
 //  Created by sky on 2018/6/6.
 //  Copyright © 2018年 DYL. All rights reserved.
-//  文件管理
-
+//
+/*********************************************
+                 文件管理
+ *********************************************/
 #import <Foundation/Foundation.h>
 
 @interface KFileManager : NSObject

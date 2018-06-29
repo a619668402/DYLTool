@@ -5,9 +5,12 @@
 //  Created by sky on 2018/6/27.
 //  Copyright © 2018年 DYL. All rights reserved.
 //
-
+/*********************************************
+            所有自定义视图模型基类
+ *********************************************/
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
+#import <ReactiveObjC.h>
 
 @interface BaseViewModel : NSObject
 
@@ -19,7 +22,7 @@
 /**
  navItem title
  */
-@property (nonatomic, readonly, copy) NSString *navTitle;
+@property (nonatomic, readwrite, copy) NSString *navTitle;
 
 /**
  返回按钮 title, default is nil
@@ -33,9 +36,29 @@
 @property (nonatomic, readwrite, assign) BOOL keyBoardEnable;
 
 /**
+ should fetch local data when viewModel init. default is YES
+ */
+@property (nonatomic, readwrite, assign) BOOL shouldFetchLocalDataOnViewModelInitliaze;
+
+/**
+ 是否需要在 viewDidLoad 中获取数据, default is YES
+ */
+@property (nonatomic, assign, readwrite) BOOL shouldRequestRemoteDataOnViewDidLoad;
+
+/**
  是否键盘弹起的时候,点击其他区域隐藏 默认YES
  */
 @property (nonatomic, readwrite, assign) BOOL shouldResignOnTouchOutside;
+
+/**
+ 是否隐藏该控制器的导航栏, 默认不隐藏(NO)
+ */
+@property (nonatomic, readwrite, assign) BOOL prefersNavigationBarHidden;
+
+/**
+ 是否隐藏该控制器的导航栏底部的分割线, 默认不隐藏(NO)
+ */
+@property (nonatomic, readwrite, assign) BOOL prefersNavigationBarBottomLineHidden;
 
 /**
  config Keyboard distance from textfield, can't be less than zero. default is 10.0f

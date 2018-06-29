@@ -85,13 +85,37 @@
 
 // 自定义打印信息
 #ifdef DEBUG
-#define KLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#define KLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, [[NSString stringWithFormat:fmt, ##__VA_ARGS__] UTF8String]);
 #else
 #define KLog(...)
 #endif
+// 打印方法
+#define KLogFunc KLog(@"%s", __func__)
+// 打印错误
+#define KLogError(error) KLog(@"%@", error)
+// 打印销毁
+#define KLogDealloc KLog(@"\n ------------------ %@ 销毁 ----------------- \n", [self class]);
 
 #define KWeakSelf(type) __weak typeof(type) weak##type = type
 #define KStrongSelf(type) __strong typeof(type) type   = weak##type
+
+/// 适配iPhone X + iOS 11
+#define KAdjustsScrollViewInsets_Never(__scrollView)\
+do {\
+_Pragma("clang diagnostic push")\
+_Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"")\
+if ([__scrollView respondsToSelector:NSSelectorFromString(@"setContentInsetAdjustmentBehavior:")]) {\
+NSMethodSignature *signature = [UIScrollView instanceMethodSignatureForSelector:@selector(setContentInsetAdjustmentBehavior:)];\
+NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];\
+NSInteger argument = 2;\
+invocation.target = __scrollView;\
+invocation.selector = @selector(setContentInsetAdjustmentBehavior:);\
+[invocation setArgument:&argument atIndex:2];\
+[invocation retainArguments];\
+[invocation invoke];\
+}\
+_Pragma("clang diagnostic pop")\
+} while (0)
 
 // GCD
 // 一次性执行

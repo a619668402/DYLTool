@@ -29,6 +29,18 @@ static KRouter *sharedInstance = nil;
     return sharedInstance;
 }
 
++ (instancetype)allocWithZone:(struct _NSZone *)zone {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [super allocWithZone: zone];
+    });
+    return sharedInstance;
+}
+
+- (id)copyWithZone:(NSZone *)zone {
+    return sharedInstance;
+}
+
 - (BaseViewController *)viewControllerFromViewModel:(BaseViewModel *)viewModel {
     NSString *viewController = self.viewModelViewMappings[NSStringFromClass(viewModel.class)];
     
@@ -36,6 +48,12 @@ static KRouter *sharedInstance = nil;
     NSParameterAssert([NSClassFromString(viewController) instancesRespondToSelector:@selector(initWithViewModel:)]);
     
     return [[NSClassFromString(viewController) alloc] initWithViewModel:viewModel];
+}
+
+/// viewModel - ViewController 的映射
+/// If You Use Push, Present, You Must Config This Dict.
+- (NSDictionary *)viewModelViewMappings {
+    return @{@"viewModel":@"ViewController"};
 }
 
 @end

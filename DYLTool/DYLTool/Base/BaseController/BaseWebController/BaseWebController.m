@@ -7,7 +7,7 @@
 //
 
 #import "BaseWebController.h"
-
+// 通过代理对象打破循环引用
 @interface WeakScriptMessageDelegate : NSObject<WKScriptMessageHandler>
 
 @property (nonatomic, weak) id<WKScriptMessageHandler> scriptDelegate;

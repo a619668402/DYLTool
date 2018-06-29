@@ -12,6 +12,8 @@
 		0D03885820DA29E8000FFCBF /* UIButton+CountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D03885720DA29E8000FFCBF /* UIButton+CountDown.m */; };
 		0D04E77020BD0A8B0040C4AF /* NSString+base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D04E76F20BD0A8B0040C4AF /* NSString+base64.m */; };
 		0D04E77420BD0C870040C4AF /* UIFont+fontSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D04E77320BD0C870040C4AF /* UIFont+fontSize.m */; };
+		0D056D2420E4904B00953C86 /* BaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D056D2320E4904B00953C86 /* BaseNavController.m */; };
+		0D056D2720E4C4DB00953C86 /* BaseTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D056D2620E4C4DB00953C86 /* BaseTableViewModel.m */; };
 		0D17F66720B7F5870082D67D /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D17F66620B7F5870082D67D /* NSString+MD5.m */; };
 		0D17F66A20B7FC0E0082D67D /* NSString+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D17F66920B7FC0E0082D67D /* NSString+Tools.m */; };
 		0D17F66D20B804170082D67D /* NSString+Predicate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D17F66C20B804170082D67D /* NSString+Predicate.m */; };
@@ -71,6 +73,10 @@
 		0D04E76F20BD0A8B0040C4AF /* NSString+base64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+base64.m"; sourceTree = "<group>"; };
 		0D04E77220BD0C870040C4AF /* UIFont+fontSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+fontSize.h"; sourceTree = "<group>"; };
 		0D04E77320BD0C870040C4AF /* UIFont+fontSize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+fontSize.m"; sourceTree = "<group>"; };
+		0D056D2220E4904B00953C86 /* BaseNavController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavController.h; sourceTree = "<group>"; };
+		0D056D2320E4904B00953C86 /* BaseNavController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavController.m; sourceTree = "<group>"; };
+		0D056D2520E4C4DB00953C86 /* BaseTableViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewModel.h; sourceTree = "<group>"; };
+		0D056D2620E4C4DB00953C86 /* BaseTableViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewModel.m; sourceTree = "<group>"; };
 		0D0B67CD20CFB6150008C4EE /* MacrosTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacrosTools.h; sourceTree = "<group>"; };
 		0D17F66520B7F5870082D67D /* NSString+MD5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		0D17F66620B7F5870082D67D /* NSString+MD5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
@@ -211,6 +217,24 @@
 			path = UIFont_Category;
 			sourceTree = "<group>";
 		};
+		0D056D2020E48FEB00953C86 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				0DD0038820E2305A00CB6B5D /* BaseTableCell */,
+				0DD0037B20E2305900CB6B5D /* BaseCollectionViewCell */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		0D056D2120E4902600953C86 /* BaseNavController */ = {
+			isa = PBXGroup;
+			children = (
+				0D056D2220E4904B00953C86 /* BaseNavController.h */,
+				0D056D2320E4904B00953C86 /* BaseNavController.m */,
+			);
+			path = BaseNavController;
+			sourceTree = "<group>";
+		};
 		0D0B67CB20CFB5E70008C4EE /* Macros */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +303,8 @@
 			children = (
 				0D24275D20E376C20040FE23 /* BaseViewModel.h */,
 				0D24275E20E376C20040FE23 /* BaseViewModel.m */,
+				0D056D2520E4C4DB00953C86 /* BaseTableViewModel.h */,
+				0D056D2620E4C4DB00953C86 /* BaseTableViewModel.m */,
 			);
 			path = BaseViewModel;
 			sourceTree = "<group>";
@@ -326,12 +352,9 @@
 		0DD0037A20E2301000CB6B5D /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				0D056D2020E48FEB00953C86 /* BaseView */,
 				0D24275C20E376B30040FE23 /* BaseViewModel */,
-				0DD0039820E2309900CB6B5D /* BaseWebController */,
-				0DD0037B20E2305900CB6B5D /* BaseCollectionViewCell */,
 				0DD0037F20E2305900CB6B5D /* BaseController */,
-				0DD0038C20E2305A00CB6B5D /* BaseTabbarController */,
-				0DD0038820E2305A00CB6B5D /* BaseTableCell */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -349,6 +372,9 @@
 		0DD0037F20E2305900CB6B5D /* BaseController */ = {
 			isa = PBXGroup;
 			children = (
+				0D056D2120E4902600953C86 /* BaseNavController */,
+				0DD0038C20E2305A00CB6B5D /* BaseTabbarController */,
+				0DD0039820E2309900CB6B5D /* BaseWebController */,
 				0DD0038020E2305900CB6B5D /* BaseControllerProtocol.h */,
 				0DD0038120E2305900CB6B5D /* BaseViewController.h */,
 				0DD0038220E2305900CB6B5D /* BaseViewController.m */,
@@ -688,6 +714,7 @@
 				0DD003B220E233B900CB6B5D /* BaseUploadRequest.m in Sources */,
 				0D17F67620B8091C0082D67D /* NSMutableString+Category.m in Sources */,
 				0D17F66A20B7FC0E0082D67D /* NSString+Tools.m in Sources */,
+				0D056D2720E4C4DB00953C86 /* BaseTableViewModel.m in Sources */,
 				0DD0036520E210BF00CB6B5D /* UITableView+Extension.m in Sources */,
 				0D17F66D20B804170082D67D /* NSString+Predicate.m in Sources */,
 				0DD0039720E2305A00CB6B5D /* BaseTabBarController.m in Sources */,
@@ -695,6 +722,7 @@
 				0D17F67020B807870082D67D /* NSString+Safe.m in Sources */,
 				0DD0039B20E230C200CB6B5D /* BaseWebController.m in Sources */,
 				0DD0036820E2130300CB6B5D /* UITextField+MaxLength.m in Sources */,
+				0D056D2420E4904B00953C86 /* BaseNavController.m in Sources */,
 				0DF4188020C93CFF004A8E11 /* UIImage+CompressImage.m in Sources */,
 				0D53F40620E0D6DB00B07B50 /* UIImageView+LoadImg.m in Sources */,
 				0DFABE3720A59B7300876945 /* AppDelegate.m in Sources */,

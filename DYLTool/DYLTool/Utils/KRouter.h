@@ -5,9 +5,9 @@
 //  Created by sky on 2018/6/27.
 //  Copyright © 2018年 DYL. All rights reserved.
 //
-/***********************************
-    ViewModel - ViewController
- ***********************************/
+/*********************************************
+       ViewModel - ViewController Mapping
+ *********************************************/
 #import <Foundation/Foundation.h>
 #import "BaseViewController.h"
 #import "BaseViewModel.h"
