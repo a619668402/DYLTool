@@ -22,6 +22,7 @@
 		0D17F67620B8091C0082D67D /* NSMutableString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D17F67520B8091C0082D67D /* NSMutableString+Category.m */; };
 		0D17F68220B80C0E0082D67D /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D17F68120B80C0E0082D67D /* UIColor+Category.m */; };
 		0D17F68620B80DAD0082D67D /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D17F68520B80DAD0082D67D /* UIView+Frame.m */; };
+		0D1959F020E9C798009237A9 /* MacrosConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D1959EF20E9C798009237A9 /* MacrosConstant.m */; };
 		0D24275820E3342F0040FE23 /* BaseTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D24275720E3342F0040FE23 /* BaseTableController.m */; };
 		0D24275B20E375E40040FE23 /* KRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D24275A20E375E40040FE23 /* KRouter.m */; };
 		0D24275F20E376C20040FE23 /* BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D24275E20E376C20040FE23 /* BaseViewModel.m */; };
@@ -94,6 +95,8 @@
 		0D17F68120B80C0E0082D67D /* UIColor+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Category.m"; sourceTree = "<group>"; };
 		0D17F68420B80DAD0082D67D /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		0D17F68520B80DAD0082D67D /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		0D1959EE20E9C798009237A9 /* MacrosConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacrosConstant.h; sourceTree = "<group>"; };
+		0D1959EF20E9C798009237A9 /* MacrosConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacrosConstant.m; sourceTree = "<group>"; };
 		0D24275620E3342F0040FE23 /* BaseTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableController.h; sourceTree = "<group>"; };
 		0D24275720E3342F0040FE23 /* BaseTableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableController.m; sourceTree = "<group>"; };
 		0D24275920E375E40040FE23 /* KRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KRouter.h; sourceTree = "<group>"; };
@@ -241,6 +244,8 @@
 				0D010A4620C7BD4E0083175C /* MacrosCategory.h */,
 				0D0B67CD20CFB6150008C4EE /* MacrosTools.h */,
 				0DD0036920E2166A00CB6B5D /* MacrosHeader.h */,
+				0D1959EE20E9C798009237A9 /* MacrosConstant.h */,
+				0D1959EF20E9C798009237A9 /* MacrosConstant.m */,
 			);
 			path = Macros;
 			sourceTree = "<group>";
@@ -697,6 +702,7 @@
 				0DD0039320E2305A00CB6B5D /* MBProgressHUD+Toast.m in Sources */,
 				0D24275820E3342F0040FE23 /* BaseTableController.m in Sources */,
 				0DD003A020E2337D00CB6B5D /* PlaceholderView.m in Sources */,
+				0D1959F020E9C798009237A9 /* MacrosConstant.m in Sources */,
 				0DD003B420E233B900CB6B5D /* BaseUrlArgumentsFilter.m in Sources */,
 				0D03885420D9F338000FFCBF /* KSaveHelper.m in Sources */,
 				0DD0039220E2305A00CB6B5D /* BaseViewController.m in Sources */,

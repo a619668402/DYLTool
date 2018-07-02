@@ -9,6 +9,7 @@
 #import "UIImage+Tool.h"
 #import <AVFoundation/AVFoundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
+#import "MacrosTools.h"
 
 @implementation UIImage (Tool)
 
@@ -43,7 +44,7 @@
     thumbnailImageRef = [assetImageGenerator copyCGImageAtTime:CMTimeMake(thumbnailImageTime, 60)actualTime:NULL error:&thumbnailImageGenerationError];
     
     if(!thumbnailImageRef)
-        NSLog(@"thumbnailImageGenerationError %@",thumbnailImageGenerationError);
+        KLog(@"thumbnailImageGenerationError %@",thumbnailImageGenerationError);
     
     UIImage*thumbnailImage = thumbnailImageRef ? [[UIImage alloc]initWithCGImage: thumbnailImageRef] : nil;
     

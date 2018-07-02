@@ -12,7 +12,7 @@
 #import "MacrosTools.h"   // 常用宏
 #import "MacrosCategory.h"// 分类
 #import "MacrosNetWork.h" // 网络相关
-
+#import "MacrosConstant.h"
 #import "KFileManager.h"  // 沙盒路径
 #import "KSaveHelper.h"   // 数据持久化相关
 #import "KRouter.h"       // 路由
