@@ -55,6 +55,7 @@
         // 4. 设置导航栏左右按钮,统一管理
         viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem yl_backItemWithTitle:title imageName:@"img_back" target:self action:@selector(_back)];
     }
+    self.navigationBar.translucent = NO;
     [super pushViewController:viewController animated:animated];
 }
 

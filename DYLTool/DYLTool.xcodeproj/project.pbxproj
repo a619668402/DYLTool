@@ -10,6 +10,10 @@
 		0D010A4520C78DEA0083175C /* KFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D010A4420C78DEA0083175C /* KFileManager.m */; };
 		0D03885420D9F338000FFCBF /* KSaveHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D03885320D9F338000FFCBF /* KSaveHelper.m */; };
 		0D03885820DA29E8000FFCBF /* UIButton+CountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D03885720DA29E8000FFCBF /* UIButton+CountDown.m */; };
+		0D0487AA20EC9D6F005BFC65 /* BaseNavigationControllerStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0487A920EC9D6F005BFC65 /* BaseNavigationControllerStack.m */; };
+		0D0487AF20ECA1EE005BFC65 /* BaseViewModelServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0487AE20ECA1EE005BFC65 /* BaseViewModelServiceImpl.m */; };
+		0D0487B320ECB9FC005BFC65 /* TestSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0487B220ECB9FC005BFC65 /* TestSearchController.m */; };
+		0D0487B620ECC1F9005BFC65 /* TestSearchController_1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0487B520ECC1F9005BFC65 /* TestSearchController_1.m */; };
 		0D04E77020BD0A8B0040C4AF /* NSString+base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D04E76F20BD0A8B0040C4AF /* NSString+base64.m */; };
 		0D04E77420BD0C870040C4AF /* UIFont+fontSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D04E77320BD0C870040C4AF /* UIFont+fontSize.m */; };
 		0D056D2420E4904B00953C86 /* BaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D056D2320E4904B00953C86 /* BaseNavController.m */; };
@@ -70,6 +74,16 @@
 		0D03885320D9F338000FFCBF /* KSaveHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSaveHelper.m; sourceTree = "<group>"; };
 		0D03885620DA29E8000FFCBF /* UIButton+CountDown.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+CountDown.h"; sourceTree = "<group>"; };
 		0D03885720DA29E8000FFCBF /* UIButton+CountDown.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CountDown.m"; sourceTree = "<group>"; };
+		0D0487A820EC9D6F005BFC65 /* BaseNavigationControllerStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationControllerStack.h; sourceTree = "<group>"; };
+		0D0487A920EC9D6F005BFC65 /* BaseNavigationControllerStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationControllerStack.m; sourceTree = "<group>"; };
+		0D0487AC20EC9DF0005BFC65 /* BaseNavigationProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationProtocol.h; sourceTree = "<group>"; };
+		0D0487AD20ECA1EE005BFC65 /* BaseViewModelServiceImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewModelServiceImpl.h; sourceTree = "<group>"; };
+		0D0487AE20ECA1EE005BFC65 /* BaseViewModelServiceImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewModelServiceImpl.m; sourceTree = "<group>"; };
+		0D0487B020ECA313005BFC65 /* BaseViewModelServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewModelServices.h; sourceTree = "<group>"; };
+		0D0487B120ECB9FC005BFC65 /* TestSearchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestSearchController.h; sourceTree = "<group>"; };
+		0D0487B220ECB9FC005BFC65 /* TestSearchController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSearchController.m; sourceTree = "<group>"; };
+		0D0487B420ECC1F9005BFC65 /* TestSearchController_1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestSearchController_1.h; sourceTree = "<group>"; };
+		0D0487B520ECC1F9005BFC65 /* TestSearchController_1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSearchController_1.m; sourceTree = "<group>"; };
 		0D04E76E20BD0A8B0040C4AF /* NSString+base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+base64.h"; sourceTree = "<group>"; };
 		0D04E76F20BD0A8B0040C4AF /* NSString+base64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+base64.m"; sourceTree = "<group>"; };
 		0D04E77220BD0C870040C4AF /* UIFont+fontSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+fontSize.h"; sourceTree = "<group>"; };
@@ -97,6 +111,7 @@
 		0D17F68520B80DAD0082D67D /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		0D1959EE20E9C798009237A9 /* MacrosConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacrosConstant.h; sourceTree = "<group>"; };
 		0D1959EF20E9C798009237A9 /* MacrosConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacrosConstant.m; sourceTree = "<group>"; };
+		0D227DC820EB0F860053ADDC /* MacrosSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacrosSingleton.h; sourceTree = "<group>"; };
 		0D24275620E3342F0040FE23 /* BaseTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableController.h; sourceTree = "<group>"; };
 		0D24275720E3342F0040FE23 /* BaseTableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableController.m; sourceTree = "<group>"; };
 		0D24275920E375E40040FE23 /* KRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KRouter.h; sourceTree = "<group>"; };
@@ -234,6 +249,9 @@
 			children = (
 				0D056D2220E4904B00953C86 /* BaseNavController.h */,
 				0D056D2320E4904B00953C86 /* BaseNavController.m */,
+				0D0487A820EC9D6F005BFC65 /* BaseNavigationControllerStack.h */,
+				0D0487A920EC9D6F005BFC65 /* BaseNavigationControllerStack.m */,
+				0D0487AC20EC9DF0005BFC65 /* BaseNavigationProtocol.h */,
 			);
 			path = BaseNavController;
 			sourceTree = "<group>";
@@ -246,6 +264,7 @@
 				0DD0036920E2166A00CB6B5D /* MacrosHeader.h */,
 				0D1959EE20E9C798009237A9 /* MacrosConstant.h */,
 				0D1959EF20E9C798009237A9 /* MacrosConstant.m */,
+				0D227DC820EB0F860053ADDC /* MacrosSingleton.h */,
 			);
 			path = Macros;
 			sourceTree = "<group>";
@@ -310,6 +329,9 @@
 				0D24275E20E376C20040FE23 /* BaseViewModel.m */,
 				0D056D2520E4C4DB00953C86 /* BaseTableViewModel.h */,
 				0D056D2620E4C4DB00953C86 /* BaseTableViewModel.m */,
+				0D0487AD20ECA1EE005BFC65 /* BaseViewModelServiceImpl.h */,
+				0D0487AE20ECA1EE005BFC65 /* BaseViewModelServiceImpl.m */,
+				0D0487B020ECA313005BFC65 /* BaseViewModelServices.h */,
 			);
 			path = BaseViewModel;
 			sourceTree = "<group>";
@@ -541,6 +563,10 @@
 				0DFABE4020A59B7300876945 /* LaunchScreen.storyboard */,
 				0DFABE4320A59B7300876945 /* Info.plist */,
 				0DFABE4420A59B7300876945 /* main.m */,
+				0D0487B120ECB9FC005BFC65 /* TestSearchController.h */,
+				0D0487B220ECB9FC005BFC65 /* TestSearchController.m */,
+				0D0487B420ECC1F9005BFC65 /* TestSearchController_1.h */,
+				0D0487B520ECC1F9005BFC65 /* TestSearchController_1.m */,
 			);
 			path = DYLTool;
 			sourceTree = "<group>";
@@ -693,6 +719,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D24275B20E375E40040FE23 /* KRouter.m in Sources */,
+				0D0487B620ECC1F9005BFC65 /* TestSearchController_1.m in Sources */,
 				0D04E77420BD0C870040C4AF /* UIFont+fontSize.m in Sources */,
 				0DFABE3A20A59B7300876945 /* ViewController.m in Sources */,
 				0DD0036C20E218BB00CB6B5D /* UITextView+MaxLength.m in Sources */,
@@ -706,10 +733,12 @@
 				0DD003B420E233B900CB6B5D /* BaseUrlArgumentsFilter.m in Sources */,
 				0D03885420D9F338000FFCBF /* KSaveHelper.m in Sources */,
 				0DD0039220E2305A00CB6B5D /* BaseViewController.m in Sources */,
+				0D0487B320ECB9FC005BFC65 /* TestSearchController.m in Sources */,
 				0DD0039420E2305A00CB6B5D /* MBProgressHUD.m in Sources */,
 				0D17F67320B808160082D67D /* NSString+DisplayTime.m in Sources */,
 				0DD0036220E1EBBB00CB6B5D /* UIScrollView+Refresh.m in Sources */,
 				0DFABE4520A59B7300876945 /* main.m in Sources */,
+				0D0487AA20EC9D6F005BFC65 /* BaseNavigationControllerStack.m in Sources */,
 				0DD003B620E233B900CB6B5D /* RequestTool.m in Sources */,
 				0DD0035F20E1D68B00CB6B5D /* UIBarButtonItem+Extension.m in Sources */,
 				0DD003B520E233B900CB6B5D /* RACNetWork.m in Sources */,
@@ -724,6 +753,7 @@
 				0DD0036520E210BF00CB6B5D /* UITableView+Extension.m in Sources */,
 				0D17F66D20B804170082D67D /* NSString+Predicate.m in Sources */,
 				0DD0039720E2305A00CB6B5D /* BaseTabBarController.m in Sources */,
+				0D0487AF20ECA1EE005BFC65 /* BaseViewModelServiceImpl.m in Sources */,
 				0D17F66720B7F5870082D67D /* NSString+MD5.m in Sources */,
 				0D17F67020B807870082D67D /* NSString+Safe.m in Sources */,
 				0DD0039B20E230C200CB6B5D /* BaseWebController.m in Sources */,
@@ -875,7 +905,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PRF43DAUH7;
 				INFOPLIST_FILE = DYLTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dyl.tool.DYLTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -889,7 +921,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PRF43DAUH7;
 				INFOPLIST_FILE = DYLTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dyl.tool.DYLTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";

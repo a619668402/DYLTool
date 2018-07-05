@@ -130,6 +130,30 @@ _Pragma("clang diagnostic pop")\
 // 设置边框
 #define kBorderWithAndColor(view, width, color) [view.layer setBorderWidth:(width)]; [view.layer setBorderColor:[color CGColor]];
 
+// 字体适配 (375(4.7) 为默认屏幕)
+#define KRadio(R) (R) * (KScreenWidth) / 375.0
+#define KFont_8 [UIFont systemFontOfSize:KRadio(8.0)]
+#define KFont_9 [UIFont systemFontOfSize:KRadio(9.0)]
+#define KFont_10 [UIFont systemFontOfSize:KRadio(10.0)]
+#define KFont_11 [UIFont systemFontOfSize:KRadio(11.0)]
+#define KFont_12 [UIFont systemFontOfSize:KRadio(12.0)]
+#define KFont_13 [UIFont systemFontOfSize:KRadio(13.0)]
+#define KFont_14 [UIFont systemFontOfSize:KRadio(14.0)]
+#define KFont_15 [UIFont systemFontOfSize:KRadio(15.0)]
+#define KFont_16 [UIFont systemFontOfSize:KRadio(16.0)]
+#define KFont_17 [UIFont systemFontOfSize:KRadio(17.0)]
+#define KFont_18 [UIFont systemFontOfSize:KRadio(18.0)]
+#define KFont_19 [UIFont systemFontOfSize:KRadio(19.0)]
+#define KFont_20 [UIFont systemFontOfSize:KRadio(20.0)]
+#define KFont_21 [UIFont systemFontOfSize:KRadio(21.0)]
+#define KFont_22 [UIFont systemFontOfSize:KRadio(22.0)]
+#define KFont_23 [UIFont systemFontOfSize:KRadio(23.0)]
+#define KFont_24 [UIFont systemFontOfSize:KRadio(24.0)]
+#define KFont_25 [UIFont systemFontOfSize:KRadio(25.0)]
+#define KFont_26 [UIFont systemFontOfSize:KRadio(26.0)]
+#define KFont_27 [UIFont systemFontOfSize:KRadio(27.0)]
+#define KFont_28 [UIFont systemFontOfSize:KRadio(28.0)]
+
 // 正常字体
 #define N_8 [UIFont systemFontOfSize:8]
 #define N_9 [UIFont systemFontOfSize:9]
@@ -199,7 +223,6 @@ _Pragma("clang diagnostic pop")\
 #define JPGImg(NAME)    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:(NAME) ofType:@"jpg"]]
 #define KIMG(NAME, EXT) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:(NAME) ofType:(EXT)]]
 #define M_IMG(IMGNAME)  [UIImage imageNamed:IMGNAME]
-
 
 // 字符串
 #define KURL(url)                            [NSURL URLWithString:url]
