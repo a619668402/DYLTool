@@ -7,7 +7,6 @@
 //
 
 #import "BaseViewModel.h"
-#import <ReactiveObjC.h>
 
 /// 传递导航栏 title key
 NSString *const KViewModelTitleKey = @"YLViewModelTitleKey";
@@ -16,6 +15,8 @@ NSString *const KViewModelTitleKey = @"YLViewModelTitleKey";
 
 @property (nonatomic, readwrite, copy) NSDictionary *params;
 
+@property (nonatomic, readwrite, strong) id<BaseViewModelServices> services;
+
 @end
 
 @implementation BaseViewModel
@@ -23,7 +24,7 @@ NSString *const KViewModelTitleKey = @"YLViewModelTitleKey";
 + (instancetype)allocWithZone:(struct _NSZone *)zone {
     BaseViewModel *viewModel = [super allocWithZone:zone];
     @weakify(viewModel);
-    [[viewModel rac_signalForSelector:@selector(initWithParams:)] subscribeNext:^(RACTuple * _Nullable x) {
+    [[viewModel rac_signalForSelector:@selector(initWithParams:services:)] subscribeNext:^(RACTuple * _Nullable x) {
         @strongify(viewModel);
         [viewModel initialize];
     }];
@@ -31,7 +32,7 @@ NSString *const KViewModelTitleKey = @"YLViewModelTitleKey";
 }
 
 // create viewModel instance
-- (instancetype)initWithParams:(NSDictionary *)params {
+- (instancetype)initWithParams:(NSDictionary *)params services:(id<BaseViewModelServices>)services {
     self = [super init];
     if (self) {
         // 默认在 viewDidLoad 中加载本地和网络数据
@@ -45,6 +46,7 @@ NSString *const KViewModelTitleKey = @"YLViewModelTitleKey";
         self.navTitle = params[KViewModelTitleKey];
         // 赋值
         self.params = params;
+        self.services = services;
     }
     return self;
 }

@@ -176,11 +176,11 @@
     return UIEdgeInsetsMake(KNavAndStatusHeight, 0, 0, 0);
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView dequeueReusableCellWithIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath {
+- (BaseTableViewCell *)tableView:(UITableView *)tableView dequeueReusableCellWithIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath {
     return [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath withObject:(id)object {}
+- (void)configureCell:(BaseTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath withObject:(id)object {}
 #pragma mark ************* public Method End   *************
 
 #pragma mark ************* private Method Start *************

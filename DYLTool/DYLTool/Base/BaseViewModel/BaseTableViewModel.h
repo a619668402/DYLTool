@@ -8,12 +8,11 @@
 
 #import "BaseViewModel.h"
 #import "RACNetWork.h"
-#import <UIKit/UIKit.h>
 
 @interface BaseTableViewModel : BaseViewModel
 
 /// the data source of table view. 这里不能用 NSMutableArray, Because NSMutableArray 不支持 KVO, 不能被 RACObserve
-@property (nonatomic, copy, readonly) NSArray *dataSource;
+@property (nonatomic, copy, readwrite) NSArray *dataSource;
 
 /// tableView's style, default is UITableViewStylePlain, 只适合 UITableView 有效
 @property (nonatomic, assign, readwrite) UITableViewStyle style;
@@ -40,7 +39,7 @@
 @property (nonatomic, strong, readonly) RACCommand *requestRemoteDataCommand;
 
 /// 选中命令 didSelectRowAtIndexpath:
-@property (nonatomic, strong, readonly) RACCommand *didSelectCommand;
+@property (nonatomic, strong, readwrite) RACCommand *didSelectCommand;
 
 /// request remote data or local data, sub class can override it
 /// page - 请求第几页数据

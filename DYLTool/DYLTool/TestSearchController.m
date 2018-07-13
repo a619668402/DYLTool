@@ -8,7 +8,8 @@
 
 #import "TestSearchController.h"
 #import "TestSearchController_1.h"
-#import "MacrosHeader.h"
+#import "TestCommonViewController.h"
+#import "TestCommonViewModel.h"
 
 @interface TestSearchController ()<UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating>
 
@@ -71,7 +72,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.item == 1) {
+        /*
         TestSearchController_1 *vc = [[TestSearchController_1 alloc] initWithViewModel:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+         */
+//        UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+//        self.navigationItem.backBarButtonItem = backItem;
+        TestCommonViewModel *viewModel = [[TestCommonViewModel alloc] initWithParams:nil services:nil];
+        TestCommonViewController *vc = [[TestCommonViewController alloc] initWithViewModel:viewModel];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
@@ -149,8 +157,10 @@
         _backBtn.frame = CGRectMake(0, 20, 60, 44);
         [_backBtn setTitle:@"返回" forState:UIControlStateNormal];
         _backBtn.titleLabel.textColor = [UIColor whiteColor];
-        [_backBtn setImage:[UIImage imageNamed:@"img_back"] forState:UIControlStateNormal];
+        [_backBtn setImage:[UIImage imageNamed:@"barbuttonicon_back_15x30"] forState:UIControlStateNormal];
+        @weakify(self);
         [[_backBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            @strongify(self);
             [self.navigationController popViewControllerAnimated:YES];
         }];
     }

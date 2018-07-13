@@ -62,4 +62,17 @@
                                    target:(id)target
                                    action:(SEL)action;
 
+
+/**
+ 快速创建一个导航栏 leftBarButtonItem 用于返回(pop) 或者 dismiss 只能是纯图片
+
+ @param imageName 返回按钮图片名称
+ @param target target
+ @param action action
+ @return UIBarButtonItem
+ */
++ (UIBarButtonItem *)yl_backItemWithImage:(NSString *)imageName
+                                   target:(id)target
+                                   action:(SEL)action;
+
 @end

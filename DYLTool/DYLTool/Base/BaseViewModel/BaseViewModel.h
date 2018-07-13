@@ -9,8 +9,8 @@
             所有自定义视图模型基类
  *********************************************/
 #import <Foundation/Foundation.h>
-#import <CoreGraphics/CoreGraphics.h>
-#import <ReactiveObjC.h>
+
+@protocol BaseViewModelServices;
 
 @interface BaseViewModel : NSObject
 
@@ -18,6 +18,10 @@
  the 'params' parameter in '-initWithParams:' method
  */
 @property (nonatomic, readonly, copy) NSDictionary *params;
+/**
+ the 'services' parameter in '-initWithParameter:services:' method
+ */
+@property (nonatomic, readonly, strong) id<BaseViewModelServices> services;
 
 /**
  navItem title
@@ -25,7 +29,7 @@
 @property (nonatomic, readwrite, copy) NSString *navTitle;
 
 /**
- 返回按钮 title, default is nil
+ 返回按钮 title, default is nil (暂时无效,没有做处理,如果设置标题,返回按钮距离左侧间距过大)
  如果设置该值, 当 push 到一个新的 controller ,则 controller 左侧返回按钮的 title 为backTitle
  */
 @property (nonatomic, readwrite, copy) NSString *backTitle;
@@ -34,6 +38,13 @@
  IQKeyboardManager 是否让 IQKeyboardManager 管理键盘的事件 默认是YES(键盘管理)
  */
 @property (nonatomic, readwrite, assign) BOOL keyBoardEnable;
+
+/**
+ FDFullscreenPopGesture
+ Whether the interactive pop gesture is disabled when contained in a navigation
+ stack (是否取消左滑pop到上一层的功能(栈底控制器无效), 默认为 NO, 不取消)
+ */
+@property (nonatomic, readwrite, assign) BOOL interactivePopDisabled;
 
 /**
  should fetch local data when viewModel init. default is YES
@@ -65,7 +76,7 @@
  */
 @property (nonatomic, readwrite, assign) CGFloat keyboardDistanceFromTextField;
 
-- (instancetype)initWithParams:(NSDictionary *)params;
+- (instancetype)initWithParams:(NSDictionary *)params services:(id<BaseViewModelServices>)services;
 
 /**
  An additional method, in which you can initialize data.

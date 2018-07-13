@@ -7,7 +7,6 @@
 //
 
 #import "TestSearchController_1.h"
-#import "MacrosHeader.h"
 
 @interface TestSearchController_1 ()
 
@@ -65,7 +64,7 @@
         _backBtn.frame = CGRectMake(0, 20, 60, 44);
         [_backBtn setTitle:@"返回" forState:UIControlStateNormal];
         _backBtn.titleLabel.textColor = [UIColor whiteColor];
-        [_backBtn setImage:[UIImage imageNamed:@"img_back"] forState:UIControlStateNormal];
+        [_backBtn setImage:[UIImage imageNamed:@"barbuttonicon_back_15x30"] forState:UIControlStateNormal];
         [[_backBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             [self.navigationController popViewControllerAnimated:YES];
         }];

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseTableCellProtocol.h"
 
 @interface BaseTableViewCell : UITableViewCell<BaseTableCellProtocol>
 

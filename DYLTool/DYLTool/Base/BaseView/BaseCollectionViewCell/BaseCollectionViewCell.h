@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseCollectionViewProtocol.h"
 
 @interface BaseCollectionViewCell : UICollectionViewCell<BaseCollectionViewProtocol>
 

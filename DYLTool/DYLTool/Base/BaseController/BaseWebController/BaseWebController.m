@@ -274,7 +274,7 @@
 - (UIBarButtonItem *)backBarButtonItem {
     if (!_backBarButtonItem) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [button setImage:[UIImage imageNamed:@"img_back"] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"barbuttonicon_back_15x30"] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(back:) forControlEvents:UIControlEventTouchUpInside];
         _backBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     }

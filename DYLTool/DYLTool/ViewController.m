@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "MacrosHeader.h"
 #import "TestSearchController.h"
 
 @interface ViewController ()
@@ -33,7 +32,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = NO;
 }
 
 - (void)yl_initValues {
@@ -46,7 +44,7 @@
 
 - (UISearchBar *)mBar {
     if (!_mBar) {
-        _mBar = [[UISearchBar alloc] initWithFrame:CGRectMake(15, 60, KScreenWidth - 30, 44)];
+        _mBar = [[UISearchBar alloc] initWithFrame:CGRectMake(15, 0, KScreenWidth - 30, 44)];
         _mBar.barStyle = UIBarStyleDefault;
         _mBar.placeholder = @"请输入搜索内容";
     }

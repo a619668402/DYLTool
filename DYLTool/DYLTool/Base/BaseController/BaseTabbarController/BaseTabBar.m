@@ -7,7 +7,6 @@
 //
 
 #import "BaseTabBar.h"
-#import "MacrosHeader.h"
 
 @interface BaseTabBar()
 
@@ -37,8 +36,8 @@
     [super layoutSubviews];
     
     [self bringSubviewToFront:self.divider];
-    [self.divider setHeight:0.5f];
-    [self.divider setWidth:KScreenWidth];
+    [self.divider yl_setHeight:0.5f];
+    [self.divider yl_setWidth:KScreenWidth];
 }
 
 @end

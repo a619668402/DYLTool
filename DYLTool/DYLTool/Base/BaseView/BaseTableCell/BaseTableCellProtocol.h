@@ -11,9 +11,10 @@
 @protocol BaseTableCellProtocol <NSObject>
 
 @required
+- (void)yl_setUp;
 // 初始化子控件
-- (void)yd_setUpChildViews; 
+- (void)yl_setUpChildViews; 
 @optional
-
+- (void)yl_bindModel:(id)viewModel;
 
 @end

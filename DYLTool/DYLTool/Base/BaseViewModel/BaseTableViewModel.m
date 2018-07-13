@@ -27,7 +27,7 @@
         return [self requestRemoteDataSignalWithPage:page.unsignedIntegerValue];
     }];
 }
-
+/// 网络请求(获取数据)
 - (RACSignal *)requestRemoteDataSignalWithPage:(NSUInteger)page {
     return [RACSignal empty];
 }

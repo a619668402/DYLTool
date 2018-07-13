@@ -10,29 +10,29 @@
 
 @interface UIView (Frame)
 
-- (CGFloat)left;
-- (CGFloat)right;
-- (CGSize)size;
-- (CGFloat)top;
-- (CGFloat)bottom;
-- (CGFloat)width;
-- (CGFloat)height;
-- (CGFloat)centerX;
-- (CGFloat)centerY;
-- (CGFloat)maxX;
-- (CGFloat)maxY;
+- (CGFloat)yl_left;
+- (CGFloat)yl_right;
+- (CGSize)yl_size;
+- (CGFloat)yl_top;
+- (CGFloat)yl_bottom;
+- (CGFloat)yl_width;
+- (CGFloat)yl_height;
+- (CGFloat)yl_centerX;
+- (CGFloat)yl_centerY;
+- (CGFloat)yl_maxX;
+- (CGFloat)yl_maxY;
 
-- (void)setLeft:(CGFloat)left;
-- (void)setRight:(CGFloat)right;
-- (void)setSize:(CGSize)size;
-- (void)setTop:(CGFloat)top;
-- (void)setBottom:(CGFloat)bottom;
-- (void)setWidth:(CGFloat)width;
-- (void)setHeight:(CGFloat)height;
-- (void)setCenterX:(CGFloat)centerX;
-- (void)setCenterY:(CGFloat)centerY;
-- (void)setOrigin:(CGPoint)point;
-- (void)setAddTop:(CGFloat)top;
-- (void)setAddLeft:(CGFloat)left;
+- (void)yl_setLeft:(CGFloat)left;
+- (void)yl_setRight:(CGFloat)right;
+- (void)yl_setSize:(CGSize)size;
+- (void)yl_setTop:(CGFloat)top;
+- (void)yl_setBottom:(CGFloat)bottom;
+- (void)yl_setWidth:(CGFloat)width;
+- (void)yl_setHeight:(CGFloat)height;
+- (void)yl_setCenterX:(CGFloat)centerX;
+- (void)yl_setCenterY:(CGFloat)centerY;
+- (void)yl_setOrigin:(CGPoint)point;
+- (void)yl_setAddTop:(CGFloat)top;
+- (void)yl_setAddLeft:(CGFloat)left;
 
 @end

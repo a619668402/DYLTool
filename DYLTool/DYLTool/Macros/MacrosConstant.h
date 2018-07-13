@@ -47,3 +47,7 @@ FOUNDATION_EXTERN NSString * const NetworkFailureInfo;
 FOUNDATION_EXTERN NSString * const NetworkRequestErrorDomain;
 FOUNDATION_EXTERN NSInteger const NetworkRequestErrorCode;
 FOUNDATION_EXTERN NSString * const NetworkRequestError;
+
+
+/// 全局变量
+FOUNDATION_EXTERN CGFloat const KGlobleLineHeight; // 分割线高度

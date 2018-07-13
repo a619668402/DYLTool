@@ -56,4 +56,12 @@
 + (UIBarButtonItem *)yl_backItemWithTitle:(NSString *)title imageName:(NSString *)imageName target:(id)target action:(SEL)action {
     return [self yl_customeItemWithTitle:title titleColor:nil imageName:imageName target:target selector:action contentHorizontalAligment:UIControlContentHorizontalAlignmentLeft];
 }
+
++ (UIBarButtonItem *)yl_backItemWithImage:(NSString *)imageName target:(id)target action:(SEL)action {
+    UIImage *image = [UIImage imageNamed:@"barbuttonicon_back_15x30"];
+    image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStyleDone target:target action:action];
+    [backItem setImageInsets:UIEdgeInsetsMake(0, -5, 0, 0)];
+    return backItem;
+}
 @end

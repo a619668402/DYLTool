@@ -1,11 +1,13 @@
 #op# Uncomment the next line to define a global platform for your project
 platform :ios, '8.0'
 target 'DYLTool' do
-pod 'YTKNetwork'
-pod 'ReactiveObjC', '~> 3.1.0'
-pod 'MJRefresh', '~> 3.1.15.3'
-pod 'MJExtension',  '~> 3.0'
-pod 'YYKeyboardManager', '~> 1.0.1'
+pod 'YTKNetwork'                        # 网络请求
+pod 'ReactiveObjC', '~> 3.1.0'          # RAC
+pod 'MJRefresh', '~> 3.1.15.3'          # 刷新控件
+pod 'MJExtension',  '~> 3.0'            # 字典转模型
+pod 'YYKeyboardManager', '~> 1.0.1'     # 键盘相关
+pod 'Masonry', '~> 1.1.0'               # 约束
+pod 'FDFullscreenPopGesture', '~> 1.1'  # 手势
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
 

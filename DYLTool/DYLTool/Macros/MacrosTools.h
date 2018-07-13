@@ -18,7 +18,7 @@
  @param str 字符串
  @return 返回 YES / NO
  */
-#define KStringIsEmpty(str) ([str isKindOfClass:[NSNull null]] || str == nil || str.length < 1 ? YES : NO)
+#define KStringIsEmpty(str) (KObjectIsEmpty(str) || str == nil || str.length < 1 ? YES : NO)
 
 /**
  判断数据是否为空
@@ -26,7 +26,7 @@
  @param array 数组
  @return 返回 YES / NO
  */
-#define KArrayIsEmpty(array) (array == nil || [array isKindOfClass:[NSNull class]] || array.count == 0)
+#define KArrayIsEmpty(array) (KObjectIsEmpty(array) || array.count == 0)
 
 /**
  判断字典是否为空
@@ -34,7 +34,7 @@
  @param dic 字典
  @return 返回 YES / NO
  */
-#define KDicIsEmpty(dic) (dic == nil || [dic isKindOfClass:[NSNull class]] || dic.allKeys == 0)
+#define KDicIsEmpty(dic) (KObjectIsEmpty(dic) || dic.allKeys == 0)
 
 /**
  判断是否是空对象

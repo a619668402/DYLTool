@@ -7,7 +7,6 @@
 //
 
 #import "BaseNavController.h"
-#import "MacrosHeader.h"
 
 @interface BaseNavController ()
 
@@ -52,8 +51,15 @@
             // 3. 查看 viewModel 的 backTitle 是否有值
             title = viewModel.backTitle ?: title;
         }
+        /* iOS 11 之后 UIBarButtonSystemItemFixedSpace 无效,不能调整间隙
+        UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+        spaceItem.width = -15;
+        UIBarButtonItem *backItem =[UIBarButtonItem yl_backItemWithTitle:nil imageName:@"barbuttonicon_back_15x30" target:self action:@selector(_back)];
+        viewController.navigationItem.leftBarButtonItems = @[spaceItem, backItem];
+         */
+        UIBarButtonItem *backItem = [UIBarButtonItem yl_backItemWithImage:@"barbuttonicon_back_15x30" target:self action:@selector(_back)];
         // 4. 设置导航栏左右按钮,统一管理
-        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem yl_backItemWithTitle:title imageName:@"img_back" target:self action:@selector(_back)];
+        viewController.navigationItem.leftBarButtonItem = backItem;
     }
     self.navigationBar.translucent = NO;
     [super pushViewController:viewController animated:animated];
@@ -70,6 +76,11 @@
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return self.topViewController.preferredStatusBarStyle;
 }
+
+- (BOOL)prefersStatusBarHidden {
+    return self.topViewController.prefersStatusBarHidden;
+}
+
 #pragma mark ************* override Method End  *************
 
 #pragma mark ************* public Method Start *************
@@ -112,7 +123,7 @@
     
     // 添加自己的分割线
     CGFloat navSystemLineH = 0.5f;
-    UIImageView *navSystemLine = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.navigationBar.height - navSystemLineH, KScreenWidth, navSystemLineH)];
+    UIImageView *navSystemLine = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.navigationBar.yl_height - navSystemLineH, KScreenWidth, navSystemLineH)];
     navSystemLine.backgroundColor = rgb(223.0f, 223.0f, 221.0f);
     [self.navigationBar addSubview:navSystemLine];
     self.navigationBottomLine = navSystemLine;
