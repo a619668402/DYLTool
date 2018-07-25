@@ -11,7 +11,7 @@
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 
-@interface BaseWebController : UIViewController
+@interface BaseWebController : BaseViewController
 
 /**
  请求的url

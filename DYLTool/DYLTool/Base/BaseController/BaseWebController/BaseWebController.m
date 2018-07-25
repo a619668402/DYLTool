@@ -105,7 +105,15 @@
 
 
 #pragma mark UIDelegate
-- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {}
+- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {
+    KLogFunc;
+    UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        completionHandler();
+    }];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:message message:nil preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:alertAction];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
 
 - (void)webView:(WKWebView *)webView runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(BOOL))completionHandler {}
 
@@ -212,7 +220,7 @@
         [userContentController addScriptMessageHandler:[[WeakScriptMessageDelegate alloc] initWithDelegate:self] name:@"定义的标识符"];
         
         if (_jsString) {
-            WKUserScript *jsString = [[WKUserScript alloc] initWithSource:_jsString injectionTime:(WKUserScriptInjectionTimeAtDocumentStart) forMainFrameOnly:NO];
+            WKUserScript *jsString = [[WKUserScript alloc] initWithSource:_jsString injectionTime:(WKUserScriptInjectionTimeAtDocumentEnd) forMainFrameOnly:YES];
             [userContentController addUserScript:jsString];
         }
         configuration.userContentController = userContentController;
