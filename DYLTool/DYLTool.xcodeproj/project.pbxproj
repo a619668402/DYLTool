@@ -504,6 +504,7 @@
 		0DD0037620E22FCA00CB6B5D /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				0DFD02202107312800A6B70D /* jsonFile.txt */,
 				0DD0037720E22FD300CB6B5D /* img */,
 			);
 			path = Resource;
@@ -694,7 +695,6 @@
 		0DFABE3420A59B7300876945 /* DYLTool */ = {
 			isa = PBXGroup;
 			children = (
-				0DFD021D21072FC000A6B70D /* Resource */,
 				0DD003A120E2339800CB6B5D /* HttpService */,
 				0DD0039C20E2335200CB6B5D /* Widget */,
 				0DD0037A20E2301000CB6B5D /* Base */,
@@ -740,15 +740,6 @@
 				0DFD0223210739F800A6B70D /* YLCoreTextImageData.m */,
 			);
 			path = CoreText;
-			sourceTree = "<group>";
-		};
-		0DFD021D21072FC000A6B70D /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				0DFD02202107312800A6B70D /* jsonFile.txt */,
-			);
-			name = Resource;
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		65326D1C7423FAFD9E046747 /* Pods */ = {
