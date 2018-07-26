@@ -30,6 +30,7 @@
 
 - (void)setImageArray:(NSArray *)imageArray {
     _imageArray = imageArray;
+    [self fillImagePoistion];
 }
 
 /// 填充图片
@@ -49,6 +50,42 @@
             break;
         }
         CTLineRef line = (__bridge CTLineRef)lines[i];
+        NSArray *runOjbArray = (NSArray *)CTLineGetGlyphRuns(line);
+        for (id runObj in runOjbArray) {
+            CTRunRef run = (__bridge CTRunRef)runObj;
+            NSDictionary *runAttributes = (NSDictionary *)CTRunGetAttributes(run);
+            CTRunDelegateRef delegate = (__bridge CTRunDelegateRef)[runAttributes valueForKey:(id)kCTRunDelegateAttributeName];
+            if (delegate == nil) {
+                continue;
+            }
+            NSDictionary *metaDic = CTRunDelegateGetRefCon(delegate);
+            if (![metaDic isKindOfClass:[NSDictionary class]]) {
+                continue;
+            }
+            CGRect runBounds;
+            CGFloat ascent;
+            CGFloat descent;
+            runBounds.size.width = CTRunGetTypographicBounds(run, CFRangeMake(0, 0), &ascent, &descent, NULL);
+            runBounds.size.height = ascent + descent;
+            
+            CGFloat x0ffset = CTLineGetOffsetForStringIndex(line, CTRunGetStringRange(run).location, NULL);
+            runBounds.origin.x = lineOrigins[i].x + x0ffset;
+            runBounds.origin.y = lineOrigins[i].y;
+            runBounds.origin.y -= descent;
+            
+            CGPathRef pathRef = CTFrameGetPath(self.ctFrame);
+            CGRect colRect = CGPathGetBoundingBox(pathRef);
+            CGRect delegateBounds = CGRectOffset(runBounds, colRect.origin.x, colRect.origin.y);
+            
+            imageData.imagePosition = delegateBounds;
+            imgIndex ++;
+            if (imgIndex == self.imageArray.count) {
+                imageData = nil;
+                break;
+            } else {
+                imageData = self.imageArray[imgIndex];
+            }
+        }
     }
 }
 

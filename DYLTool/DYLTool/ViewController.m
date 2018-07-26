@@ -11,6 +11,7 @@
 #import "YLAlertMessageView.h"
 #import "YLAlertController.h"
 #import "TestWebController.h"
+#import "TestFilterViewController.h"
 
 #import "ArrowLabel.h"
 #import "YLButton.h"
@@ -59,7 +60,6 @@
     YLDisplayView *displayView = [[YLDisplayView alloc] initWithFrame:CGRectMake(10, 180, KScreenWidth, 400)];
     displayView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:displayView];
-    
     // 设置配置信息
     YLFrameParserConfig *config = [[YLFrameParserConfig alloc] init];
     config.width = displayView.yl_width;
@@ -79,7 +79,6 @@
     [attributeString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:19.0f] range:NSMakeRange(0, 20)];
     [attributeString addAttribute:(NSString *)kCTForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, 20)];
     */
-    
     // 获取模版文件
     NSString *path = [[NSBundle mainBundle] pathForResource:@"jsonFile" ofType:@"txt"];
     
@@ -162,8 +161,14 @@
         [_btn2 setTitleRect:CGRectMake(0, 5, 70, 20)];
         [_btn2 setImageRect:CGRectMake(20, 30, 30, 30)];
         _btn2.frame = CGRectMake(20, 120, 70, 65);
+        [_btn2 addTarget:self action:@selector(_btn2Click) forControlEvents:UIControlEventTouchUpInside];
     }
     return _btn2;
+}
+
+- (void)_btn2Click {
+    TestFilterViewController *vc = [[TestFilterViewController alloc] initWithViewModel:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)test {

@@ -28,7 +28,8 @@
 
 #pragma mark ************* Private Method Start *************
 - (void)_initValues {
-    self.view.backgroundColor = [UIColor colorWithWhite:0.2f alpha:0.5f];
+    self.view.backgroundColor = [UIColor colorWithWhite:0.1f alpha:0.2f];
+//    self.view.backgroundColor = [UIColor clearColor];
 }
 
 - (void)_initViews {

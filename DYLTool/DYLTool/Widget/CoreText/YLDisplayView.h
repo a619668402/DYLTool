@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "YLCoreTextData.h"
+#import "YLCoreTextLinkData.h"
+#import "YLCoreTextUtils.h"
 
 @interface YLDisplayView : UIView
 

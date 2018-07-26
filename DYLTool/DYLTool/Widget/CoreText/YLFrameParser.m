@@ -8,6 +8,7 @@
 
 #import "YLFrameParser.h"
 #import "YLCoreTextData.h"
+#import "YLCoreTextLinkData.h"
 #import "YLCoreTextImageData.h"
 #import "YLFrameParserConfig.h"
 
@@ -43,13 +44,15 @@
 /// 方法一:用于提供对外接口,调用方法二实现从一个json模版文件中读取内容,然后调用方法五生成CoreTextData
 + (YLCoreTextData *)parseTemplateFile:(NSString *)path config:(YLFrameParserConfig *)config {
     NSMutableArray *imageArray = [NSMutableArray array];
-    NSAttributedString *content = [self loadTemplateFile:path config:config];
+    NSMutableArray *linkArray = [NSMutableArray array];
+    NSAttributedString *content = [self loadTemplateFile:path config:config imageArray:imageArray linkArray:linkArray];
     YLCoreTextData *data = [self parseAttributeContent:content config:config];
-
+    data.imageArray = imageArray;
+    data.linkArray = linkArray;
     return data;
 }
 /// 方法二:读取json文件内容,并且调用方法三从NSDictionary到NSAttributedString转换
-+ (NSAttributedString *)loadTemplateFile:(NSString *)path config:(YLFrameParserConfig *)config {
++ (NSAttributedString *)loadTemplateFile:(NSString *)path config:(YLFrameParserConfig *)config imageArray:(NSMutableArray *)imageArray linkArray:(NSMutableArray *)linkArray {
     NSData *data = [NSData dataWithContentsOfFile:path];
     NSMutableAttributedString *result = [[NSMutableAttributedString alloc] init];
     if (data) {
@@ -65,7 +68,23 @@
                     YLCoreTextImageData *imageData = [[YLCoreTextImageData alloc] init];
                     imageData.name = dict[@"name"];
                     imageData.position = result.length;
+                    [imageArray addObject:imageData];
                     
+                    // 创建空白占位符, 并且设置它的CTRunDelegate信息
+                    NSAttributedString *as = [self parseImageDataFromNSDictionary:dict config:config];
+                    [result appendAttributedString:as];
+                } else if ([type isEqualToString:@"link"]) {
+                    NSUInteger startPos = result.length;
+                    NSAttributedString *as = [self parstAttributeContentFromNSDictionary:dict config:config];
+                    [result appendAttributedString:as];
+                    // 创建YLCoreTextLinkData
+                    NSUInteger length = result.length - startPos;
+                    NSRange linkRange = NSMakeRange(startPos, length);
+                    YLCoreTextLinkData *linkData = [[YLCoreTextLinkData alloc] init];
+                    linkData.title = dict[@"content"];
+                    linkData.url = dict[@"url"];
+                    linkData.range = linkRange;
+                    [linkArray addObject:linkData];
                 }
             }
         }
@@ -136,4 +155,37 @@
     return frame;
 }
 
+
+#pragma mark ************* 添加设置CTRunDelegate信息的方法 Start *************
+static CGFloat ascentCallback(void *ref) {
+    return [(NSNumber *)[(__bridge NSDictionary *)ref objectForKey:@"height"] floatValue];
+}
+
+static CGFloat descentCallback(void *ref) {
+    return 0;
+}
+
+static CGFloat widthCallback(void *ref) {
+    return [(NSNumber *)[(__bridge NSDictionary *)ref objectForKey:@"width"] floatValue];
+}
+
++ (NSAttributedString *)parseImageDataFromNSDictionary:(NSDictionary *)dict config:(YLFrameParserConfig *)config {
+    CTRunDelegateCallbacks callbacks;
+    memset(&callbacks, 0, sizeof(CTRunDelegateCallbacks));
+    callbacks.version = kCTRunDelegateVersion1;
+    callbacks.getAscent = ascentCallback;
+    callbacks.getDescent = descentCallback;
+    callbacks.getWidth = widthCallback;
+    CTRunDelegateRef delegate = CTRunDelegateCreate(&callbacks, (__bridge void *)dict);
+    
+    // 使用0xFFFC作为空白占位符
+    unichar objectReplacementChar = 0xFFFC;
+    NSString *content = [NSString stringWithCharacters:&objectReplacementChar length:1];
+    NSDictionary *attributes = [self attributesWithConfig:config];
+    NSMutableAttributedString *space = [[NSMutableAttributedString alloc] initWithString:content attributes:attributes];
+    CFAttributedStringSetAttribute((CFMutableAttributedStringRef)space, CFRangeMake(0, 1), kCTRunDelegateAttributeName, delegate);
+    CFRelease(delegate);
+    return space;
+}
+#pragma mark ************* 添加设置CTRunDelegate信息的方法 End   *************
 @end
