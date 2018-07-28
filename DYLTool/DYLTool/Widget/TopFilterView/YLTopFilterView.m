@@ -20,7 +20,7 @@
 
 @end
 /// 动画时间
-const CGFloat animateTime = 0.10f;
+const CGFloat animateTime = 0.14f;
 
 @implementation YLTopFilterView
 
@@ -41,6 +41,22 @@ const CGFloat animateTime = 0.10f;
     return self;
 }
 
+#pragma mark ************* Public Method Start *************
+/// 更改选中按钮文字
+- (void)updateClickBtnTitle:(NSString *)titleStr btnTag:(NSInteger)tag {
+    UIButton *btn = [(UIButton *)self viewWithTag:tag];
+    [btn setTitle:titleStr forState:UIControlStateNormal];
+}
+/// 重置所有按钮标题
+- (void)resetBtnTitle {
+    for (int i = 0; i < self.viewModel.dataSource.count; i ++) {
+        UIButton *btn = [(UIButton *)self viewWithTag:i + 1];
+        [btn setTitle:self.viewModel.dataSource[i] forState:UIControlStateNormal];
+    }
+}
+#pragma mark ************* Public Method End   *************
+
+#pragma mark ************* Private Method Start *************
 - (void)_initValues {
     self.isShow = NO;
 }
@@ -52,10 +68,11 @@ const CGFloat animateTime = 0.10f;
         btn.frame = CGRectMake((self.frame.size.width / self.viewModel.dataSource.count) * i, 0, self.frame.size.width / self.viewModel.dataSource.count, self.frame.size.height - 0.5f);
         [btn setTitle:self.viewModel.dataSource[i] forState:UIControlStateNormal];
         btn.titleLabel.font = [UIFont systemFontOfSize:self.viewModel.fontSize];
+        btn.selected = NO;
         [btn setTitleColor:self.viewModel.defaultColor forState:UIControlStateNormal];
         [btn setTitleColor:self.viewModel.selectColor forState:UIControlStateSelected];
+        [btn setTitleColor:self.viewModel.selectColor forState:UIControlStateHighlighted | UIControlStateSelected];
         [btn addTarget:self action:@selector(_btnClick:) forControlEvents:UIControlEventTouchUpInside];
-        btn.selected = NO;
         [self addSubview:btn];
     }
     // 底部分割线
@@ -64,35 +81,34 @@ const CGFloat animateTime = 0.10f;
     [self addSubview:bottomLineView];
 }
 
-#pragma mark ************* Private Method Start *************
+/// 筛选按钮点击事件
 - (void)_btnClick:(UIButton *)btn {
     if (self.viewModel.viewSource.count != self.viewModel.dataSource.count) {
         KLog(@"*************数据源有误,请确认后在执行*************");
         return;
     }
-    if (_tempView != nil && self.isShow) {
+    if (_tempView != nil && self.isShow && _tempBtn != btn) {
+        [self _dismissViewWithOutAnimation];
+    } else {
         [self _dismissView];
     }
     UIView *view = self.viewModel.viewSource[btn.tag - 1];
-    // 1. 先判断是否点击的是同一个按钮
-    if (_tempBtn == btn) {
-    }
+    [self _showView:view];
     if (_tempBtn != nil) {
         _tempBtn.selected = NO;
     }
     btn.selected = !btn.selected;
-    [self _showView:view];
     _tempBtn = btn;
     _tempView = view;
 }
-
+/// 显示下拉筛选View
 - (void)_showView:(UIView *)view {
     if (self.isShow == NO) {
         UIView *parentView = [self superview];
         [parentView addSubview:self.coverView];
         [parentView addSubview:view];
         [UIView animateWithDuration:animateTime animations:^{
-            view.frame = CGRectMake(view.yl_left, view.yl_bottom, view.yl_width, 300);
+            view.frame = CGRectMake(view.yl_left, view.yl_bottom, view.yl_width, 500);
             _coverView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.3];
         } completion:^(BOOL finished) {
             if (finished) {
@@ -101,7 +117,7 @@ const CGFloat animateTime = 0.10f;
         }];
     }
 }
-
+/// 移除下拉筛选View(带动画)
 - (void)_dismissView {
     if (self.isShow == YES) {
         [UIView animateWithDuration:animateTime animations:^{
@@ -117,10 +133,18 @@ const CGFloat animateTime = 0.10f;
         }];
     }
 }
+/// 移除下拉筛选View(不带动画)
+- (void)_dismissViewWithOutAnimation {
+    _tempView.frame = CGRectMake(self.yl_left, self.yl_bottom, _tempView.yl_width, 0);
+    [_tempView removeFromSuperview];
+    self.isShow = NO;
+    self.tempBtn.selected = NO;
+}
 
 #pragma mark ************* Private Method End   *************
 
 #pragma mark ************* Lazyload Start *************
+/// 蒙版View
 - (UIView *)coverView {
     if (!_coverView) {
         _coverView = [[UIView alloc] initWithFrame:CGRectMake(self.yl_left, self.yl_bottom, self.yl_width, KScreenHeight)];

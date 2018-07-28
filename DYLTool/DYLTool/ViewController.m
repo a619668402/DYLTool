@@ -8,11 +8,13 @@
 
 #import "ViewController.h"
 #import "TestSearchController.h"
-#import "YLAlertMessageView.h"
-#import "YLAlertController.h"
 #import "TestWebController.h"
 #import "TestFilterViewController.h"
+#import "TestTZImagePickerController.h"
+#import "TestHXPhotoPicker.h"
 
+#import "YLAlertMessageView.h"
+#import "YLAlertController.h"
 #import "ArrowLabel.h"
 #import "YLButton.h"
 #import "UIButton+Layout.h"
@@ -22,7 +24,7 @@
 #import "YLFrameParserConfig.h"
 #import "YLCoreTextData.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UISearchBar *mBar;
 
@@ -36,14 +38,16 @@
 
 @property (nonatomic, strong) YLButton *btn2;
 
+@property (nonatomic, strong) UITableView *tableView;
+
+@property (nonatomic, strong) NSArray *data;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self createCoreText];
 }
 
 - (void)yl_initViews {
@@ -52,8 +56,7 @@
     [self.view addSubview:self.label];
     [self.view addSubview:self.btn1];
     [self.view addSubview:self.btn2];
-    
-    
+    [self.view addSubview:self.tableView];
 }
 
 - (void)createCoreText {
@@ -66,19 +69,6 @@
     config.textColor = [UIColor greenColor];
     config.fontSize = 11.0f;
     
-    /*
-    NSString *content = @"CoreText是用于处理文字和字体的底层技术。"
-    "它直接和Core Graphics(又被称为Quartz)打交道。"
-    "Quartz是一个2D图形渲染引擎，能够处理OSX和iOS中图形显示问题。"
-    "Quartz能够直接处理字体（font）和字形（glyphs），将文字渲染到界面上，它是基础库中唯一能够处理字形的模块。"
-    "因此CoreText为了排版，需要将显示的文字内容、位置、字体、字形直接传递给Quartz。"
-    "与其他UI组件相比，由于CoreText直接和Quartz来交互，所以它具有更高效的排版功能。";
-    // 设置富文本
-    NSDictionary *attr = [YLFrameParser attributesWithConfig:config];
-    NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:content attributes:attr];
-    [attributeString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:19.0f] range:NSMakeRange(0, 20)];
-    [attributeString addAttribute:(NSString *)kCTForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, 20)];
-    */
     // 获取模版文件
     NSString *path = [[NSBundle mainBundle] pathForResource:@"jsonFile" ofType:@"txt"];
     
@@ -94,11 +84,11 @@
 }
 
 - (void)yl_initValues {
-//    _mBtnCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
-//        TestSearchController *vc = [[TestSearchController alloc] initWithViewModel:nil];
-////        [self.navigationController pushViewController:vc animated:YES];
-//        return [RACSignal empty];
-//    }];
+    _mBtnCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+        TestSearchController *vc = [[TestSearchController alloc] initWithViewModel:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+        return [RACSignal empty];
+    }];
 }
 
 - (UISearchBar *)mBar {
@@ -115,7 +105,7 @@
         _mBtn = [UIButton buttonWithType:UIButtonTypeSystem];
         _mBtn.backgroundColor = red_color;
         _mBtn.frame = CGRectMake((KScreenWidth - 60) / 2, 120, 60, 44);
-//        _mBtn.rac_command = _mBtnCommand;
+        _mBtn.rac_command = _mBtnCommand;
         [_mBtn addTarget:self action:@selector(test) forControlEvents:UIControlEventTouchUpInside];
     }
     return _mBtn;
@@ -132,13 +122,13 @@
 - (UIButton *)btn1 {
     if (!_btn1) {
         _btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_btn1 setTitle:@"test" forState:UIControlStateNormal];
+        [_btn1 setTitle:@"WebController" forState:UIControlStateNormal];
         [_btn1 setImage:[UIImage imageNamed:@"ff_IconShowAlbum_25x25"] forState:UIControlStateNormal];
         [_btn1 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         _btn1.titleLabel.textAlignment = NSTextAlignmentCenter;
         [_btn1 setImageRect:CGRectMake(20, 5, 30, 30)];
         [_btn1 setTitleRect:CGRectMake(0, 40, 70, 20)];
-        _btn1.frame = CGRectMake(280 / 2, 120, 70, 65);
+        _btn1.frame = CGRectMake(KScreenWidth - 20 - 70, 120, 70, 65);
         [_btn1 addTarget:self action:@selector(_btn1Click) forControlEvents:UIControlEventTouchUpInside];
     }
     return _btn1;
@@ -154,7 +144,7 @@
 - (YLButton *)btn2 {
     if (!_btn2) {
         _btn2 = [YLButton buttonWithType:UIButtonTypeCustom];
-        [_btn2 setTitle:@"BTN2" forState:UIControlStateNormal];
+        [_btn2 setTitle:@"PopView" forState:UIControlStateNormal];
         [_btn2 setImage:[UIImage imageNamed:@"ff_IconShowAlbum_25x25"] forState:UIControlStateNormal];
         [_btn2 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         _btn2.titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -172,15 +162,63 @@
 }
 
 - (void)test {
-    /*
     YLAlertMessageView *alertView1 = [[YLAlertMessageView alloc] initWithTitle:@"Test" message:@"Test AlertView" cancleBtnTitle:@"Cancle" otherBtnTitle:@"Sure"];
     [alertView1 show];
-     */
-    
-    YLAlertController *alertController = [YLAlertController alertWithViewController];
-    [self presentViewController:alertController animated:NO completion:^{
-        
-    }];
 }
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.btn2.yl_bottom + 10, KScreenWidth, KScreenHeight - self.btn2.yl_bottom - 10) style:UITableViewStylePlain];
+        _tableView.rowHeight = 44.0f;
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.tableFooterView = [UIView new];
+    }
+    return _tableView;
+}
+
+- (NSArray *)data {
+    if (!_data) {
+        _data = @[@"HXPhotoPicker",@"TZImagePickerController"];
+    }
+    return _data;
+}
+
+#pragma mark ************* UITableView Delegate and DataSource Start *************
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.data.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell1"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell1"];
+    }
+    cell.textLabel.text = self.data[indexPath.item];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    switch (indexPath.item) {
+        case 0:
+        {
+            TestHXPhotoPicker *vc = [[TestHXPhotoPicker alloc] initWithViewModel:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 1:
+        {
+            TestTZImagePickerController *vc = [[TestTZImagePickerController alloc] initWithViewModel:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        default:
+            break;
+    }
+}
+
+#pragma mark ************* UITableView Delegate and DataSource End   *************
 
 @end

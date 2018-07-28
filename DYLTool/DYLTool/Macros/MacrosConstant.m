@@ -22,7 +22,16 @@ NSString * const NetworkFailureInfo = @"网络请求失败,请稍后重试";
 NSString * const NetworkRequestErrorDomain = @"NetworkRequestErrorDomain";
 NSInteger const NetworkRequestErrorCode = 7003;
 NSString * const NetworkRequestError = @"NetworkRequestError";
-
-
+/*
+NSString *const CODE_SUCCESS = @"1";
+NSString *const CODE_LACKPARAMETERERROR = @"-1";
+NSString *const CODE_PASSWORDERROR = @"-2";
+NSString *const CODE_VERIFYERROR = @"-3";
+NSString *const CODE_ACCOUNTERROR = @"-4";
+NSString *const CODE_NOAUTHORITYERROR = @"-5";
+NSString *const CODE_SYSTEMERROR = @"-6";
+NSString *const CODE_LOGICERROR = @"-7";
+NSString *const CODE_TOKENERROR = @"-10";
+*/
 /// 全局变量
 CGFloat const KGlobleLineHeight = 0.5f; // 全局分割线高度 0.5f

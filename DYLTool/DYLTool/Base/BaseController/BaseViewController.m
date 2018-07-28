@@ -74,8 +74,10 @@
     [super viewWillAppear:animated];
     // 隐藏系统返回按钮
     self.navigationItem.hidesBackButton = YES;
+    /* BaseNavController 中已设置
     /// 设置导航栏颜色 (在 ViewDidLoad 不生效)
     self.navigationController.navigationBar.barTintColor = [UIColor grayColor];
+     */
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

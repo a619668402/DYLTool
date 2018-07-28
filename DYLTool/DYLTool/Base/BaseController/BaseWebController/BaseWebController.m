@@ -233,7 +233,11 @@
         _wkWebView.allowsBackForwardNavigationGestures = YES;
         // 是否开启下拉刷新
         if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 10.0 && _canDownRefresh) {
-            _wkWebView.scrollView.refreshControl = self.refreshControl;
+            if (@available(iOS 10.0, *)) {
+                _wkWebView.scrollView.refreshControl = self.refreshControl;
+            } else {
+                // Fallback on earlier versions
+            }
         }
         // 添加进度监听
         [_wkWebView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];

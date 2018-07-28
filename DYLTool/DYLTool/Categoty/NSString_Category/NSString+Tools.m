@@ -149,5 +149,43 @@
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet decimalDigitCharacterSet]];
 }
 
+/**
+ 返回字符串中的所有数字
+
+ @return 字符串中的所有数字
+ */
+- (NSString *)yl_allNumberOfString {
+    NSMutableArray *characters = [NSMutableArray array];
+    NSMutableString *mutStr = [NSMutableString string];
+    // 分离出字符串中所有的字符, 并存储到数组characters中
+    for (int i = 0; i < self.length; i ++) {
+        NSString *subString = [self substringToIndex:i + 1];
+        subString = [subString substringFromIndex:i];
+        [characters addObject:subString];
+    }
+    // 利用正则表达式,匹配数组中的每一个元素,判断是否是数字,将数字拼接在可变字符串
+    for (NSString *b in characters) {
+        NSString  *regex = @"^[0-9]*$";
+        NSPredicate *pre = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+        BOOL isShu = [pre evaluateWithObject:b];
+        if (isShu) {
+            [mutStr appendString:b];
+        }
+    }
+    return mutStr;
+}
+
+/**
+ 返回字符串中的数字
+
+ @return 字符串中的数字
+ */
+- (NSString *)yl_numberOfString {
+     NSScanner *scanner = [NSScanner scannerWithString:self];
+     [scanner scanUpToCharactersFromSet:[NSCharacterSet decimalDigitCharacterSet] intoString:nil];
+     int number;
+     [scanner scanInt:&number];
+     return [NSString stringWithFormat:@"%d", number];
+}
 
 @end

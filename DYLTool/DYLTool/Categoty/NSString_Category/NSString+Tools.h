@@ -91,4 +91,18 @@
  */
 - (NSString *)yl_trimmedString;
 
+/**
+ 返回字符串中的所有数字
+
+ @return 字符串中的所有数字
+ */
+- (NSString *)yl_allNumberOfString;
+
+/**
+ 返回字符串中的数字(第一次出现的数字)
+
+ @return 字符串中的数字
+ */
+- (NSString *)yl_numberOfString;
+
 @end

@@ -16,7 +16,6 @@
     return [[RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
         [request startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
             NSLog(@"\n 请求url %@/%@\n 请求参数 %@\n 结果 %@\n", [YTKNetworkConfig sharedConfig].baseUrl, request.requestUrl, request.requestArgument, request.responseJSONObject);
-            //            NSLog(@"%@ \n ,结果: %@ \n", request.description, request.responseJSONObject);
             BaseResponse *response = [BaseResponse mj_objectWithKeyValues:request.responseData];
             if (resultClass != nil) { // 泛型不为空
                 if ([response.code isEqualToString:CODE_SUCCESS]) { // 请求成功
