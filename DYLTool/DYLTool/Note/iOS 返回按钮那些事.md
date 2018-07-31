@@ -6,6 +6,7 @@
 UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleDone target:nil action:nil];
 self.navigationItem.backBarButtonItem = backItem;
 `
+
 2. 自定义返回按钮,手势滑动失效,可以和 FDFullscreenPopGesture 结合实现手势滑动返回, 返回事件需要自己实现
 
 `
