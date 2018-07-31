@@ -30,7 +30,7 @@
 #import <AFNetworking.h>
 #import <Masonry.h>
 #import <UINavigationController+FDFullscreenPopGesture.h> // 手势
-
+#import <IQKeyboardManager.h>
 /*********************************************
                 自定义协议
  *********************************************/

@@ -29,13 +29,13 @@
     self.filterView = [[YLTopFilterView alloc] initWithFrame:CGRectMake(0, KNavAndStatusHeight, KScreenWidth, 45) viewModel:self.filterViewModel];
     [self.view addSubview:self.filterView];
     
-    UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(self.filterView.yl_left, self.filterView.yl_bottom, self.filterView.yl_width, 0)];
+    UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(self.filterView.yl_x, self.filterView.yl_bottom, self.filterView.yl_width, 0)];
     view1.backgroundColor = [UIColor greenColor];
-    UIView *view2 = [[UIView alloc] initWithFrame:CGRectMake(self.filterView.yl_left, self.filterView.yl_bottom, self.filterView.yl_width, 0)];
+    UIView *view2 = [[UIView alloc] initWithFrame:CGRectMake(self.filterView.yl_x, self.filterView.yl_bottom, self.filterView.yl_width, 0)];
     view2.backgroundColor = [UIColor grayColor];
-    UIView *view3 = [[UIView alloc] initWithFrame:CGRectMake(self.filterView.yl_left, self.filterView.yl_bottom, self.filterView.yl_width, 0)];
+    UIView *view3 = [[UIView alloc] initWithFrame:CGRectMake(self.filterView.yl_x, self.filterView.yl_bottom, self.filterView.yl_width, 0)];
     view3.backgroundColor = [UIColor redColor];
-    UIView *view4 = [[UIView alloc] initWithFrame:CGRectMake(self.filterView.yl_left, self.filterView.yl_bottom, self.filterView.yl_width, 0)];
+    UIView *view4 = [[UIView alloc] initWithFrame:CGRectMake(self.filterView.yl_x, self.filterView.yl_bottom, self.filterView.yl_width, 0)];
     view4.backgroundColor = [UIColor blackColor];
     self.filterViewModel.viewSource = @[view1, view2, view3, view4];
 }

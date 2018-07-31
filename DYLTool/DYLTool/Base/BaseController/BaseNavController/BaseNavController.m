@@ -56,12 +56,13 @@
         spaceItem.width = -15;
         UIBarButtonItem *backItem =[UIBarButtonItem yl_backItemWithTitle:nil imageName:@"barbuttonicon_back_15x30" target:self action:@selector(_back)];
         viewController.navigationItem.leftBarButtonItems = @[spaceItem, backItem];
-         */
+        */
         UIBarButtonItem *backItem = [UIBarButtonItem yl_backItemWithImage:@"barbuttonicon_back_15x30" target:self action:@selector(_back)];
         // 4. 设置导航栏左右按钮,统一管理
         viewController.navigationItem.leftBarButtonItem = backItem;
+        
+        viewController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleDone target:nil action:nil];
     }
-    self.navigationBar.translucent = NO;
     [super pushViewController:viewController animated:animated];
 }
 

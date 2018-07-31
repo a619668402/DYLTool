@@ -78,6 +78,10 @@
     /// 设置导航栏颜色 (在 ViewDidLoad 不生效)
     self.navigationController.navigationBar.barTintColor = [UIColor grayColor];
      */
+    // 配置键盘
+    IQKeyboardManager.sharedManager.enable = self.viewModel.keyBoardEnable;
+    IQKeyboardManager.sharedManager.shouldResignOnTouchOutside = self.viewModel.shouldResignOnTouchOutside;
+    IQKeyboardManager.sharedManager.keyboardDistanceFromTextField = self.viewModel.keyboardDistanceFromTextField;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

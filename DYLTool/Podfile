@@ -8,6 +8,7 @@ pod 'MJExtension',  '~> 3.0'            # 字典转模型
 pod 'YYKeyboardManager', '~> 1.0.1'     # 键盘相关
 pod 'Masonry', '~> 1.1.0'               # 约束
 pod 'FDFullscreenPopGesture', '~> 1.1'  # 手势
+pod 'IQKeyboardManager', '~> 6.1.1'     # 键盘管理
 
 pod 'TZImagePickerController', '~> 2.2.2' # 图片选择器
 pod 'HXPhotoPicker', '~> 2.2.0'           # 图片选择器

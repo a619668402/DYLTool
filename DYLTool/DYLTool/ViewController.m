@@ -12,19 +12,21 @@
 #import "TestFilterViewController.h"
 #import "TestTZImagePickerController.h"
 #import "TestHXPhotoPicker.h"
+#import "TestInputViewController.h"
 
 #import "YLAlertMessageView.h"
 #import "YLAlertController.h"
 #import "ArrowLabel.h"
 #import "YLButton.h"
 #import "UIButton+Layout.h"
+#import "YLInputView.h"
 
 #import "YLDisplayView.h"
 #import "YLFrameParser.h"
 #import "YLFrameParserConfig.h"
 #import "YLCoreTextData.h"
 
-@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource, YLInputViewDelegate>
 
 @property (nonatomic, strong) UISearchBar *mBar;
 
@@ -42,22 +44,53 @@
 
 @property (nonatomic, strong) NSArray *data;
 
+@property (nonatomic, strong) YLInputView *inputView;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(0, KNavAndStatusHeight, 50, 30);
+    btn.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:btn];
+    
+    [self yl_initViews];
 }
 
 - (void)yl_initViews {
-    [self.view addSubview:self.mBar];
+//    [super yl_initViews];
     [self.view addSubview:self.mBtn];
+    [self.view addSubview:self.mBar];
     [self.view addSubview:self.label];
     [self.view addSubview:self.btn1];
     [self.view addSubview:self.btn2];
     [self.view addSubview:self.tableView];
+    
+    [self createInputView];
 }
+
+- (void)createInputView {
+    self.inputView = [[YLInputView alloc] initWithFrame:CGRectMake(0, KScreenHeight, KScreenWidth, 50)];
+    self.inputView.textViewMaxLine = 4;
+    self.inputView.delegate = self;
+    self.inputView.placeholderLabel.text = @"请输入......";
+    [self.view addSubview:self.inputView];
+}
+
+- (void)yl_inputView:(YLInputView *)inputView inputContent:(NSString *)sendContent {
+    [self.inputView.textInput resignFirstResponder];
+    KLog(@"-------%@", sendContent);
+    [self.inputView sendSuccessEndEditing];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.inputView.textInput resignFirstResponder];
+}
+
 
 - (void)createCoreText {
     YLDisplayView *displayView = [[YLDisplayView alloc] initWithFrame:CGRectMake(10, 180, KScreenWidth, 400)];
@@ -76,7 +109,7 @@
 //    YLCoreTextData *data = [YLFrameParser parseAttributeContent:attributeString config:config];
     YLCoreTextData *data = [YLFrameParser parseTemplateFile:path config:config];
     displayView.data = data;
-    [displayView yl_setHeight:data.height];
+    displayView.yl_height = data.height;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -104,7 +137,7 @@
     if (!_mBtn) {
         _mBtn = [UIButton buttonWithType:UIButtonTypeSystem];
         _mBtn.backgroundColor = red_color;
-        _mBtn.frame = CGRectMake((KScreenWidth - 60) / 2, 120, 60, 44);
+        _mBtn.frame = CGRectMake((KScreenWidth - 60) / 2, 0, 60, 44);
         _mBtn.rac_command = _mBtnCommand;
         [_mBtn addTarget:self action:@selector(test) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -138,7 +171,6 @@
     TestWebController *vc = [[TestWebController alloc] initWithViewModel:nil];
     vc.urlString = @"https://www.baidu.com";
     vc.jsString = @"alert('sfsdfadfa')";
-    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (YLButton *)btn2 {
@@ -157,8 +189,11 @@
 }
 
 - (void)_btn2Click {
+    /*
     TestFilterViewController *vc = [[TestFilterViewController alloc] initWithViewModel:nil];
     [self.navigationController pushViewController:vc animated:YES];
+     */
+    [self.inputView.textInput becomeFirstResponder];
 }
 
 - (void)test {
@@ -168,7 +203,7 @@
 
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.btn2.yl_bottom + 10, KScreenWidth, KScreenHeight - self.btn2.yl_bottom - 10) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.btn2.yl_y + self.btn2.yl_height + 70, KScreenWidth, KScreenHeight - self.btn2.yl_y - self.btn2.yl_height - 10) style:UITableViewStylePlain];
         _tableView.rowHeight = 44.0f;
         _tableView.delegate = self;
         _tableView.dataSource = self;
@@ -179,7 +214,7 @@
 
 - (NSArray *)data {
     if (!_data) {
-        _data = @[@"HXPhotoPicker",@"TZImagePickerController"];
+        _data = @[@"HXPhotoPicker", @"TZImagePickerController", @"YLInputView"];
     }
     return _data;
 }
@@ -214,11 +249,17 @@
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
+        case 2:
+        {
+//            TestInputViewController *vc = [[TestInputViewController alloc] init];
+            TestInputViewController *vc = [[TestInputViewController alloc] initWithViewModel:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
         default:
             break;
     }
 }
-
 #pragma mark ************* UITableView Delegate and DataSource End   *************
 
 @end

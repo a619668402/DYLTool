@@ -108,7 +108,7 @@ const CGFloat animateTime = 0.14f;
         [parentView addSubview:self.coverView];
         [parentView addSubview:view];
         [UIView animateWithDuration:animateTime animations:^{
-            view.frame = CGRectMake(view.yl_left, view.yl_bottom, view.yl_width, 500);
+            view.frame = CGRectMake(view.yl_x, view.yl_y + view.yl_height, view.yl_width, 500);
             _coverView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.3];
         } completion:^(BOOL finished) {
             if (finished) {
@@ -121,7 +121,7 @@ const CGFloat animateTime = 0.14f;
 - (void)_dismissView {
     if (self.isShow == YES) {
         [UIView animateWithDuration:animateTime animations:^{
-            _tempView.frame = CGRectMake(self.yl_left, self.yl_bottom, _tempView.yl_width, 0);
+            _tempView.frame = CGRectMake(self.yl_x, self.yl_y + self.yl_height, _tempView.yl_width, 0);
             _coverView.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
         } completion:^(BOOL finished) {
             if (finished) {
@@ -135,7 +135,7 @@ const CGFloat animateTime = 0.14f;
 }
 /// 移除下拉筛选View(不带动画)
 - (void)_dismissViewWithOutAnimation {
-    _tempView.frame = CGRectMake(self.yl_left, self.yl_bottom, _tempView.yl_width, 0);
+    _tempView.frame = CGRectMake(self.yl_x, self.yl_height + self.yl_y, _tempView.yl_width, 0);
     [_tempView removeFromSuperview];
     self.isShow = NO;
     self.tempBtn.selected = NO;
@@ -147,7 +147,7 @@ const CGFloat animateTime = 0.14f;
 /// 蒙版View
 - (UIView *)coverView {
     if (!_coverView) {
-        _coverView = [[UIView alloc] initWithFrame:CGRectMake(self.yl_left, self.yl_bottom, self.yl_width, KScreenHeight)];
+        _coverView = [[UIView alloc] initWithFrame:CGRectMake(self.yl_x, self.yl_height + self.yl_y, self.yl_width, KScreenHeight)];
         _coverView.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
         [_coverView setOpaque:NO];
         [_coverView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_dismissView)]];

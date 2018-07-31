@@ -53,7 +53,7 @@
     if (KStringIsEmpty(viewModel.centerLeftViewName)) {
         self.centerLeftView.hidden = NO;
         self.centerLeftView.image = M_IMG(viewModel.centerLeftViewName);
-        [self.centerLeftView yl_setSize:self.centerLeftView.image.size];
+        self.centerLeftView.yl_size = self.centerLeftView.image.size;
     } else {
         self.centerLeftView.hidden = YES;
     }
@@ -61,7 +61,7 @@
     if (KStringIsEmpty(viewModel.centerRightViewName)) {
         self.centerRightView.hidden = NO;
         self.centerRightView.image = M_IMG(viewModel.centerRightViewName);
-        [self.centerRightView yl_setSize:self.centerRightView.image.size];
+        self.centerRightView.yl_size = self.centerRightView.image.size;
     } else {
         self.centerRightView.hidden = YES;
     }
@@ -115,21 +115,22 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     // 设置
-    if (fabs(self.textLabel.yl_left - self.detailTextLabel.yl_left) <= 0.1f) {
-        [self.textLabel yl_setBottom:self.detailTextLabel.yl_top];
+    if (fabs(self.textLabel.yl_x - self.detailTextLabel.yl_x) <= 0.1f) {
+        self.textLabel.yl_bottom = self.detailTextLabel.yl_y;
     } else {
-        [self.textLabel yl_setCenterY:self.yl_height * 0.5f];
+        self.textLabel.yl_centerY = self.yl_height * 0.5f;
     }
     
     self.divider0.frame = CGRectMake(0, 0, self.yl_width, KGlobleLineHeight);
     self.divider1.frame = CGRectMake(14, self.yl_height - KGlobleLineHeight, self.yl_width - 14, KGlobleLineHeight);
     self.divider2.frame = CGRectMake(0, self.yl_height - KGlobleLineHeight, self.yl_width, KGlobleLineHeight);
     
-    [self.centerLeftView yl_setLeft:self.accessoryView.yl_left - 11];
-    [self.centerLeftView yl_setCenterY:self.yl_height * 0.5f];
     
-    [self.centerRightView yl_setRight:self.detailTextLabel.yl_left - 5];
-    [self.centerRightView yl_setCenterY:self.yl_height * 0.5f];
+    self.centerLeftView.yl_x = self.accessoryView.yl_x - 11;
+    self.centerLeftView.yl_centerY = self.yl_height * 0.5f;
+    
+    self.centerRightView.yl_right = self.detailTextLabel.yl_x - 5;
+    self.centerRightView.yl_centerY = self.yl_height * 0.5f;
 }
 #pragma mark ************* Override Method End   *************
 
