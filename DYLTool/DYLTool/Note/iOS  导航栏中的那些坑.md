@@ -8,10 +8,12 @@ self.navigationController.navigationBar.translucent = YES;
 
 - 解决导航控制器向下偏移:
 1. 设置navigationBar透明
+
 `
 self.navigationController.navigationBar.translucent = YES;
 `
 2. 在ScrollView之前添加一个View
+
 `
 UIView *view = [[UIView alloc] initWithFrame:CGrectMake(0, 0, ScreenWidth, 0.01)];
 [self.view addSubview:view];
