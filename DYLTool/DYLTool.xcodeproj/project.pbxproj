@@ -413,6 +413,13 @@
 			path = Note;
 			sourceTree = "<group>";
 		};
+		0D0A97E121105F1300C63065 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		0D0B67CB20CFB5E70008C4EE /* Macros */ = {
 			isa = PBXGroup;
 			children = (
@@ -750,6 +757,7 @@
 		0DD0039C20E2335200CB6B5D /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				0D0A97E121105F1300C63065 /* New Group */,
 				0D218425210EC70B008A4EB6 /* InputView */,
 				0DA8B071210AC76800B0EBFC /* NineView */,
 				0D3D418821086E7A00F9A763 /* TopFilterView */,

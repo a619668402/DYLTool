@@ -70,6 +70,15 @@
  */
 #define KNavAndStatusHeight self.navigationController.navigationBar.frame.size.height + [[UIApplication sharedApplication] statusBarFrame].size.height
 
+/**
+ 判断是否是iPhoneX
+ */
+#define IS_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+/**
+ 安全距离(iPhoneX 安全区距离底部34个像素)
+ */
+#define KSafeBottomMargin (IS_iPhoneX ? 34.f : 0.f)
 
 // Application 对象
 #define KApplication [UIApplication sharedApplication]

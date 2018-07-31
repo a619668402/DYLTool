@@ -58,11 +58,10 @@
     btn.backgroundColor = [UIColor blackColor];
     [self.view addSubview:btn];
     
-    [self yl_initViews];
 }
 
 - (void)yl_initViews {
-//    [super yl_initViews];
+    [super yl_initViews];
     [self.view addSubview:self.mBtn];
     [self.view addSubview:self.mBar];
     [self.view addSubview:self.label];
