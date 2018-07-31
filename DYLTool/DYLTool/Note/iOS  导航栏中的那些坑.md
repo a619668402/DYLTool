@@ -7,6 +7,7 @@ self.navigationController.navigationBar.translucent = YES;
 - 导航控制器中第一个子控件是ScrollView子类,页面会偏移(导航栏高度 + 状态栏高度)
 
 - 解决导航控制器向下偏移:
+
 `
 1.设置navigationBar透明
 self.navigationController.navigationBar.translucent = YES;
