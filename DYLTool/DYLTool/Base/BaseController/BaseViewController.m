@@ -53,6 +53,10 @@
 }
 
 - (void)yl_initValues {
+    // 设置返回按钮
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleDone target:nil action:nil];
+    self.navigationItem.backBarButtonItem = backItem;
+    // HUD 是否显示
     self.isDisplay = NO;
     self.extendedLayoutIncludesOpaqueBars = YES;
     // 手势关闭 Controller
@@ -73,7 +77,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     // 隐藏系统返回按钮
-    self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.hidesBackButton = NO;
     /* BaseNavController 中已设置
     /// 设置导航栏颜色 (在 ViewDidLoad 不生效)
     self.navigationController.navigationBar.barTintColor = [UIColor grayColor];

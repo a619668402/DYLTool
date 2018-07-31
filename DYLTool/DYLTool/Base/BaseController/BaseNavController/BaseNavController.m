@@ -41,6 +41,7 @@
     if (self.viewControllers.count > 0) {
         // 隐藏底部tabbar
         viewController.hidesBottomBarWhenPushed = YES;
+        /* 使用系统的返回按钮(在BaseViewController中设置)
         // 设置左侧按钮标题
         NSString *title = @"返回";
         // 1. 取出当前控制器的 title
@@ -51,17 +52,18 @@
             // 3. 查看 viewModel 的 backTitle 是否有值
             title = viewModel.backTitle ?: title;
         }
+        */
         /* iOS 11 之后 UIBarButtonSystemItemFixedSpace 无效,不能调整间隙
         UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
         spaceItem.width = -15;
         UIBarButtonItem *backItem =[UIBarButtonItem yl_backItemWithTitle:nil imageName:@"barbuttonicon_back_15x30" target:self action:@selector(_back)];
         viewController.navigationItem.leftBarButtonItems = @[spaceItem, backItem];
         */
+        /*
         UIBarButtonItem *backItem = [UIBarButtonItem yl_backItemWithImage:@"barbuttonicon_back_15x30" target:self action:@selector(_back)];
         // 4. 设置导航栏左右按钮,统一管理
         viewController.navigationItem.leftBarButtonItem = backItem;
-        
-        viewController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleDone target:nil action:nil];
+        */
     }
     [super pushViewController:viewController animated:animated];
 }

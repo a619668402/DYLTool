@@ -117,6 +117,7 @@
 }
 
 - (void)yl_initValues {
+    [super yl_initValues];
     _mBtnCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
         TestSearchController *vc = [[TestSearchController alloc] initWithViewModel:nil];
         [self.navigationController pushViewController:vc animated:YES];
