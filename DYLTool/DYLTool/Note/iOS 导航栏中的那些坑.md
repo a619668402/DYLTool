@@ -12,6 +12,7 @@ self.navigationController.navigationBar.translucent = YES;
 `
 self.navigationController.navigationBar.translucent = YES;
 `
+
 2. 在ScrollView之前添加一个View
 
 `

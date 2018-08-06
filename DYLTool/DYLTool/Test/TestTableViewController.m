@@ -6,12 +6,12 @@
 //  Copyright © 2018年 DYL. All rights reserved.
 //
 
-#import "TestSearchController.h"
+#import "TestTableViewController.h"
 #import "TestSearchController_1.h"
 #import "TestCommonViewController.h"
 #import "TestCommonViewModel.h"
 
-@interface TestSearchController ()<UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating>
+@interface TestTableViewController ()<UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating>
 
 @property (nonatomic, strong) UITableView *tableView;
 
@@ -27,7 +27,7 @@
 
 @end
 
-@implementation TestSearchController
+@implementation TestTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -56,10 +56,49 @@
     return self.datas.count;
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    /*
+    CATransform3D rotation = CATransform3DMakeRotation((90 * M_PI) / 180, 0.0, 0.7, 0.4);
+    rotation.m34 = 1.0 / -600;
+    cell.layer.shadowColor = [[UIColor blackColor] CGColor];
+    cell.layer.shadowOffset = CGSizeMake(10, 10);
+    cell.alpha = 0;
+    cell.layer.transform = rotation;
+    cell.layer.anchorPoint = CGPointMake(0, 0.5);
+    
+    [UIView beginAnimations:@"rotation" context:NULL];
+    [UIView setAnimationDuration:0.8];
+    cell.layer.transform = CATransform3DIdentity;
+    cell.alpha = 1;
+    cell.layer.shadowOffset = CGSizeMake(0, 0);
+    [UIView commitAnimations];
+     */
+    
+    /*
+    cell.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1);
+    [UIView animateWithDuration:0.25 animations:^{
+        cell.layer.transform = CATransform3DMakeScale(1, 1, 1);
+    }];
+     */
+    
+    if (indexPath.row % 2 != 0) {
+        cell.transform = CGAffineTransformTranslate(cell.transform, KScreenWidth/2, 0);
+    } else {
+        cell.transform = CGAffineTransformTranslate(cell.transform, -KScreenWidth/2, 0);
+    }
+    cell.alpha = 0.0;
+    [UIView animateWithDuration:0.7 animations:^{
+        cell.transform = CGAffineTransformIdentity;
+        cell.alpha = 1.0;
+    } completion:^(BOOL finished) {
+    }];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        cell.textLabel.textAlignment = NSTextAlignmentCenter;
     }
     if (self.searchController.active) {
         cell.textLabel.text = self.results[indexPath.item];
@@ -119,7 +158,7 @@
 - (NSMutableArray *)datas {
     if (!_datas) {
         _datas = [NSMutableArray arrayWithCapacity:0];
-        for (int i = 0; i < 30; i ++) {
+        for (int i = 0; i < 300; i ++) {
             [_datas addObject:[NSString stringWithFormat:@"测试--- %d", i]];
         }
     }

@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface TestSearchController : BaseViewController
+@interface TestTableViewController : BaseViewController
 
 @end

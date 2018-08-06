@@ -33,9 +33,10 @@
 #import "UITableView+Extension.h"           // 注册Cell
 #import "UITextField+MaxLength.h"           // UITextField 设置最大长度
 #import "UITextView+MaxLength.h"            // UITextView 设置最大长度
-#import "UIButton+CountDown.h"              // 按钮倒计时
 #import "UILabel+LineSpaceAndWordSpace.h"   // 行距和字间距
+#import "UIButton+CountDown.h"              // 按钮倒计时
 #import "UIButton+Layout.h"                 // 修改icon和文字的坐标
+#import "UIButton+Initialize.h"             // UIButton 快速实例化
 
 #import "UIFont+fontSize.h"                 // 字体适配
 #import "UIImage+CompressImage.h"           // 图片压缩
