@@ -19,10 +19,12 @@ PODS:
     - SDWebImage (~> 4.4.1)
   - IQKeyboardManager (6.1.1)
   - JPFPSStatus (0.1.1)
+  - lottie-ios (2.5.0)
   - Masonry (1.1.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.15.3)
   - ReactiveObjC (3.1.0)
+  - RSKImageCropper (2.1.0)
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
@@ -36,10 +38,12 @@ DEPENDENCIES:
   - HXPhotoPicker (~> 2.2.0)
   - IQKeyboardManager (~> 6.1.1)
   - JPFPSStatus (~> 0.1.1)
+  - lottie-ios (~> 2.5.0)
   - Masonry (~> 1.1.0)
   - MJExtension (~> 3.0)
   - MJRefresh (~> 3.1.15.3)
   - ReactiveObjC (~> 3.1.0)
+  - RSKImageCropper (~> 2.1.0)
   - TZImagePickerController (~> 2.2.2)
   - YTKNetwork
   - YYKeyboardManager (~> 1.0.1)
@@ -50,15 +54,17 @@ SPEC CHECKSUMS:
   HXPhotoPicker: 31be3e2dbd4c93f911b641aac1b15dc6691fa654
   IQKeyboardManager: 79c57795f5c2408d259d37b9da2ed07efcbb5225
   JPFPSStatus: 03f32aa3d4d7d0c5bf56f6f3e7cf8b7280a5f52c
+  lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
+  RSKImageCropper: 0d0c6d8525a2381f03fde32a47c6703817a2feed
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   TZImagePickerController: 5374a30df056b33428802c8112ed44011fe2596a
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
   YYKeyboardManager: ff53d2e80d1808567a7f004028bd200d9469a89f
 
-PODFILE CHECKSUM: 77d2873016c39508f144c6c266f7ccc749d056de
+PODFILE CHECKSUM: d1a2d601105b4526bad4da82e45aab67815435fc
 
 COCOAPODS: 1.4.0

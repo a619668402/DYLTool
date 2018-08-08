@@ -12,6 +12,6 @@
 
 @required
 // 设置子控件
-- (void)yd_setUpChildViews;
+- (void)yl_setUpChildViews;
 
 @end

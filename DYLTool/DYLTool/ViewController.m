@@ -16,6 +16,9 @@
 #import "TestBasicAnimationController.h"
 #import "TestThreadController.h"
 #import "KQRCodeController.h"
+#import "TestLottieController.h"
+#import "TestScrollController.h"
+#import "TestCollectionController.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -54,7 +57,7 @@
 
 - (NSArray *)data {
     if (!_data) {
-        _data = @[@"HXPhotoPicker", @"TZImagePickerController", @"YLInputView", @"TestCABasicAnimation", @"TestThread", @"TestTableView", @"QRCodeScan"];
+        _data = @[@"HXPhotoPicker", @"TZImagePickerController", @"YLInputView", @"TestCABasicAnimation", @"TestThread", @"TestTableView", @"QRCodeScan", @"TestLottie", @"TestScrollView", @"TestCollectionView"];
     }
     return _data;
 }
@@ -116,6 +119,24 @@
         case 6:
         {
             KQRCodeController *vc = [[KQRCodeController alloc] initWithViewModel:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 7:
+        {
+            TestLottieController *vc = [[TestLottieController alloc] initWithViewModel:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 8:
+        {
+            TestScrollController *vc = [[TestScrollController alloc] initWithViewModel:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 9:
+        {
+            TestCollectionController *vc = [[TestCollectionController alloc] initWithViewModel:nil];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;

@@ -27,6 +27,7 @@
  *********************************************/
 #import "UIView+Frame.h"                    // View Frame相关
 #import "UIView+CurrentViewController.h"    // 获取当前View的控制器对象
+#import "UIView+CornerRadius.h"             // 设置指定位置圆角
 #import "UIImageView+LoadImg.h"             // 图片加载封装
 #import "UIScrollView+Refresh.h"            // 上拉加载更多,下拉刷新
 #import "UIBarButtonItem+Extension.h"       // 快速创建 UIBarButtonItem

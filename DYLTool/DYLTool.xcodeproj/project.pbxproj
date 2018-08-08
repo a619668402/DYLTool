@@ -62,9 +62,16 @@
 		0D3D418721086E7600F9A763 /* YLTopFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D418621086E7600F9A763 /* YLTopFilterView.m */; };
 		0D3D418B2108726D00F9A763 /* YLTopFilterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D418A2108726D00F9A763 /* YLTopFilterViewModel.m */; };
 		0D3D418E2108758100F9A763 /* TestFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D418D2108758100F9A763 /* TestFilterViewController.m */; };
+		0D41A3BF211AA2DD002E5493 /* KAuthorityUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D41A3BE211AA2DD002E5493 /* KAuthorityUtil.m */; };
+		0D41A3C4211AD731002E5493 /* TestCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D41A3C3211AD731002E5493 /* TestCollectionController.m */; };
+		0D41A3C7211ADA3C002E5493 /* TestCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D41A3C6211ADA3C002E5493 /* TestCollectionViewCell.m */; };
 		0D53CC152117EB5200F5F84E /* KQRCodeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D53CC142117EB5200F5F84E /* KQRCodeUtil.m */; };
 		0D53CC192117F45100F5F84E /* KQRCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D53CC182117F45100F5F84E /* KQRCodeController.m */; };
 		0D53CC1C211805E900F5F84E /* scanSuccess.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D53CC1B211805E800F5F84E /* scanSuccess.wav */; };
+		0D53CC1F211853EC00F5F84E /* TestLottieController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D53CC1E211853EC00F5F84E /* TestLottieController.m */; };
+		0D53CC222118556400F5F84E /* areas.json in Resources */ = {isa = PBXBuildFile; fileRef = 0D53CC212118556400F5F84E /* areas.json */; };
+		0D53CC242118556F00F5F84E /* jolly_walker.json in Resources */ = {isa = PBXBuildFile; fileRef = 0D53CC232118556F00F5F84E /* jolly_walker.json */; };
+		0D53CC262118570000F5F84E /* laugh.json in Resources */ = {isa = PBXBuildFile; fileRef = 0D53CC252118570000F5F84E /* laugh.json */; };
 		0D53F40620E0D6DB00B07B50 /* UIImageView+LoadImg.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D53F40520E0D6DB00B07B50 /* UIImageView+LoadImg.m */; };
 		0D53F41120E0F58600B07B50 /* NSDateFormatter+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D53F41020E0F58600B07B50 /* NSDateFormatter+Extension.m */; };
 		0D53F41420E0FAAD00B07B50 /* UIImage+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D53F41320E0FAAD00B07B50 /* UIImage+Tool.m */; };
@@ -73,6 +80,8 @@
 		0D5C8BB72112F190001033CF /* UIButton+Initialize.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5C8BB62112F190001033CF /* UIButton+Initialize.m */; };
 		0D60AC1B2105E307004C7DFA /* UIButton+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D60AC1A2105E307004C7DFA /* UIButton+Layout.m */; };
 		0D60AC1F2105EA89004C7DFA /* YLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D60AC1E2105EA89004C7DFA /* YLButton.m */; };
+		0D7906E821197F480024DB90 /* UIView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7906E721197F480024DB90 /* UIView+CornerRadius.m */; };
+		0D7906EB211987D30024DB90 /* TestScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7906EA211987D30024DB90 /* TestScrollController.m */; };
 		0DA8B06D210ABB0500B0EBFC /* TestHXPhotoPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8B06C210ABB0500B0EBFC /* TestHXPhotoPicker.m */; };
 		0DA8B070210ABB2500B0EBFC /* TestTZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8B06F210ABB2500B0EBFC /* TestTZImagePickerController.m */; };
 		0DA8B074210AC78400B0EBFC /* YLNiNeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8B073210AC78400B0EBFC /* YLNiNeView.m */; };
@@ -232,11 +241,22 @@
 		0D3D418A2108726D00F9A763 /* YLTopFilterViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLTopFilterViewModel.m; sourceTree = "<group>"; };
 		0D3D418C2108758100F9A763 /* TestFilterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFilterViewController.h; sourceTree = "<group>"; };
 		0D3D418D2108758100F9A763 /* TestFilterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestFilterViewController.m; sourceTree = "<group>"; };
+		0D41A3BD211AA2DD002E5493 /* KAuthorityUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KAuthorityUtil.h; sourceTree = "<group>"; };
+		0D41A3BE211AA2DD002E5493 /* KAuthorityUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KAuthorityUtil.m; sourceTree = "<group>"; };
+		0D41A3C2211AD731002E5493 /* TestCollectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCollectionController.h; sourceTree = "<group>"; };
+		0D41A3C3211AD731002E5493 /* TestCollectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCollectionController.m; sourceTree = "<group>"; };
+		0D41A3C5211ADA3C002E5493 /* TestCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCollectionViewCell.h; sourceTree = "<group>"; };
+		0D41A3C6211ADA3C002E5493 /* TestCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCollectionViewCell.m; sourceTree = "<group>"; };
 		0D53CC132117EB5200F5F84E /* KQRCodeUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KQRCodeUtil.h; sourceTree = "<group>"; };
 		0D53CC142117EB5200F5F84E /* KQRCodeUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KQRCodeUtil.m; sourceTree = "<group>"; };
 		0D53CC172117F45100F5F84E /* KQRCodeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KQRCodeController.h; sourceTree = "<group>"; };
 		0D53CC182117F45100F5F84E /* KQRCodeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KQRCodeController.m; sourceTree = "<group>"; };
 		0D53CC1B211805E800F5F84E /* scanSuccess.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = scanSuccess.wav; sourceTree = "<group>"; };
+		0D53CC1D211853EC00F5F84E /* TestLottieController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLottieController.h; sourceTree = "<group>"; };
+		0D53CC1E211853EC00F5F84E /* TestLottieController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLottieController.m; sourceTree = "<group>"; };
+		0D53CC212118556400F5F84E /* areas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = areas.json; sourceTree = "<group>"; };
+		0D53CC232118556F00F5F84E /* jolly_walker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jolly_walker.json; sourceTree = "<group>"; };
+		0D53CC252118570000F5F84E /* laugh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = laugh.json; sourceTree = "<group>"; };
 		0D53F40420E0D6DB00B07B50 /* UIImageView+LoadImg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LoadImg.h"; sourceTree = "<group>"; };
 		0D53F40520E0D6DB00B07B50 /* UIImageView+LoadImg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LoadImg.m"; sourceTree = "<group>"; };
 		0D53F40F20E0F58600B07B50 /* NSDateFormatter+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+Extension.h"; sourceTree = "<group>"; };
@@ -254,6 +274,10 @@
 		0D60AC1A2105E307004C7DFA /* UIButton+Layout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Layout.m"; sourceTree = "<group>"; };
 		0D60AC1D2105EA89004C7DFA /* YLButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLButton.h; sourceTree = "<group>"; };
 		0D60AC1E2105EA89004C7DFA /* YLButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLButton.m; sourceTree = "<group>"; };
+		0D7906E621197F480024DB90 /* UIView+CornerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CornerRadius.h"; sourceTree = "<group>"; };
+		0D7906E721197F480024DB90 /* UIView+CornerRadius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CornerRadius.m"; sourceTree = "<group>"; };
+		0D7906E9211987D30024DB90 /* TestScrollController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestScrollController.h; sourceTree = "<group>"; };
+		0D7906EA211987D30024DB90 /* TestScrollController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestScrollController.m; sourceTree = "<group>"; };
 		0DA8B06B210ABB0500B0EBFC /* TestHXPhotoPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestHXPhotoPicker.h; sourceTree = "<group>"; };
 		0DA8B06C210ABB0500B0EBFC /* TestHXPhotoPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestHXPhotoPicker.m; sourceTree = "<group>"; };
 		0DA8B06E210ABB2500B0EBFC /* TestTZImagePickerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTZImagePickerController.h; sourceTree = "<group>"; };
@@ -363,6 +387,8 @@
 				0D24275A20E375E40040FE23 /* KRouter.m */,
 				0D53CC132117EB5200F5F84E /* KQRCodeUtil.h */,
 				0D53CC142117EB5200F5F84E /* KQRCodeUtil.m */,
+				0D41A3BD211AA2DD002E5493 /* KAuthorityUtil.h */,
+				0D41A3BE211AA2DD002E5493 /* KAuthorityUtil.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -444,13 +470,6 @@
 			path = Note;
 			sourceTree = "<group>";
 		};
-		0D0A97E121105F1300C63065 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		0D0B67CB20CFB5E70008C4EE /* Macros */ = {
 			isa = PBXGroup;
 			children = (
@@ -524,6 +543,8 @@
 				0DD0036B20E218BB00CB6B5D /* UITextView+MaxLength.m */,
 				0D1DE5D621002F7700C46C24 /* UILabel+LineSpaceAndWordSpace.h */,
 				0D1DE5D721002F7700C46C24 /* UILabel+LineSpaceAndWordSpace.m */,
+				0D7906E621197F480024DB90 /* UIView+CornerRadius.h */,
+				0D7906E721197F480024DB90 /* UIView+CornerRadius.m */,
 			);
 			path = UIView_Category;
 			sourceTree = "<group>";
@@ -618,6 +639,8 @@
 		0D3D418F21088F9700F9A763 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				0D41A3C1211AD719002E5493 /* View */,
+				0D41A3C0211AD713002E5493 /* Model */,
 				0D0487B120ECB9FC005BFC65 /* TestTableViewController.h */,
 				0D0487B220ECB9FC005BFC65 /* TestTableViewController.m */,
 				0D0487B420ECC1F9005BFC65 /* TestSearchController_1.h */,
@@ -642,8 +665,30 @@
 				0D5C8BAF2112BBEE001033CF /* TestThreadController.m */,
 				0D5C8BB22112EFD8001033CF /* TestCustomOperation.h */,
 				0D5C8BB32112EFD8001033CF /* TestCustomOperation.m */,
+				0D53CC1D211853EC00F5F84E /* TestLottieController.h */,
+				0D53CC1E211853EC00F5F84E /* TestLottieController.m */,
+				0D7906E9211987D30024DB90 /* TestScrollController.h */,
+				0D7906EA211987D30024DB90 /* TestScrollController.m */,
+				0D41A3C2211AD731002E5493 /* TestCollectionController.h */,
+				0D41A3C3211AD731002E5493 /* TestCollectionController.m */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		0D41A3C0211AD713002E5493 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0D41A3C1211AD719002E5493 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D41A3C5211ADA3C002E5493 /* TestCollectionViewCell.h */,
+				0D41A3C6211ADA3C002E5493 /* TestCollectionViewCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		0D53CC162117F42200F5F84E /* QRViewController */ = {
@@ -661,6 +706,17 @@
 				0D53CC1B211805E800F5F84E /* scanSuccess.wav */,
 			);
 			path = wav;
+			sourceTree = "<group>";
+		};
+		0D53CC202118552B00F5F84E /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				0D53CC252118570000F5F84E /* laugh.json */,
+				0D53CC232118556F00F5F84E /* jolly_walker.json */,
+				0D53CC212118556400F5F84E /* areas.json */,
+				0DFD02202107312800A6B70D /* jsonFile.txt */,
+			);
+			path = Json;
 			sourceTree = "<group>";
 		};
 		0D53F40E20E0F4C900B07B50 /* NSDate_Category */ = {
@@ -712,9 +768,9 @@
 		0DD0037620E22FCA00CB6B5D /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				0D53CC202118552B00F5F84E /* Json */,
 				0D53CC1A211805BF00F5F84E /* wav */,
 				0D317F3721081CD4005CD288 /* TestImage */,
-				0DFD02202107312800A6B70D /* jsonFile.txt */,
 				0DD0037720E22FD300CB6B5D /* img */,
 			);
 			path = Resource;
@@ -811,7 +867,6 @@
 		0DD0039C20E2335200CB6B5D /* Widget */ = {
 			isa = PBXGroup;
 			children = (
-				0D0A97E121105F1300C63065 /* New Group */,
 				0D218425210EC70B008A4EB6 /* InputView */,
 				0DA8B071210AC76800B0EBFC /* NineView */,
 				0D3D418821086E7A00F9A763 /* TopFilterView */,
@@ -1035,9 +1090,12 @@
 				0D53CC1C211805E900F5F84E /* scanSuccess.wav in Resources */,
 				0DFABE4220A59B7300876945 /* LaunchScreen.storyboard in Resources */,
 				0DFD02212107312900A6B70D /* jsonFile.txt in Resources */,
+				0D53CC262118570000F5F84E /* laugh.json in Resources */,
+				0D53CC242118556F00F5F84E /* jolly_walker.json in Resources */,
 				0D317F3A21081CF5005CD288 /* image_2.jpg in Resources */,
 				0DFABE3F20A59B7300876945 /* Assets.xcassets in Resources */,
 				0DFABE3D20A59B7300876945 /* Main.storyboard in Resources */,
+				0D53CC222118556400F5F84E /* areas.json in Resources */,
 				0D317F3B21081CF5005CD288 /* image_1.jpg in Resources */,
 				0D279D9B211195D200D9F3F7 /* iOS 动画.md in Resources */,
 				0DD0037920E22FEE00CB6B5D /* tabbarBkg_5x49@2x.png in Resources */,
@@ -1072,6 +1130,7 @@
 				"${PODS_ROOT}/HXPhotoPicker/照片选择器/HXPhotoPicker/HXPhotoPicker.bundle",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/RSKImageCropper/RSKImageCropper/RSKImageCropperStrings.bundle",
 				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -1079,6 +1138,7 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HXPhotoPicker.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RSKImageCropperStrings.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1117,6 +1177,7 @@
 				0D0487B620ECC1F9005BFC65 /* TestSearchController_1.m in Sources */,
 				0DFD021921070B6900A6B70D /* YLCoreTextData.m in Sources */,
 				0D26552120F33F68004E5366 /* BaseCommonViewModel.m in Sources */,
+				0D41A3C7211ADA3C002E5493 /* TestCollectionViewCell.m in Sources */,
 				0D5C8BB02112BBEE001033CF /* TestThreadController.m in Sources */,
 				0D04E77420BD0C870040C4AF /* UIFont+fontSize.m in Sources */,
 				0D60AC1B2105E307004C7DFA /* UIButton+Layout.m in Sources */,
@@ -1143,6 +1204,7 @@
 				0D1144882101898A00F1BD8A /* YLAlertController.m in Sources */,
 				0D26552C20F3699B004E5366 /* CommonArrowItemViewModel.m in Sources */,
 				0D1609A620F46779004FCF88 /* CommonValueItemViewModel.m in Sources */,
+				0D53CC1F211853EC00F5F84E /* TestLottieController.m in Sources */,
 				0D5C8BB72112F190001033CF /* UIButton+Initialize.m in Sources */,
 				0D1959F020E9C798009237A9 /* MacrosConstant.m in Sources */,
 				0D3D418B2108726D00F9A763 /* YLTopFilterViewModel.m in Sources */,
@@ -1185,6 +1247,7 @@
 				0D17F66D20B804170082D67D /* NSString+Predicate.m in Sources */,
 				0DD0039720E2305A00CB6B5D /* BaseTabBarController.m in Sources */,
 				0D0487AF20ECA1EE005BFC65 /* BaseViewModelServiceImpl.m in Sources */,
+				0D41A3C4211AD731002E5493 /* TestCollectionController.m in Sources */,
 				0D077FC021097C17009773AB /* NSArray+Safe.m in Sources */,
 				0D17F66720B7F5870082D67D /* NSString+MD5.m in Sources */,
 				0D17F67020B807870082D67D /* NSString+Safe.m in Sources */,
@@ -1194,6 +1257,8 @@
 				0D53CC152117EB5200F5F84E /* KQRCodeUtil.m in Sources */,
 				0D056D2420E4904B00953C86 /* BaseNavController.m in Sources */,
 				0DF4188020C93CFF004A8E11 /* UIImage+CompressImage.m in Sources */,
+				0D7906EB211987D30024DB90 /* TestScrollController.m in Sources */,
+				0D7906E821197F480024DB90 /* UIView+CornerRadius.m in Sources */,
 				0DFD021321070A9000A6B70D /* YLFrameParserConfig.m in Sources */,
 				0D53F40620E0D6DB00B07B50 /* UIImageView+LoadImg.m in Sources */,
 				0DFABE3720A59B7300876945 /* AppDelegate.m in Sources */,
@@ -1201,6 +1266,7 @@
 				0DD0039520E2305A00CB6B5D /* BaseTableViewCell.m in Sources */,
 				0D0A97DD21100C0500C63065 /* TestInputViewController.m in Sources */,
 				0D5C8BB42112EFD8001033CF /* TestCustomOperation.m in Sources */,
+				0D41A3BF211AA2DD002E5493 /* KAuthorityUtil.m in Sources */,
 				0D17F68220B80C0E0082D67D /* UIColor+Category.m in Sources */,
 				0D1DE5D821002F7700C46C24 /* UILabel+LineSpaceAndWordSpace.m in Sources */,
 				0DD003B320E233B900CB6B5D /* BaseResponse.m in Sources */,

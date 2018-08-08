@@ -12,11 +12,11 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        [self yd_setUpChildViews];
+        [self yl_setUpChildViews];
     }
     return self;
 }
 
-- (void)yd_setUpChildViews {}
+- (void)yl_setUpChildViews {}
 
 @end
