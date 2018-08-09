@@ -37,9 +37,10 @@
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
         layout.minimumLineSpacing = 10;
         layout.minimumInteritemSpacing = 10;
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(10, KNavAndStatusHeight + 10, KScreenWidth - 30, KScreenHeight - KNavAndStatusHeight - 10) collectionViewLayout:layout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(10, KNavAndStatusHeight + 10, KScreenWidth - 20, KScreenHeight - KNavAndStatusHeight - 10) collectionViewLayout:layout];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
+        _collectionView.clipsToBounds = NO;
         [_collectionView registerClass:[TestCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([TestCollectionViewCell class])];
         _collectionView.backgroundColor = white_color;
     }
@@ -70,9 +71,10 @@
 }
 
 - (void)_btnClick:(UIButton *)btn {
-    KLog(@"%ld", btn.tag - 1);
-    [self.dataSource removeObjectAtIndex:btn.tag - 1];
-    [self.collectionView deleteItemsAtIndexPaths:@[[NSIndexPath indexPathForRow:btn.tag - 1 inSection:0]]];
+    TestCollectionViewCell *cell = (TestCollectionViewCell *)[[[btn superview] superview] superview];
+    NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
+    [self.dataSource removeObjectAtIndex:indexPath.item];
+    [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
 }
 
 #pragma mark ************* Collection Delegate and DataSource Start *************
@@ -92,7 +94,6 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     TestCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([TestCollectionViewCell class]) forIndexPath:indexPath];
     [cell setModel:self.dataSource[indexPath.item]];
-    cell.btn.tag = indexPath.item + 1;
     [cell.btn addTarget:self action:@selector(_btnClick:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }

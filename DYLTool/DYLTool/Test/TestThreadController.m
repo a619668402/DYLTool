@@ -19,6 +19,8 @@
 
 @property (nonatomic, strong) UIButton *gcdBtn;
 
+@property (nonatomic, strong) UIButton *centerBtn;
+
 @end
 
 @implementation TestThreadController
@@ -34,6 +36,7 @@
     [self.view addSubview:self.operationBtn];
     [self.view addSubview:self.customOperationBtn];
     [self.view addSubview:self.gcdBtn];
+    [self.view addSubview:self.centerBtn];
 }
 
 - (void)_threadSelector {
@@ -118,6 +121,21 @@
             break;
     }
 }
+
+- (UIButton *)centerBtn {
+    if (!_centerBtn) {
+        _centerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _centerBtn.bounds = CGRectMake(0, 0, 50, 50);
+        _centerBtn.center = self.view.center;
+        _centerBtn.backgroundColor = [UIColor blackColor];
+        _centerBtn.touchExtendInset = UIEdgeInsetsMake(-20, -20, -20, -20);
+        [[_centerBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            KLogFunc;
+        }];
+    }
+    return _centerBtn;
+}
+
 
 - (UIButton *)gcdBtn {
     if (!_gcdBtn) {

@@ -65,6 +65,8 @@
 		0D41A3BF211AA2DD002E5493 /* KAuthorityUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D41A3BE211AA2DD002E5493 /* KAuthorityUtil.m */; };
 		0D41A3C4211AD731002E5493 /* TestCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D41A3C3211AD731002E5493 /* TestCollectionController.m */; };
 		0D41A3C7211ADA3C002E5493 /* TestCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D41A3C6211ADA3C002E5493 /* TestCollectionViewCell.m */; };
+		0D41A3CB211AFC50002E5493 /* PresentingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D41A3CA211AFC50002E5493 /* PresentingAnimationController.m */; };
+		0D41A3CE211AFE38002E5493 /* DismissingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D41A3CD211AFE38002E5493 /* DismissingAnimationController.m */; };
 		0D53CC152117EB5200F5F84E /* KQRCodeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D53CC142117EB5200F5F84E /* KQRCodeUtil.m */; };
 		0D53CC192117F45100F5F84E /* KQRCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D53CC182117F45100F5F84E /* KQRCodeController.m */; };
 		0D53CC1C211805E900F5F84E /* scanSuccess.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D53CC1B211805E800F5F84E /* scanSuccess.wav */; };
@@ -82,6 +84,8 @@
 		0D60AC1F2105EA89004C7DFA /* YLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D60AC1E2105EA89004C7DFA /* YLButton.m */; };
 		0D7906E821197F480024DB90 /* UIView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7906E721197F480024DB90 /* UIView+CornerRadius.m */; };
 		0D7906EB211987D30024DB90 /* TestScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7906EA211987D30024DB90 /* TestScrollController.m */; };
+		0D920A83211BD9DD004FF3EF /* UIGestureRecognizer+YLBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D920A82211BD9DD004FF3EF /* UIGestureRecognizer+YLBlock.m */; };
+		0D920A86211BDECF004FF3EF /* UIView+YLExtendTouchRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D920A85211BDECF004FF3EF /* UIView+YLExtendTouchRect.m */; };
 		0DA8B06D210ABB0500B0EBFC /* TestHXPhotoPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8B06C210ABB0500B0EBFC /* TestHXPhotoPicker.m */; };
 		0DA8B070210ABB2500B0EBFC /* TestTZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8B06F210ABB2500B0EBFC /* TestTZImagePickerController.m */; };
 		0DA8B074210AC78400B0EBFC /* YLNiNeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8B073210AC78400B0EBFC /* YLNiNeView.m */; };
@@ -247,6 +251,10 @@
 		0D41A3C3211AD731002E5493 /* TestCollectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCollectionController.m; sourceTree = "<group>"; };
 		0D41A3C5211ADA3C002E5493 /* TestCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCollectionViewCell.h; sourceTree = "<group>"; };
 		0D41A3C6211ADA3C002E5493 /* TestCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCollectionViewCell.m; sourceTree = "<group>"; };
+		0D41A3C9211AFC50002E5493 /* PresentingAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentingAnimationController.h; sourceTree = "<group>"; };
+		0D41A3CA211AFC50002E5493 /* PresentingAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentingAnimationController.m; sourceTree = "<group>"; };
+		0D41A3CC211AFE38002E5493 /* DismissingAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DismissingAnimationController.h; sourceTree = "<group>"; };
+		0D41A3CD211AFE38002E5493 /* DismissingAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DismissingAnimationController.m; sourceTree = "<group>"; };
 		0D53CC132117EB5200F5F84E /* KQRCodeUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KQRCodeUtil.h; sourceTree = "<group>"; };
 		0D53CC142117EB5200F5F84E /* KQRCodeUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KQRCodeUtil.m; sourceTree = "<group>"; };
 		0D53CC172117F45100F5F84E /* KQRCodeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KQRCodeController.h; sourceTree = "<group>"; };
@@ -278,6 +286,10 @@
 		0D7906E721197F480024DB90 /* UIView+CornerRadius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CornerRadius.m"; sourceTree = "<group>"; };
 		0D7906E9211987D30024DB90 /* TestScrollController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestScrollController.h; sourceTree = "<group>"; };
 		0D7906EA211987D30024DB90 /* TestScrollController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestScrollController.m; sourceTree = "<group>"; };
+		0D920A81211BD9DD004FF3EF /* UIGestureRecognizer+YLBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+YLBlock.h"; sourceTree = "<group>"; };
+		0D920A82211BD9DD004FF3EF /* UIGestureRecognizer+YLBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+YLBlock.m"; sourceTree = "<group>"; };
+		0D920A84211BDECF004FF3EF /* UIView+YLExtendTouchRect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+YLExtendTouchRect.h"; sourceTree = "<group>"; };
+		0D920A85211BDECF004FF3EF /* UIView+YLExtendTouchRect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+YLExtendTouchRect.m"; sourceTree = "<group>"; };
 		0DA8B06B210ABB0500B0EBFC /* TestHXPhotoPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestHXPhotoPicker.h; sourceTree = "<group>"; };
 		0DA8B06C210ABB0500B0EBFC /* TestHXPhotoPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestHXPhotoPicker.m; sourceTree = "<group>"; };
 		0DA8B06E210ABB2500B0EBFC /* TestTZImagePickerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTZImagePickerController.h; sourceTree = "<group>"; };
@@ -545,6 +557,8 @@
 				0D1DE5D721002F7700C46C24 /* UILabel+LineSpaceAndWordSpace.m */,
 				0D7906E621197F480024DB90 /* UIView+CornerRadius.h */,
 				0D7906E721197F480024DB90 /* UIView+CornerRadius.m */,
+				0D920A84211BDECF004FF3EF /* UIView+YLExtendTouchRect.h */,
+				0D920A85211BDECF004FF3EF /* UIView+YLExtendTouchRect.m */,
 			);
 			path = UIView_Category;
 			sourceTree = "<group>";
@@ -639,6 +653,7 @@
 		0D3D418F21088F9700F9A763 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				0D41A3C8211AFC34002E5493 /* Animate */,
 				0D41A3C1211AD719002E5493 /* View */,
 				0D41A3C0211AD713002E5493 /* Model */,
 				0D0487B120ECB9FC005BFC65 /* TestTableViewController.h */,
@@ -691,6 +706,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		0D41A3C8211AFC34002E5493 /* Animate */ = {
+			isa = PBXGroup;
+			children = (
+				0D41A3C9211AFC50002E5493 /* PresentingAnimationController.h */,
+				0D41A3CA211AFC50002E5493 /* PresentingAnimationController.m */,
+				0D41A3CC211AFE38002E5493 /* DismissingAnimationController.h */,
+				0D41A3CD211AFE38002E5493 /* DismissingAnimationController.m */,
+			);
+			path = Animate;
+			sourceTree = "<group>";
+		};
 		0D53CC162117F42200F5F84E /* QRViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -737,6 +763,15 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
+		0D920A7D211BD940004FF3EF /* UIGestureRecongizer_Category */ = {
+			isa = PBXGroup;
+			children = (
+				0D920A81211BD9DD004FF3EF /* UIGestureRecognizer+YLBlock.h */,
+				0D920A82211BD9DD004FF3EF /* UIGestureRecognizer+YLBlock.m */,
+			);
+			path = UIGestureRecongizer_Category;
+			sourceTree = "<group>";
+		};
 		0DA8B071210AC76800B0EBFC /* NineView */ = {
 			isa = PBXGroup;
 			children = (
@@ -751,6 +786,7 @@
 		0DD0037520E22F8B00CB6B5D /* Categoty */ = {
 			isa = PBXGroup;
 			children = (
+				0D920A7D211BD940004FF3EF /* UIGestureRecongizer_Category */,
 				0D077FC121097E82009773AB /* NSDictionary_Category */,
 				0D077FBD21097BF0009773AB /* NSArray_Categoty */,
 				0DD003B720E241B500CB6B5D /* ViewController_Category */,
@@ -1185,6 +1221,7 @@
 				0DFABE3A20A59B7300876945 /* ViewController.m in Sources */,
 				0D1609B220F49BE1004FCF88 /* TestCommonViewModel.m in Sources */,
 				0DA8B070210ABB2500B0EBFC /* TestTZImagePickerController.m in Sources */,
+				0D920A86211BDECF004FF3EF /* UIView+YLExtendTouchRect.m in Sources */,
 				0DFD021C210711BF00A6B70D /* YLDisplayView.m in Sources */,
 				0DFD021621070B1A00A6B70D /* YLFrameParser.m in Sources */,
 				0DD0036C20E218BB00CB6B5D /* UITextView+MaxLength.m in Sources */,
@@ -1192,6 +1229,7 @@
 				0D077FBC210979B9009773AB /* NSAttributedString+Ext.m in Sources */,
 				0D24275F20E376C20040FE23 /* BaseViewModel.m in Sources */,
 				0D04E77020BD0A8B0040C4AF /* NSString+base64.m in Sources */,
+				0D41A3CB211AFC50002E5493 /* PresentingAnimationController.m in Sources */,
 				0DD003B120E233B900CB6B5D /* BaseRequest.m in Sources */,
 				0D317F412108556B005CD288 /* YLCoreTextUtils.m in Sources */,
 				0D1609A020F46443004FCF88 /* CommonSwitchItemViewModel.m in Sources */,
@@ -1228,6 +1266,7 @@
 				0DD0035F20E1D68B00CB6B5D /* UIBarButtonItem+Extension.m in Sources */,
 				0D26553320F36B17004E5366 /* CommonCell.m in Sources */,
 				0D11448C2101912200F1BD8A /* ArrowLabel.m in Sources */,
+				0D920A83211BD9DD004FF3EF /* UIGestureRecognizer+YLBlock.m in Sources */,
 				0DFD0224210739F800A6B70D /* YLCoreTextImageData.m in Sources */,
 				0DD003B520E233B900CB6B5D /* RACNetWork.m in Sources */,
 				0D17F68620B80DAD0082D67D /* UIView+Frame.m in Sources */,
@@ -1243,6 +1282,7 @@
 				0D056D2720E4C4DB00953C86 /* BaseTableViewModel.m in Sources */,
 				0D26552720F341C2004E5366 /* BaseCommonItemViewModel.m in Sources */,
 				0DD0036520E210BF00CB6B5D /* UITableView+Extension.m in Sources */,
+				0D41A3CE211AFE38002E5493 /* DismissingAnimationController.m in Sources */,
 				0D1609A920F489CD004FCF88 /* CommonHeaderView.m in Sources */,
 				0D17F66D20B804170082D67D /* NSString+Predicate.m in Sources */,
 				0DD0039720E2305A00CB6B5D /* BaseTabBarController.m in Sources */,

@@ -28,6 +28,7 @@
 #import "UIView+Frame.h"                    // View Frame相关
 #import "UIView+CurrentViewController.h"    // 获取当前View的控制器对象
 #import "UIView+CornerRadius.h"             // 设置指定位置圆角
+#import "UIView+YLExtendTouchRect.h"        // 增加点击响应区域
 #import "UIImageView+LoadImg.h"             // 图片加载封装
 #import "UIScrollView+Refresh.h"            // 上拉加载更多,下拉刷新
 #import "UIBarButtonItem+Extension.h"       // 快速创建 UIBarButtonItem
@@ -38,6 +39,7 @@
 #import "UIButton+CountDown.h"              // 按钮倒计时
 #import "UIButton+Layout.h"                 // 修改icon和文字的坐标
 #import "UIButton+Initialize.h"             // UIButton 快速实例化
+#import "UIGestureRecognizer+YLBlock.h"     // Block 实现手势
 
 #import "UIFont+fontSize.h"                 // 字体适配
 #import "UIImage+CompressImage.h"           // 图片压缩

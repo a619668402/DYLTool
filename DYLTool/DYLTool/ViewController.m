@@ -19,8 +19,14 @@
 #import "TestLottieController.h"
 #import "TestScrollController.h"
 #import "TestCollectionController.h"
+#import "YLAlertController.h"
 
-@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
+#import "PresentingAnimationController.h"
+#import "DismissingAnimationController.h"
+
+#import "UIGestureRecognizer+YLBlock.h"
+
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 
@@ -57,7 +63,7 @@
 
 - (NSArray *)data {
     if (!_data) {
-        _data = @[@"HXPhotoPicker", @"TZImagePickerController", @"YLInputView", @"TestCABasicAnimation", @"TestThread", @"TestTableView", @"QRCodeScan", @"TestLottie", @"TestScrollView", @"TestCollectionView"];
+        _data = @[@"HXPhotoPicker", @"TZImagePickerController", @"YLInputView", @"TestCABasicAnimation", @"TestThread", @"TestTableView", @"QRCodeScan", @"TestLottie", @"TestScrollView", @"TestCollectionView", @"TestAlertController"];
     }
     return _data;
 }
@@ -137,7 +143,25 @@
         case 9:
         {
             TestCollectionController *vc = [[TestCollectionController alloc] initWithViewModel:nil];
+            CATransition *anim = [CATransition animation];
+            anim.duration = 0.5f;
+            anim.type = @"moveln";
+            anim.subtype = kCATransitionFromRight;
+            anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+            [self.navigationController.view.layer addAnimation:anim forKey:nil];
             [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 10:
+        {
+            [self.view addGestureRecognizer:[UITapGestureRecognizer yl_gestureRecognizerWithActionBlock:^(id gestureRecognizer) {
+                KLogFunc;
+            }]];
+            
+            YLAlertController *vc = [[YLAlertController alloc] init];
+            vc.transitioningDelegate = self;
+            vc.modalPresentationStyle = UIModalPresentationCustom;
+            [self.navigationController presentViewController:vc animated:YES completion:nil];
         }
             break;
         default:
@@ -145,5 +169,14 @@
     }
 }
 #pragma mark ************* UITableView Delegate and DataSource End   *************
+
+#pragma mark ************* UIViewControllerTransitioningDelegate Start *************
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+    return [[PresentingAnimationController alloc] init];
+}
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    return [[DismissingAnimationController alloc] init];
+}
+#pragma mark ************* UIViewControllerTransitioningDelegate End   *************
 
 @end

@@ -28,20 +28,25 @@
 
 #pragma mark ************* Private Method Start *************
 - (void)_initValues {
-    self.view.backgroundColor = [UIColor colorWithWhite:0.1f alpha:0.2f];
+//    self.view.backgroundColor = [UIColor colorWithWhite:0.1f alpha:0.2f];
 //    self.view.backgroundColor = [UIColor clearColor];
+    self.view.backgroundColor = green_color;
 }
 
 - (void)_initViews {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.backgroundColor = [UIColor redColor];
-    btn.bounds = CGRectMake(0, 0, 100, 30);
-    btn.center = self.view.center;
+//    btn.bounds = CGRectMake(0, 0, 100, 30);
+//    btn.center = self.view.center;
+    btn.frame = CGRectMake(0, 0, 100, 30);
+    [[btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
     [self.view addSubview:btn];
 }
 #pragma mark ************* Private Method End   *************
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self dismissViewControllerAnimated:YES completion:nil];
+//    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end
