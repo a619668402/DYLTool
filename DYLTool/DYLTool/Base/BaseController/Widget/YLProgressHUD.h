@@ -1,5 +1,5 @@
 //
-//  MBProgressHUD.h
+//  YLProgressHUD.h
 //  Version 1.1.0
 //  Created by Matej Bukovinski on 2.4.09.
 //
@@ -31,45 +31,45 @@
 #import <CoreGraphics/CoreGraphics.h>
 
 @class MBBackgroundView;
-@protocol MBProgressHUDDelegate;
+@protocol YLProgressHUDDelegate;
 
 
 extern CGFloat const MBProgressMaxOffset;
 
-typedef NS_ENUM(NSInteger, MBProgressHUDMode) {
+typedef NS_ENUM(NSInteger, YLProgressHUDMode) {
     /// UIActivityIndicatorView.
-    MBProgressHUDModeIndeterminate,
+    YLProgressHUDModeIndeterminate,
     /// A round, pie-chart like, progress view.
-    MBProgressHUDModeDeterminate,
+    YLProgressHUDModeDeterminate,
     /// Horizontal progress bar.
-    MBProgressHUDModeDeterminateHorizontalBar,
+    YLProgressHUDModeDeterminateHorizontalBar,
     /// Ring-shaped progress view.
-    MBProgressHUDModeAnnularDeterminate,
+    YLProgressHUDModeAnnularDeterminate,
     /// Shows a custom view.
-    MBProgressHUDModeCustomView,
+    YLProgressHUDModeCustomView,
     /// Shows only labels.
-    MBProgressHUDModeText
+    YLProgressHUDModeText
 };
 
-typedef NS_ENUM(NSInteger, MBProgressHUDAnimation) {
+typedef NS_ENUM(NSInteger, YLProgressHUDAnimation) {
     /// Opacity animation
-    MBProgressHUDAnimationFade,
+    YLProgressHUDAnimationFade,
     /// Opacity + scale animation (zoom in when appearing zoom out when disappearing)
-    MBProgressHUDAnimationZoom,
+    YLProgressHUDAnimationZoom,
     /// Opacity + scale animation (zoom out style)
-    MBProgressHUDAnimationZoomOut,
+    YLProgressHUDAnimationZoomOut,
     /// Opacity + scale animation (zoom in style)
-    MBProgressHUDAnimationZoomIn
+    YLProgressHUDAnimationZoomIn
 };
 
-typedef NS_ENUM(NSInteger, MBProgressHUDBackgroundStyle) {
+typedef NS_ENUM(NSInteger, YLProgressHUDBackgroundStyle) {
     /// Solid color background
-    MBProgressHUDBackgroundStyleSolidColor,
+    YLProgressHUDBackgroundStyleSolidColor,
     /// UIVisualEffectView or UIToolbar.layer background view
-    MBProgressHUDBackgroundStyleBlur
+    YLProgressHUDBackgroundStyleBlur
 };
 
-typedef void (^MBProgressHUDCompletionBlock)(void);
+typedef void (^YLProgressHUDCompletionBlock)(void);
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -79,13 +79,13 @@ NS_ASSUME_NONNULL_BEGIN
  * Displays a simple HUD window containing a progress indicator and two optional labels for short messages.
  *
  * This is a simple drop-in class for displaying a progress HUD view similar to Apple's private UIProgressHUD class.
- * The MBProgressHUD window spans over the entire space given to it by the initWithFrame: constructor and catches all
+ * The YLProgressHUD window spans over the entire space given to it by the initWithFrame: constructor and catches all
  * user input on this region, thereby preventing the user operations on components below the view.
  *
  * @note To still allow touches to pass through the HUD, you can set hud.userInteractionEnabled = NO.
- * @attention MBProgressHUD is a UI class and should therefore only be accessed on the main thread.
+ * @attention YLProgressHUD is a UI class and should therefore only be accessed on the main thread.
  */
-@interface MBProgressHUD : UIView
+@interface YLProgressHUD : UIView
 
 /**
  * Creates a new HUD, adds it to provided view and shows it. The counterpart to this method is hideHUDForView:animated:.
@@ -125,7 +125,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param view The view that is going to be searched.
  * @return A reference to the last HUD subview discovered.
  */
-+ (nullable MBProgressHUD *)HUDForView:(UIView *)view;
++ (nullable YLProgressHUD *)HUDForView:(UIView *)view;
 
 /**
  * A convenience constructor that initializes the HUD with the view's bounds. Calls the designated constructor with
@@ -176,12 +176,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * The HUD delegate object. Receives HUD state notifications.
  */
-@property (weak, nonatomic) id<MBProgressHUDDelegate> delegate;
+@property (weak, nonatomic) id<YLProgressHUDDelegate> delegate;
 
 /**
  * Called after the HUD is hiden.
  */
-@property (copy, nullable) MBProgressHUDCompletionBlock completionBlock;
+@property (copy, nullable) YLProgressHUDCompletionBlock completionBlock;
 
 /*
  * Grace period is the time (in seconds) that the invoked method may be run without
@@ -210,9 +210,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Appearance
 
 /** 
- * MBProgressHUD operation mode. The default is MBProgressHUDModeIndeterminate.
+ * YLProgressHUD operation mode. The default is YLProgressHUDModeIndeterminate.
  */
-@property (assign, nonatomic) MBProgressHUDMode mode;
+@property (assign, nonatomic) YLProgressHUDMode mode;
 
 /**
  * A color that gets forwarded to all labels and supported indicators. Also sets the tintColor
@@ -224,7 +224,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * The animation type that should be used when the HUD is shown and hidden.
  */
-@property (assign, nonatomic) MBProgressHUDAnimation animationType UI_APPEARANCE_SELECTOR;
+@property (assign, nonatomic) YLProgressHUDAnimation animationType UI_APPEARANCE_SELECTOR;
 
 /**
  * The bezel offset relative to the center of the view. You can use MBProgressMaxOffset
@@ -283,7 +283,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic, readonly) MBBackgroundView *backgroundView;
 
 /**
- * The UIView (e.g., a UIImageView) to be shown when the HUD is in MBProgressHUDModeCustomView.
+ * The UIView (e.g., a UIImageView) to be shown when the HUD is in YLProgressHUDModeCustomView.
  * The view should implement intrinsicContentSize for proper sizing. For best results use approximately 37 by 37 pixels.
  */
 @property (strong, nonatomic, nullable) UIView *customView;
@@ -307,14 +307,14 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-@protocol MBProgressHUDDelegate <NSObject>
+@protocol YLProgressHUDDelegate <NSObject>
 
 @optional
 
 /** 
  * Called after the HUD was fully hidden from the screen. 
  */
-- (void)hudWasHidden:(MBProgressHUD *)hud;
+- (void)hudWasHidden:(YLProgressHUD *)hud;
 
 @end
 
@@ -385,14 +385,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * The background style. 
- * Defaults to MBProgressHUDBackgroundStyleBlur on iOS 7 or later and MBProgressHUDBackgroundStyleSolidColor otherwise.
+ * Defaults to YLProgressHUDBackgroundStyleBlur on iOS 7 or later and YLProgressHUDBackgroundStyleSolidColor otherwise.
  * @note Due to iOS 7 not supporting UIVisualEffectView, the blur effect differs slightly between iOS 7 and later versions.
  */
-@property (nonatomic) MBProgressHUDBackgroundStyle style;
+@property (nonatomic) YLProgressHUDBackgroundStyle style;
 
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000 || TARGET_OS_TV
 /**
- * The blur effect style, when using MBProgressHUDBackgroundStyleBlur.
+ * The blur effect style, when using YLProgressHUDBackgroundStyleBlur.
  * Defaults to UIBlurEffectStyleLight.
  */
 @property (nonatomic) UIBlurEffectStyle blurEffectStyle;

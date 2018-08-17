@@ -1,18 +1,18 @@
 //
-//  MBProgressHUD+Toast.m
+//  YLProgressHUD+Toast.m
 //  Base
 //
 //  Created by sky on 2018/6/12.
 //  Copyright © 2018年 DYL. All rights reserved.
 //
 
-#import "MBProgressHUD+Toast.h"
+#import "YLProgressHUD+Toast.h"
 
-@implementation MBProgressHUD (Toast)
+@implementation YLProgressHUD (Toast)
 
 + (void)showMessageWithView:(UIView *)view message:(NSString *)message; {
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    hud.mode = MBProgressHUDModeText;
+    YLProgressHUD *hud = [YLProgressHUD showHUDAddedTo:view animated:YES];
+    hud.mode = YLProgressHUDModeText;
     hud.removeFromSuperViewOnHide = YES;
     hud.userInteractionEnabled = NO;
     hud.detailsLabel.text = message;
@@ -20,7 +20,7 @@
     hud.detailsLabel.font = [UIFont systemFontOfSize:14.0f];
     hud.detailsLabel.numberOfLines = 0;
     hud.margin = 10.0f;
-    hud.animationType = MBProgressHUDAnimationFade;
+    hud.animationType = YLProgressHUDAnimationFade;
     hud.bezelView.layer.cornerRadius = 4.0f;
     hud.offset = CGPointMake(0, 180);
     hud.bezelView.backgroundColor = [UIColor blackColor];

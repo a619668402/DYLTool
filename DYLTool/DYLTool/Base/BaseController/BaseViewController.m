@@ -14,7 +14,7 @@
 
 @interface BaseViewController ()
 
-@property (nonatomic, strong) MBProgressHUD *hud; // 加载动画控件
+@property (nonatomic, strong) YLProgressHUD *hud; // 加载动画控件
 @property (nonatomic, assign) BOOL isDisplay; // 判断HUD是否正在显示,默认为NO;
 @property (nonatomic, strong, readwrite) BaseViewModel *viewModel;
 @end
@@ -82,6 +82,8 @@
     /// 设置导航栏颜色 (在 ViewDidLoad 不生效)
     self.navigationController.navigationBar.barTintColor = [UIColor grayColor];
      */
+    // 隐藏导航栏细线
+    self.viewModel.prefersNavigationBarBottomLineHidden ? [(BaseNavController *) self.navigationController hideNavigationBottomLine] : [(BaseNavController *)self.navigationController showNavigationBottomLine];
     // 配置键盘
     IQKeyboardManager.sharedManager.enable = self.viewModel.keyBoardEnable;
     IQKeyboardManager.sharedManager.shouldResignOnTouchOutside = self.viewModel.shouldResignOnTouchOutside;
@@ -212,15 +214,15 @@
 
 #pragma mark ----- 懒加载 -----
 /// MBProgressHUD
-- (MBProgressHUD *)hud {
+- (YLProgressHUD *)hud {
     if (!_hud) {
-        _hud = [[MBProgressHUD alloc] initWithView:self.view];
-        _hud.mode = MBProgressHUDModeIndeterminate;
+        _hud = [[YLProgressHUD alloc] initWithView:self.view];
+        _hud.mode = YLProgressHUDModeIndeterminate;
         _hud.bezelView.color = [UIColor blackColor];
         _hud.bezelView.color = [_hud.bezelView.color colorWithAlphaComponent:1];
         _hud.bezelView.layer.cornerRadius = 8.0f;
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_9_0
-        [UIActivityIndicatorView appearanceWhenContainedIn:[MBProgressHUD class], nil].color = [UIColor whiteColor];
+        [UIActivityIndicatorView appearanceWhenContainedIn:[YLProgressHUD class], nil].color = [UIColor whiteColor];
 #else
         [UIActivityIndicatorView appearanceWhenContainedInInstancesOfClasses:@[[MBProgressHUD class]]].color = [UIColor whiteColor];
 #endif

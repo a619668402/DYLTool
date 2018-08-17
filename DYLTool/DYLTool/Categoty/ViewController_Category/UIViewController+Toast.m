@@ -7,12 +7,12 @@
 //
 
 #import "UIViewController+Toast.h"
-#import "MBProgressHUD+Toast.h"
+#import "YLProgressHUD+Toast.h"
 
 @implementation UIViewController (Toast)
 
 - (void)yl_toast:(NSString *)message {
-    [MBProgressHUD showMessageWithView:self.view message:message];
+    [YLProgressHUD showMessageWithView:self.view message:message];
 }
 
 @end

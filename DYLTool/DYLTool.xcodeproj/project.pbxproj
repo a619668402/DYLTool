@@ -62,6 +62,10 @@
 		0D3D418721086E7600F9A763 /* YLTopFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D418621086E7600F9A763 /* YLTopFilterView.m */; };
 		0D3D418B2108726D00F9A763 /* YLTopFilterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D418A2108726D00F9A763 /* YLTopFilterViewModel.m */; };
 		0D3D418E2108758100F9A763 /* TestFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D418D2108758100F9A763 /* TestFilterViewController.m */; };
+		0D4108BF21266A1A00B2B4A8 /* YLPassWordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4108BE21266A1A00B2B4A8 /* YLPassWordView.m */; };
+		0D4108C22126A8EA00B2B4A8 /* YLNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4108C12126A8EA00B2B4A8 /* YLNavController.m */; };
+		0D4108C42126AB4100B2B4A8 /* lakeside_sunset.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D4108C32126AB4100B2B4A8 /* lakeside_sunset.png */; };
+		0D4108C72126C3AE00B2B4A8 /* UIViewController+YLNavConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4108C62126C3AE00B2B4A8 /* UIViewController+YLNavConfig.m */; };
 		0D41A3BF211AA2DD002E5493 /* KAuthorityUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D41A3BE211AA2DD002E5493 /* KAuthorityUtil.m */; };
 		0D41A3C4211AD731002E5493 /* TestCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D41A3C3211AD731002E5493 /* TestCollectionController.m */; };
 		0D41A3C7211ADA3C002E5493 /* TestCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D41A3C6211ADA3C002E5493 /* TestCollectionViewCell.m */; };
@@ -98,8 +102,8 @@
 		0DD0037920E22FEE00CB6B5D /* tabbarBkg_5x49@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DD0037820E22FEE00CB6B5D /* tabbarBkg_5x49@2x.png */; };
 		0DD0039120E2305A00CB6B5D /* BaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD0037D20E2305900CB6B5D /* BaseCollectionViewCell.m */; };
 		0DD0039220E2305A00CB6B5D /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD0038220E2305900CB6B5D /* BaseViewController.m */; };
-		0DD0039320E2305A00CB6B5D /* MBProgressHUD+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD0038520E2305900CB6B5D /* MBProgressHUD+Toast.m */; };
-		0DD0039420E2305A00CB6B5D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD0038720E2305900CB6B5D /* MBProgressHUD.m */; };
+		0DD0039320E2305A00CB6B5D /* YLProgressHUD+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD0038520E2305900CB6B5D /* YLProgressHUD+Toast.m */; };
+		0DD0039420E2305A00CB6B5D /* YLProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD0038720E2305900CB6B5D /* YLProgressHUD.m */; };
 		0DD0039520E2305A00CB6B5D /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD0038B20E2305A00CB6B5D /* BaseTableViewCell.m */; };
 		0DD0039620E2305A00CB6B5D /* BaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD0038E20E2305A00CB6B5D /* BaseTabBar.m */; };
 		0DD0039720E2305A00CB6B5D /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD0039020E2305A00CB6B5D /* BaseTabBarController.m */; };
@@ -245,6 +249,13 @@
 		0D3D418A2108726D00F9A763 /* YLTopFilterViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLTopFilterViewModel.m; sourceTree = "<group>"; };
 		0D3D418C2108758100F9A763 /* TestFilterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFilterViewController.h; sourceTree = "<group>"; };
 		0D3D418D2108758100F9A763 /* TestFilterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestFilterViewController.m; sourceTree = "<group>"; };
+		0D4108BD21266A1A00B2B4A8 /* YLPassWordView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLPassWordView.h; sourceTree = "<group>"; };
+		0D4108BE21266A1A00B2B4A8 /* YLPassWordView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLPassWordView.m; sourceTree = "<group>"; };
+		0D4108C02126A8EA00B2B4A8 /* YLNavController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLNavController.h; sourceTree = "<group>"; };
+		0D4108C12126A8EA00B2B4A8 /* YLNavController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLNavController.m; sourceTree = "<group>"; };
+		0D4108C32126AB4100B2B4A8 /* lakeside_sunset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lakeside_sunset.png; sourceTree = "<group>"; };
+		0D4108C52126C3AE00B2B4A8 /* UIViewController+YLNavConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YLNavConfig.h"; sourceTree = "<group>"; };
+		0D4108C62126C3AE00B2B4A8 /* UIViewController+YLNavConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YLNavConfig.m"; sourceTree = "<group>"; };
 		0D41A3BD211AA2DD002E5493 /* KAuthorityUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KAuthorityUtil.h; sourceTree = "<group>"; };
 		0D41A3BE211AA2DD002E5493 /* KAuthorityUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KAuthorityUtil.m; sourceTree = "<group>"; };
 		0D41A3C2211AD731002E5493 /* TestCollectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCollectionController.h; sourceTree = "<group>"; };
@@ -315,10 +326,10 @@
 		0DD0038020E2305900CB6B5D /* BaseControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseControllerProtocol.h; sourceTree = "<group>"; };
 		0DD0038120E2305900CB6B5D /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		0DD0038220E2305900CB6B5D /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		0DD0038420E2305900CB6B5D /* MBProgressHUD+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Toast.h"; sourceTree = "<group>"; };
-		0DD0038520E2305900CB6B5D /* MBProgressHUD+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Toast.m"; sourceTree = "<group>"; };
-		0DD0038620E2305900CB6B5D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		0DD0038720E2305900CB6B5D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		0DD0038420E2305900CB6B5D /* YLProgressHUD+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YLProgressHUD+Toast.h"; sourceTree = "<group>"; };
+		0DD0038520E2305900CB6B5D /* YLProgressHUD+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "YLProgressHUD+Toast.m"; sourceTree = "<group>"; };
+		0DD0038620E2305900CB6B5D /* YLProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLProgressHUD.h; sourceTree = "<group>"; };
+		0DD0038720E2305900CB6B5D /* YLProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLProgressHUD.m; sourceTree = "<group>"; };
 		0DD0038920E2305A00CB6B5D /* BaseTableCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableCellProtocol.h; sourceTree = "<group>"; };
 		0DD0038A20E2305A00CB6B5D /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
 		0DD0038B20E2305A00CB6B5D /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
@@ -633,6 +644,7 @@
 		0D317F3721081CD4005CD288 /* TestImage */ = {
 			isa = PBXGroup;
 			children = (
+				0D4108C32126AB4100B2B4A8 /* lakeside_sunset.png */,
 				0D317F3921081CF5005CD288 /* image_1.jpg */,
 				0D317F3821081CF5005CD288 /* image_2.jpg */,
 			);
@@ -686,8 +698,19 @@
 				0D7906EA211987D30024DB90 /* TestScrollController.m */,
 				0D41A3C2211AD731002E5493 /* TestCollectionController.h */,
 				0D41A3C3211AD731002E5493 /* TestCollectionController.m */,
+				0D4108C02126A8EA00B2B4A8 /* YLNavController.h */,
+				0D4108C12126A8EA00B2B4A8 /* YLNavController.m */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		0D4108BC212669E800B2B4A8 /* PasswordView */ = {
+			isa = PBXGroup;
+			children = (
+				0D4108BD21266A1A00B2B4A8 /* YLPassWordView.h */,
+				0D4108BE21266A1A00B2B4A8 /* YLPassWordView.m */,
+			);
+			path = PasswordView;
 			sourceTree = "<group>";
 		};
 		0D41A3C0211AD713002E5493 /* Model */ = {
@@ -862,10 +885,10 @@
 		0DD0038320E2305900CB6B5D /* Widget */ = {
 			isa = PBXGroup;
 			children = (
-				0DD0038420E2305900CB6B5D /* MBProgressHUD+Toast.h */,
-				0DD0038520E2305900CB6B5D /* MBProgressHUD+Toast.m */,
-				0DD0038620E2305900CB6B5D /* MBProgressHUD.h */,
-				0DD0038720E2305900CB6B5D /* MBProgressHUD.m */,
+				0DD0038420E2305900CB6B5D /* YLProgressHUD+Toast.h */,
+				0DD0038520E2305900CB6B5D /* YLProgressHUD+Toast.m */,
+				0DD0038620E2305900CB6B5D /* YLProgressHUD.h */,
+				0DD0038720E2305900CB6B5D /* YLProgressHUD.m */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -903,6 +926,7 @@
 		0DD0039C20E2335200CB6B5D /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				0D4108BC212669E800B2B4A8 /* PasswordView */,
 				0D218425210EC70B008A4EB6 /* InputView */,
 				0DA8B071210AC76800B0EBFC /* NineView */,
 				0D3D418821086E7A00F9A763 /* TopFilterView */,
@@ -965,6 +989,8 @@
 			children = (
 				0DD003B820E241D600CB6B5D /* UIViewController+Toast.h */,
 				0DD003B920E241D600CB6B5D /* UIViewController+Toast.m */,
+				0D4108C52126C3AE00B2B4A8 /* UIViewController+YLNavConfig.h */,
+				0D4108C62126C3AE00B2B4A8 /* UIViewController+YLNavConfig.m */,
 			);
 			path = ViewController_Category;
 			sourceTree = "<group>";
@@ -1091,6 +1117,7 @@
 		0DFABE2A20A59B7200876945 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = YL;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = DYL;
 				TargetAttributes = {
@@ -1129,6 +1156,7 @@
 				0D53CC262118570000F5F84E /* laugh.json in Resources */,
 				0D53CC242118556F00F5F84E /* jolly_walker.json in Resources */,
 				0D317F3A21081CF5005CD288 /* image_2.jpg in Resources */,
+				0D4108C42126AB4100B2B4A8 /* lakeside_sunset.png in Resources */,
 				0DFABE3F20A59B7300876945 /* Assets.xcassets in Resources */,
 				0DFABE3D20A59B7300876945 /* Main.storyboard in Resources */,
 				0D53CC222118556400F5F84E /* areas.json in Resources */,
@@ -1225,6 +1253,7 @@
 				0DFD021C210711BF00A6B70D /* YLDisplayView.m in Sources */,
 				0DFD021621070B1A00A6B70D /* YLFrameParser.m in Sources */,
 				0DD0036C20E218BB00CB6B5D /* UITextView+MaxLength.m in Sources */,
+				0D4108BF21266A1A00B2B4A8 /* YLPassWordView.m in Sources */,
 				0D60AC1F2105EA89004C7DFA /* YLButton.m in Sources */,
 				0D077FBC210979B9009773AB /* NSAttributedString+Ext.m in Sources */,
 				0D24275F20E376C20040FE23 /* BaseViewModel.m in Sources */,
@@ -1235,7 +1264,7 @@
 				0D1609A020F46443004FCF88 /* CommonSwitchItemViewModel.m in Sources */,
 				0DA8B06D210ABB0500B0EBFC /* TestHXPhotoPicker.m in Sources */,
 				0D1609AF20F49B46004FCF88 /* TestCommonViewController.m in Sources */,
-				0DD0039320E2305A00CB6B5D /* MBProgressHUD+Toast.m in Sources */,
+				0DD0039320E2305A00CB6B5D /* YLProgressHUD+Toast.m in Sources */,
 				0D24275820E3342F0040FE23 /* BaseTableController.m in Sources */,
 				0DA8B074210AC78400B0EBFC /* YLNiNeView.m in Sources */,
 				0DD003A020E2337D00CB6B5D /* PlaceholderView.m in Sources */,
@@ -1245,6 +1274,7 @@
 				0D53CC1F211853EC00F5F84E /* TestLottieController.m in Sources */,
 				0D5C8BB72112F190001033CF /* UIButton+Initialize.m in Sources */,
 				0D1959F020E9C798009237A9 /* MacrosConstant.m in Sources */,
+				0D4108C72126C3AE00B2B4A8 /* UIViewController+YLNavConfig.m in Sources */,
 				0D3D418B2108726D00F9A763 /* YLTopFilterViewModel.m in Sources */,
 				0D1609AC20F48E8C004FCF88 /* CommonFooterView.m in Sources */,
 				0DA8B077210ACBD600B0EBFC /* YLNineCollectionViewCell.m in Sources */,
@@ -1253,7 +1283,7 @@
 				0DD0039220E2305A00CB6B5D /* BaseViewController.m in Sources */,
 				0D0487B320ECB9FC005BFC65 /* TestTableViewController.m in Sources */,
 				0D077FCA210981F4009773AB /* NSMutableDictionary+Safe.m in Sources */,
-				0DD0039420E2305A00CB6B5D /* MBProgressHUD.m in Sources */,
+				0DD0039420E2305A00CB6B5D /* YLProgressHUD.m in Sources */,
 				0D17F67320B808160082D67D /* NSString+DisplayTime.m in Sources */,
 				0DD0036220E1EBBB00CB6B5D /* UIScrollView+Refresh.m in Sources */,
 				0D1DE5D521002B3F00C46C24 /* YLAlertMessageView.m in Sources */,
@@ -1275,6 +1305,7 @@
 				0D3D418E2108758100F9A763 /* TestFilterViewController.m in Sources */,
 				0DD0039620E2305A00CB6B5D /* BaseTabBar.m in Sources */,
 				0DD003BA20E241D600CB6B5D /* UIViewController+Toast.m in Sources */,
+				0D4108C22126A8EA00B2B4A8 /* YLNavController.m in Sources */,
 				0D26552420F3407A004E5366 /* BaseCommonGroupViewModel.m in Sources */,
 				0DD003B220E233B900CB6B5D /* BaseUploadRequest.m in Sources */,
 				0D077FC7210980C5009773AB /* NSMutableArray+Safe.m in Sources */,

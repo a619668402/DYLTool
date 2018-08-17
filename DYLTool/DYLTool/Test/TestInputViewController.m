@@ -8,6 +8,7 @@
 
 #import "TestInputViewController.h"
 #import "YLInputView.h"
+#import "YLPassWordView.h"
 
 @interface TestInputViewController ()<YLInputViewDelegate>
 
@@ -27,7 +28,10 @@
     [btn addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     
-    [self createInputView];
+    YLPassWordView *pswView = [[YLPassWordView alloc] initWithFrame:CGRectMake(10, btn.yl_height + btn.yl_y, KScreenWidth - 20, 40)];
+    [self.view addSubview:pswView];
+    
+//    [self createInputView];
 }
 
 

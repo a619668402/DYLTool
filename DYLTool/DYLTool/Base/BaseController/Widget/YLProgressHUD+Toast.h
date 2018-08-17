@@ -6,9 +6,9 @@
 //  Copyright © 2018年 DYL. All rights reserved.
 //
 
-#import "MBProgressHUD.h"
+#import "YLProgressHUD.h"
 
-@interface MBProgressHUD (Toast)
+@interface YLProgressHUD (Toast)
 
 + (void)showMessageWithView:(UIView *)view message:(NSString *)message;
 

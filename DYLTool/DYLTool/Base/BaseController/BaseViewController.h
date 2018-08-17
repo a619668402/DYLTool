@@ -10,7 +10,7 @@
  *********************************************/
 #import <UIKit/UIKit.h>
 #import "BaseControllerProtocol.h"
-#import "MBProgressHUD.h"
+#import "YLProgressHUD.h"
 #import "BaseViewModel.h"
 
 @interface BaseViewController : UIViewController<BaseControllerProtocol, UINavigationControllerDelegate>

@@ -46,7 +46,7 @@
 #import "UIImage+Tool.h"                    // 图片操作
 #import "NSDateFormatter+Extension.h"       // 日期格式化
 #import "UIViewController+Toast.h"          // Toast 显示
-#import "MBProgressHUD+Toast.h"
+#import "YLProgressHUD+Toast.h"
 
 /*********************************************
 NSArray,NSMutableArray,NSDictionary,NSMutableDictionary Safe Method

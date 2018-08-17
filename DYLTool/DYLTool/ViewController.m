@@ -20,6 +20,7 @@
 #import "TestScrollController.h"
 #import "TestCollectionController.h"
 #import "YLAlertController.h"
+#import "YLNavController.h"
 
 #import "PresentingAnimationController.h"
 #import "DismissingAnimationController.h"
@@ -63,7 +64,7 @@
 
 - (NSArray *)data {
     if (!_data) {
-        _data = @[@"HXPhotoPicker", @"TZImagePickerController", @"YLInputView", @"TestCABasicAnimation", @"TestThread", @"TestTableView", @"QRCodeScan", @"TestLottie", @"TestScrollView", @"TestCollectionView", @"TestAlertController"];
+        _data = @[@"HXPhotoPicker", @"TZImagePickerController", @"YLInputView", @"TestCABasicAnimation", @"TestThread", @"TestTableView", @"QRCodeScan", @"TestLottie", @"TestScrollView", @"TestCollectionView", @"TestAlertController", @"TestNavController"];
     }
     return _data;
 }
@@ -162,6 +163,12 @@
             vc.transitioningDelegate = self;
             vc.modalPresentationStyle = UIModalPresentationCustom;
             [self.navigationController presentViewController:vc animated:YES completion:nil];
+        }
+            break;
+        case 11:
+        {
+            YLNavController *nav = [[YLNavController alloc] initWithViewModel:nil];
+            [self.navigationController pushViewController:nav animated:YES];
         }
             break;
         default:
