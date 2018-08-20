@@ -12,9 +12,6 @@
 #import "BaseViewController.h"
 #import "BaseTableViewModel.h"
 
-#import "UIScrollView+Refresh.h"
-#import "UITableView+Extension.h"
-
 #import "MacrosTools.h"
 
 @interface BaseTableController : BaseViewController<UITableViewDelegate, UITableViewDataSource>

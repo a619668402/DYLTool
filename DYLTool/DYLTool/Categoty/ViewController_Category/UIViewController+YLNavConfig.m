@@ -126,7 +126,7 @@
         if ([UINavigationBar appearance].barTintColor) {
             color = [UINavigationBar appearance].barTintColor;
         } else {
-            color = [UINavigationBar appearance].barStyle == UIBarStyleDefault ? [UIColor colorWithRed:247 / 255.0f green:247 / 255.f blue:247 / 255.f alpha:.8f] : [UIColor colorWithRed:28 / 255.f green:28 / 255.f blue:28 / 255.f alpha:0.729];
+            color = [UINavigationBar appearance].barStyle == UIBarStyleDefault ? [UIColor colorWithRed:247/255.0 green:247/255.0 blue:247/255.0 alpha:0.8]: [UIColor colorWithRed:28/255.0 green:28/255.0 blue:28/255.0 alpha:0.729];
         }
     }
     return color;
@@ -135,7 +135,28 @@
 - (void)yl_setNeedsUpdateNavigationBar {
     if (self.navigationController && [self.navigationController isKindOfClass:[BaseNavController class]]) {
         BaseNavController *nav = (BaseNavController *)self.navigationController;
+//        [nav yl_updateNavigationBarForViewController:self];
     }
 }
 
+- (void)yl_setNeedsUpdateNavigationBarAlpha {
+    if (self.navigationController && [self.navigationController isKindOfClass:[BaseNavController class]]) {
+        BaseNavController *nav = (BaseNavController *)self.navigationController;
+//        [nav yl_updateNavigationBarAlphaForViewController:self];
+    }
+}
+
+- (void)yl_setNeedsUpdateNavigationBarColorOrImage {
+    if (self.navigationController && [self.navigationController isKindOfClass:[BaseNavController class]]) {
+        BaseNavController *nav = (BaseNavController *)self.navigationController;
+//        [nav yl_updateNavigationBarColorOrImageForViewController:self];
+    }
+}
+
+- (void)yl_setNeedsUpdateNavigationBarShadowAlpha {
+    if (self.navigationController && [self.navigationController isKindOfClass:[BaseNavController class]]) {
+        BaseNavController *nav = (BaseNavController *)self.navigationController;
+//        [nav yl_updateNavigationBarShadowAlphaForViewController:self];
+    }
+}
 @end

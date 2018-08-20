@@ -18,6 +18,7 @@
 /// 隐藏导航栏的细线
 - (void)hideNavigationBottomLine;
 
+/*
 - (void)yl_updateNavigationBarForViewController:(UIViewController *)vc;
 
 - (void)yl_updateNavigationBarAlphaForViewController:(UIViewController *)vc;
@@ -25,5 +26,5 @@
 - (void)yl_updateNavigationBarColorOrImageForViewController:(UIViewController *)vc;
 
 - (void)yl_updateNavigationBarShadowAlphaForViewController:(UIViewController *)vc;
-
+*/
 @end

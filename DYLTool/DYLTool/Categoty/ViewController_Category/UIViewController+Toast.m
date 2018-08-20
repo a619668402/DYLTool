@@ -6,10 +6,9 @@
 //  Copyright © 2018年 DYL. All rights reserved.
 //
 
-#import "UIViewController+Toast.h"
-#import "YLProgressHUD+Toast.h"
+#import "UIViewController+YLToast.h"
 
-@implementation UIViewController (Toast)
+@implementation UIViewController (YLToast)
 
 - (void)yl_toast:(NSString *)message {
     [YLProgressHUD showMessageWithView:self.view message:message];
