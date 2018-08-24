@@ -54,11 +54,17 @@
 		0D26553320F36B17004E5366 /* CommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D26553220F36B17004E5366 /* CommonCell.m */; };
 		0D279D9B211195D200D9F3F7 /* iOS 动画.md in Resources */ = {isa = PBXBuildFile; fileRef = 0D279D9A211195D100D9F3F7 /* iOS 动画.md */; };
 		0D279D9E2111B3AE00D9F3F7 /* TestBasicAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D279D9D2111B3AE00D9F3F7 /* TestBasicAnimationController.m */; };
+		0D2C899E212F9D0E00BD4E96 /* TestDragCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2C899D212F9D0E00BD4E96 /* TestDragCollectionController.m */; };
+		0D2C89A1212FA03D00BD4E96 /* TestDragCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2C89A0212FA03D00BD4E96 /* TestDragCell.m */; };
+		0D2C89A4212FDD3100BD4E96 /* TestBezierPathController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2C89A3212FDD3100BD4E96 /* TestBezierPathController.m */; };
 		0D317F3621080F2E005CD288 /* TestWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D317F3521080F2E005CD288 /* TestWebController.m */; };
 		0D317F3A21081CF5005CD288 /* image_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D317F3821081CF5005CD288 /* image_2.jpg */; };
 		0D317F3B21081CF5005CD288 /* image_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D317F3921081CF5005CD288 /* image_1.jpg */; };
 		0D317F3E21085530005CD288 /* YLCoreTextLinkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D317F3D21085530005CD288 /* YLCoreTextLinkData.m */; };
 		0D317F412108556B005CD288 /* YLCoreTextUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D317F402108556B005CD288 /* YLCoreTextUtils.m */; };
+		0D36E89C212E53E200EF1DD1 /* YLCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D36E89B212E53E200EF1DD1 /* YLCircleView.m */; };
+		0D36E89F212E556C00EF1DD1 /* YLTestCircleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D36E89E212E556C00EF1DD1 /* YLTestCircleController.m */; };
+		0D36E8A2212E922F00EF1DD1 /* YLCircleLodingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D36E8A1212E922F00EF1DD1 /* YLCircleLodingView.m */; };
 		0D3D418721086E7600F9A763 /* YLTopFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D418621086E7600F9A763 /* YLTopFilterView.m */; };
 		0D3D418B2108726D00F9A763 /* YLTopFilterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D418A2108726D00F9A763 /* YLTopFilterViewModel.m */; };
 		0D3D418E2108758100F9A763 /* TestFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D418D2108758100F9A763 /* TestFilterViewController.m */; };
@@ -87,6 +93,7 @@
 		0D60AC1B2105E307004C7DFA /* UIButton+YLLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D60AC1A2105E307004C7DFA /* UIButton+YLLayout.m */; };
 		0D60AC1F2105EA89004C7DFA /* YLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D60AC1E2105EA89004C7DFA /* YLButton.m */; };
 		0D62B479212A632500A59A6C /* UIViewController+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D62B478212A632400A59A6C /* UIViewController+Toast.m */; };
+		0D62B47E212A988100A59A6C /* YLShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D62B47D212A988100A59A6C /* YLShareView.m */; };
 		0D7906E821197F480024DB90 /* UIView+YLCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7906E721197F480024DB90 /* UIView+YLCornerRadius.m */; };
 		0D7906EB211987D30024DB90 /* TestScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7906EA211987D30024DB90 /* TestScrollController.m */; };
 		0D920A83211BD9DD004FF3EF /* UIGestureRecognizer+YLBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D920A82211BD9DD004FF3EF /* UIGestureRecognizer+YLBlock.m */; };
@@ -124,6 +131,8 @@
 		0DFABE3F20A59B7300876945 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DFABE3E20A59B7300876945 /* Assets.xcassets */; };
 		0DFABE4220A59B7300876945 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DFABE4020A59B7300876945 /* LaunchScreen.storyboard */; };
 		0DFABE4520A59B7300876945 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFABE4420A59B7300876945 /* main.m */; };
+		0DFB6692212D40AB000B3ABA /* UIButton+YLAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFB6691212D40AB000B3ABA /* UIButton+YLAnimate.m */; };
+		0DFB6696212D4151000B3ABA /* UILabel+YLInitialize.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFB6695212D4151000B3ABA /* UILabel+YLInitialize.m */; };
 		0DFD021321070A9000A6B70D /* YLFrameParserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFD021221070A9000A6B70D /* YLFrameParserConfig.m */; };
 		0DFD021621070B1A00A6B70D /* YLFrameParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFD021521070B1A00A6B70D /* YLFrameParser.m */; };
 		0DFD021921070B6900A6B70D /* YLCoreTextData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFD021821070B6900A6B70D /* YLCoreTextData.m */; };
@@ -235,6 +244,12 @@
 		0D279D9A211195D100D9F3F7 /* iOS 动画.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "iOS 动画.md"; sourceTree = "<group>"; };
 		0D279D9C2111B3AE00D9F3F7 /* TestBasicAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestBasicAnimationController.h; sourceTree = "<group>"; };
 		0D279D9D2111B3AE00D9F3F7 /* TestBasicAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBasicAnimationController.m; sourceTree = "<group>"; };
+		0D2C899C212F9D0E00BD4E96 /* TestDragCollectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestDragCollectionController.h; sourceTree = "<group>"; };
+		0D2C899D212F9D0E00BD4E96 /* TestDragCollectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestDragCollectionController.m; sourceTree = "<group>"; };
+		0D2C899F212FA03D00BD4E96 /* TestDragCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestDragCell.h; sourceTree = "<group>"; };
+		0D2C89A0212FA03D00BD4E96 /* TestDragCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestDragCell.m; sourceTree = "<group>"; };
+		0D2C89A2212FDD3100BD4E96 /* TestBezierPathController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestBezierPathController.h; sourceTree = "<group>"; };
+		0D2C89A3212FDD3100BD4E96 /* TestBezierPathController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBezierPathController.m; sourceTree = "<group>"; };
 		0D317F3421080F2E005CD288 /* TestWebController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestWebController.h; sourceTree = "<group>"; };
 		0D317F3521080F2E005CD288 /* TestWebController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestWebController.m; sourceTree = "<group>"; };
 		0D317F3821081CF5005CD288 /* image_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_2.jpg; sourceTree = "<group>"; };
@@ -243,6 +258,12 @@
 		0D317F3D21085530005CD288 /* YLCoreTextLinkData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLCoreTextLinkData.m; sourceTree = "<group>"; };
 		0D317F3F2108556B005CD288 /* YLCoreTextUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLCoreTextUtils.h; sourceTree = "<group>"; };
 		0D317F402108556B005CD288 /* YLCoreTextUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLCoreTextUtils.m; sourceTree = "<group>"; };
+		0D36E89A212E53E200EF1DD1 /* YLCircleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLCircleView.h; sourceTree = "<group>"; };
+		0D36E89B212E53E200EF1DD1 /* YLCircleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLCircleView.m; sourceTree = "<group>"; };
+		0D36E89D212E556C00EF1DD1 /* YLTestCircleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLTestCircleController.h; sourceTree = "<group>"; };
+		0D36E89E212E556C00EF1DD1 /* YLTestCircleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLTestCircleController.m; sourceTree = "<group>"; };
+		0D36E8A0212E922F00EF1DD1 /* YLCircleLodingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLCircleLodingView.h; sourceTree = "<group>"; };
+		0D36E8A1212E922F00EF1DD1 /* YLCircleLodingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLCircleLodingView.m; sourceTree = "<group>"; };
 		0D3D418521086E7600F9A763 /* YLTopFilterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLTopFilterView.h; sourceTree = "<group>"; };
 		0D3D418621086E7600F9A763 /* YLTopFilterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLTopFilterView.m; sourceTree = "<group>"; };
 		0D3D41892108726D00F9A763 /* YLTopFilterViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLTopFilterViewModel.h; sourceTree = "<group>"; };
@@ -294,6 +315,8 @@
 		0D60AC1D2105EA89004C7DFA /* YLButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLButton.h; sourceTree = "<group>"; };
 		0D60AC1E2105EA89004C7DFA /* YLButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLButton.m; sourceTree = "<group>"; };
 		0D62B478212A632400A59A6C /* UIViewController+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Toast.m"; sourceTree = "<group>"; };
+		0D62B47C212A988100A59A6C /* YLShareView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLShareView.h; sourceTree = "<group>"; };
+		0D62B47D212A988100A59A6C /* YLShareView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLShareView.m; sourceTree = "<group>"; };
 		0D7906E621197F480024DB90 /* UIView+YLCornerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+YLCornerRadius.h"; sourceTree = "<group>"; };
 		0D7906E721197F480024DB90 /* UIView+YLCornerRadius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+YLCornerRadius.m"; sourceTree = "<group>"; };
 		0D7906E9211987D30024DB90 /* TestScrollController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestScrollController.h; sourceTree = "<group>"; };
@@ -370,6 +393,10 @@
 		0DFABE4120A59B7300876945 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DFABE4320A59B7300876945 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DFABE4420A59B7300876945 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0DFB6690212D40AB000B3ABA /* UIButton+YLAnimate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+YLAnimate.h"; sourceTree = "<group>"; };
+		0DFB6691212D40AB000B3ABA /* UIButton+YLAnimate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YLAnimate.m"; sourceTree = "<group>"; };
+		0DFB6694212D4151000B3ABA /* UILabel+YLInitialize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+YLInitialize.h"; sourceTree = "<group>"; };
+		0DFB6695212D4151000B3ABA /* UILabel+YLInitialize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+YLInitialize.m"; sourceTree = "<group>"; };
 		0DFD021121070A9000A6B70D /* YLFrameParserConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLFrameParserConfig.h; sourceTree = "<group>"; };
 		0DFD021221070A9000A6B70D /* YLFrameParserConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLFrameParserConfig.m; sourceTree = "<group>"; };
 		0DFD021421070B1A00A6B70D /* YLFrameParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLFrameParser.h; sourceTree = "<group>"; };
@@ -425,6 +452,8 @@
 				0D03885720DA29E8000FFCBF /* UIButton+YLCountDown.m */,
 				0D5C8BB52112F190001033CF /* UIButton+YLInitialize.h */,
 				0D5C8BB62112F190001033CF /* UIButton+YLInitialize.m */,
+				0DFB6690212D40AB000B3ABA /* UIButton+YLAnimate.h */,
+				0DFB6691212D40AB000B3ABA /* UIButton+YLAnimate.m */,
 			);
 			path = UIButton_Category;
 			sourceTree = "<group>";
@@ -574,6 +603,13 @@
 			path = UIView_Category;
 			sourceTree = "<group>";
 		};
+		0D193E56212BCD320081DE9C /* MenuView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MenuView;
+			sourceTree = "<group>";
+		};
 		0D1DE5D221002AE700C46C24 /* AlertView */ = {
 			isa = PBXGroup;
 			children = (
@@ -651,6 +687,17 @@
 			path = TestImage;
 			sourceTree = "<group>";
 		};
+		0D36E899212E53CB00EF1DD1 /* CircleView */ = {
+			isa = PBXGroup;
+			children = (
+				0D36E89A212E53E200EF1DD1 /* YLCircleView.h */,
+				0D36E89B212E53E200EF1DD1 /* YLCircleView.m */,
+				0D36E8A0212E922F00EF1DD1 /* YLCircleLodingView.h */,
+				0D36E8A1212E922F00EF1DD1 /* YLCircleLodingView.m */,
+			);
+			path = CircleView;
+			sourceTree = "<group>";
+		};
 		0D3D418821086E7A00F9A763 /* TopFilterView */ = {
 			isa = PBXGroup;
 			children = (
@@ -700,6 +747,12 @@
 				0D41A3C3211AD731002E5493 /* TestCollectionController.m */,
 				0D4108C02126A8EA00B2B4A8 /* YLNavController.h */,
 				0D4108C12126A8EA00B2B4A8 /* YLNavController.m */,
+				0D36E89D212E556C00EF1DD1 /* YLTestCircleController.h */,
+				0D36E89E212E556C00EF1DD1 /* YLTestCircleController.m */,
+				0D2C899C212F9D0E00BD4E96 /* TestDragCollectionController.h */,
+				0D2C899D212F9D0E00BD4E96 /* TestDragCollectionController.m */,
+				0D2C89A2212FDD3100BD4E96 /* TestBezierPathController.h */,
+				0D2C89A3212FDD3100BD4E96 /* TestBezierPathController.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -725,6 +778,8 @@
 			children = (
 				0D41A3C5211ADA3C002E5493 /* TestCollectionViewCell.h */,
 				0D41A3C6211ADA3C002E5493 /* TestCollectionViewCell.m */,
+				0D2C899F212FA03D00BD4E96 /* TestDragCell.h */,
+				0D2C89A0212FA03D00BD4E96 /* TestDragCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -797,6 +852,15 @@
 			path = YLProgressHUD;
 			sourceTree = "<group>";
 		};
+		0D62B47B212A986600A59A6C /* ShareView */ = {
+			isa = PBXGroup;
+			children = (
+				0D62B47C212A988100A59A6C /* YLShareView.h */,
+				0D62B47D212A988100A59A6C /* YLShareView.m */,
+			);
+			path = ShareView;
+			sourceTree = "<group>";
+		};
 		0D920A7D211BD940004FF3EF /* UIGestureRecongizer_Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -820,6 +884,7 @@
 		0DD0037520E22F8B00CB6B5D /* Categoty */ = {
 			isa = PBXGroup;
 			children = (
+				0DFB6693212D4122000B3ABA /* UILabel_Category */,
 				0D920A7D211BD940004FF3EF /* UIGestureRecongizer_Category */,
 				0D077FC121097E82009773AB /* NSDictionary_Category */,
 				0D077FBD21097BF0009773AB /* NSArray_Categoty */,
@@ -925,6 +990,9 @@
 		0DD0039C20E2335200CB6B5D /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				0D36E899212E53CB00EF1DD1 /* CircleView */,
+				0D193E56212BCD320081DE9C /* MenuView */,
+				0D62B47B212A986600A59A6C /* ShareView */,
 				0D62B47A212A643C00A59A6C /* YLProgressHUD */,
 				0D4108BC212669E800B2B4A8 /* PasswordView */,
 				0D218425210EC70B008A4EB6 /* InputView */,
@@ -1047,6 +1115,15 @@
 				0DFABE4420A59B7300876945 /* main.m */,
 			);
 			path = DYLTool;
+			sourceTree = "<group>";
+		};
+		0DFB6693212D4122000B3ABA /* UILabel_Category */ = {
+			isa = PBXGroup;
+			children = (
+				0DFB6694212D4151000B3ABA /* UILabel+YLInitialize.h */,
+				0DFB6695212D4151000B3ABA /* UILabel+YLInitialize.m */,
+			);
+			path = UILabel_Category;
 			sourceTree = "<group>";
 		};
 		0DFD021021070A0800A6B70D /* CoreText */ = {
@@ -1236,6 +1313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D3D418721086E7600F9A763 /* YLTopFilterView.m in Sources */,
+				0D36E89C212E53E200EF1DD1 /* YLCircleView.m in Sources */,
 				0D24275B20E375E40040FE23 /* KRouter.m in Sources */,
 				0D317F3E21085530005CD288 /* YLCoreTextLinkData.m in Sources */,
 				0D0487B620ECC1F9005BFC65 /* TestSearchController_1.m in Sources */,
@@ -1256,6 +1334,7 @@
 				0D4108BF21266A1A00B2B4A8 /* YLPassWordView.m in Sources */,
 				0D60AC1F2105EA89004C7DFA /* YLButton.m in Sources */,
 				0D077FBC210979B9009773AB /* NSAttributedString+YLExt.m in Sources */,
+				0D36E8A2212E922F00EF1DD1 /* YLCircleLodingView.m in Sources */,
 				0D24275F20E376C20040FE23 /* BaseViewModel.m in Sources */,
 				0D04E77020BD0A8B0040C4AF /* NSString+YLBase64.m in Sources */,
 				0D41A3CB211AFC50002E5493 /* PresentingAnimationController.m in Sources */,
@@ -1288,6 +1367,7 @@
 				0D17F67320B808160082D67D /* NSString+YLDisplayTime.m in Sources */,
 				0DD0036220E1EBBB00CB6B5D /* UIScrollView+YLRefresh.m in Sources */,
 				0D1DE5D521002B3F00C46C24 /* YLAlertMessageView.m in Sources */,
+				0D2C899E212F9D0E00BD4E96 /* TestDragCollectionController.m in Sources */,
 				0DFABE4520A59B7300876945 /* main.m in Sources */,
 				0D26551E20F33E01004E5366 /* BaseCommonController.m in Sources */,
 				0D0487AA20EC9D6F005BFC65 /* BaseNavigationControllerStack.m in Sources */,
@@ -1307,10 +1387,14 @@
 				0DD0039620E2305A00CB6B5D /* BaseTabBar.m in Sources */,
 				0D4108C22126A8EA00B2B4A8 /* YLNavController.m in Sources */,
 				0D26552420F3407A004E5366 /* BaseCommonGroupViewModel.m in Sources */,
+				0DFB6692212D40AB000B3ABA /* UIButton+YLAnimate.m in Sources */,
 				0DD003B220E233B900CB6B5D /* BaseUploadRequest.m in Sources */,
 				0D077FC7210980C5009773AB /* NSMutableArray+YLSafe.m in Sources */,
+				0DFB6696212D4151000B3ABA /* UILabel+YLInitialize.m in Sources */,
+				0D2C89A4212FDD3100BD4E96 /* TestBezierPathController.m in Sources */,
 				0D17F66A20B7FC0E0082D67D /* NSString+YLTools.m in Sources */,
 				0D056D2720E4C4DB00953C86 /* BaseTableViewModel.m in Sources */,
+				0D36E89F212E556C00EF1DD1 /* YLTestCircleController.m in Sources */,
 				0D26552720F341C2004E5366 /* BaseCommonItemViewModel.m in Sources */,
 				0DD0036520E210BF00CB6B5D /* UITableView+YLExtension.m in Sources */,
 				0D41A3CE211AFE38002E5493 /* DismissingAnimationController.m in Sources */,
@@ -1326,6 +1410,7 @@
 				0D53CC192117F45100F5F84E /* KQRCodeController.m in Sources */,
 				0DD0036820E2130300CB6B5D /* UITextField+YLMaxLength.m in Sources */,
 				0D53CC152117EB5200F5F84E /* KQRCodeUtil.m in Sources */,
+				0D2C89A1212FA03D00BD4E96 /* TestDragCell.m in Sources */,
 				0D056D2420E4904B00953C86 /* BaseNavController.m in Sources */,
 				0DF4188020C93CFF004A8E11 /* UIImage+YLCompressImage.m in Sources */,
 				0D7906EB211987D30024DB90 /* TestScrollController.m in Sources */,
@@ -1345,6 +1430,7 @@
 				0D53F41120E0F58600B07B50 /* NSDateFormatter+YLExtension.m in Sources */,
 				0DEE546120CA942C00749A2C /* UIView+YLCurrentViewController.m in Sources */,
 				0D03885820DA29E8000FFCBF /* UIButton+YLCountDown.m in Sources */,
+				0D62B47E212A988100A59A6C /* YLShareView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

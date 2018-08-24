@@ -9,19 +9,19 @@
 #import "MacrosConstant.h"
 
 /// 网络请求相关定义
-NSString * const NetworkErrorDomain = @"NetworkErrorDomain";
-NSInteger const NetworkErrorCode = 7001;
-NSString * const NetworkError = @"NetworkError";
-NSString * const NetworkErrorInfo = @"网络错误,请检查网络";
+NSString * const KNetworkErrorDomain = @"NetworkErrorDomain";
+NSInteger const KNetworkErrorCode = 7001;
+NSString * const KNetworkError = @"NetworkError";
+NSString * const KNetworkErrorInfo = @"网络错误,请检查网络";
 
-NSString * const NetworkFailureDomain = @"NetworkFailureDomain";
-NSInteger const NetworkFailureCode = 7002;
-NSString * const NetworkFailure = @"NetworkFailure";
-NSString * const NetworkFailureInfo = @"网络请求失败,请稍后重试";
+NSString * const KNetworkFailureDomain = @"NetworkFailureDomain";
+NSInteger const KNetworkFailureCode = 7002;
+NSString * const KNetworkFailure = @"NetworkFailure";
+NSString * const KNetworkFailureInfo = @"网络请求失败,请稍后重试";
 
-NSString * const NetworkRequestErrorDomain = @"NetworkRequestErrorDomain";
-NSInteger const NetworkRequestErrorCode = 7003;
-NSString * const NetworkRequestError = @"NetworkRequestError";
+NSString * const KNetworkRequestErrorDomain = @"NetworkRequestErrorDomain";
+NSInteger const KNetworkRequestErrorCode = 7003;
+NSString * const KNetworkRequestError = @"NetworkRequestError";
 /*
 NSString *const CODE_SUCCESS = @"1";
 NSString *const CODE_LACKPARAMETERERROR = @"-1";

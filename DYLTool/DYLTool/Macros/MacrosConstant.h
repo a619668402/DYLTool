@@ -34,19 +34,19 @@ typedef id(^IDBlock_id)(id);
 
 
 /// 网络请求相关定义
-FOUNDATION_EXTERN NSString * const NetworkErrorDomain;
-FOUNDATION_EXTERN NSInteger const NetworkErrorCode;
-FOUNDATION_EXTERN NSString * const NetworkError;
-FOUNDATION_EXTERN NSString * const NetworkErrorInfo;
+FOUNDATION_EXTERN NSString * const KNetworkErrorDomain;
+FOUNDATION_EXTERN NSInteger const KNetworkErrorCode;
+FOUNDATION_EXTERN NSString * const KNetworkError;
+FOUNDATION_EXTERN NSString * const KNetworkErrorInfo;
 
-FOUNDATION_EXTERN NSString * const NetworkFailureDomain;
-FOUNDATION_EXTERN NSInteger const NetworkFailureCode;
-FOUNDATION_EXTERN NSString * const NetworkFailure;
-FOUNDATION_EXTERN NSString * const NetworkFailureInfo;
+FOUNDATION_EXTERN NSString * const KNetworkFailureDomain;
+FOUNDATION_EXTERN NSInteger const KNetworkFailureCode;
+FOUNDATION_EXTERN NSString * const KNetworkFailure;
+FOUNDATION_EXTERN NSString * const KNetworkFailureInfo;
 
-FOUNDATION_EXTERN NSString * const NetworkRequestErrorDomain;
-FOUNDATION_EXTERN NSInteger const NetworkRequestErrorCode;
-FOUNDATION_EXTERN NSString * const NetworkRequestError;
+FOUNDATION_EXTERN NSString * const KNetworkRequestErrorDomain;
+FOUNDATION_EXTERN NSInteger const KNetworkRequestErrorCode;
+FOUNDATION_EXTERN NSString * const KNetworkRequestError;
 /*
 FOUNDATION_EXTERN NSString *const CODE_SUCCESS;
 FOUNDATION_EXTERN NSString *const CODE_LACKPARAMETERERROR;

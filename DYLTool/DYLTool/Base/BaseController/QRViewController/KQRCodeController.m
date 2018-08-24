@@ -42,25 +42,25 @@
     
     // 设置扫描区域外部的上部的视图
     UIView *topView = [[UIView alloc] init];
-    topView.frame = CGRectMake(0, KNavAndStatusHeight, KScreenWidth, (KScreenHeight - KNavAndStatusHeight - KQRCodeWidth) / 2.f);
+    topView.frame = CGRectMake(0, 0, KScreenWidth, (KScreenHeight - KNavAndStatusHeight - KQRCodeWidth) / 2.f);
     topView.backgroundColor = color;
     topView.alpha = alpha;
     
     // 设置扫描区域外部左边的视图
     UIView *leftView = [[UIView alloc] init];
-    leftView.frame = CGRectMake(0, KNavAndStatusHeight + topView.yl_height, (KScreenWidth - KQRCodeWidth) / 2.f, KQRCodeWidth);
+    leftView.frame = CGRectMake(0, 0 + topView.yl_height, (KScreenWidth - KQRCodeWidth) / 2.f, KQRCodeWidth);
     leftView.backgroundColor = color;
     leftView.alpha = alpha;
     
     // 设置扫描区域外部右边视图
     UIView *rightView = [[UIView alloc] init];
-    rightView.frame = CGRectMake((KScreenWidth - KQRCodeWidth) / 2.f + KQRCodeWidth, KNavAndStatusHeight + topView.yl_height, (KScreenWidth - KQRCodeWidth) / 2.f, KQRCodeWidth);
+    rightView.frame = CGRectMake((KScreenWidth - KQRCodeWidth) / 2.f + KQRCodeWidth, 0 + topView.yl_height, (KScreenWidth - KQRCodeWidth) / 2.f, KQRCodeWidth);
     rightView.backgroundColor = color;
     rightView.alpha = alpha;
     
     // 设置扫描区域外部底部视图
     UIView *bottomView = [[UIView alloc] init];
-    bottomView.frame = CGRectMake(0, KNavAndStatusHeight + topView.yl_height + KQRCodeWidth, KScreenWidth, KScreenHeight - KNavAndStatusHeight - topView.yl_height - KQRCodeWidth);
+    bottomView.frame = CGRectMake(0, 0 + topView.yl_height + KQRCodeWidth, KScreenWidth, KScreenHeight - 0 - topView.yl_height - KQRCodeWidth);
     bottomView.backgroundColor = color;
     bottomView.alpha = alpha;
     
@@ -73,7 +73,7 @@
 
 - (void)_setupScanWindowView {
     // 设置扫描区域的位置
-    UIView *scanWindow = [[UIView alloc] initWithFrame:CGRectMake((KScreenWidth - KQRCodeWidth) / 2.f, (KScreenHeight - KQRCodeWidth - KNavAndStatusHeight) / 2.f + KNavAndStatusHeight, KQRCodeWidth, KQRCodeWidth)];
+    UIView *scanWindow = [[UIView alloc] initWithFrame:CGRectMake((KScreenWidth - KQRCodeWidth) / 2.f, (KScreenHeight - KQRCodeWidth - 0) / 2.f + 0, KQRCodeWidth, KQRCodeWidth)];
     scanWindow.clipsToBounds = YES;
     [self.view addSubview:scanWindow];
     
@@ -124,7 +124,7 @@
     // 创建输出流
     AVCaptureMetadataOutput *output = [[AVCaptureMetadataOutput alloc] init];
     
-    CGFloat x = (KScreenHeight - KQRCodeWidth - KNavAndStatusHeight) / 2.f / KScreenHeight;
+    CGFloat x = (KScreenHeight - KQRCodeWidth - 0) / 2.f / KScreenHeight;
     CGFloat y = (KScreenWidth - KQRCodeWidth) / 2.f / KScreenWidth;
     CGFloat width = KQRCodeWidth / KScreenHeight;
     CGFloat height = KQRCodeWidth / KScreenWidth;

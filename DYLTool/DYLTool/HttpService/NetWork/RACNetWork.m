@@ -11,7 +11,7 @@
 + (RACSignal *)rac_Action:(BaseRequest *)request resultClass:(Class)resultClass {
     // TODO 判断网络状态,不可用返回
     if (0 != 0) {
-        return [RACSignal error:[NSError errorWithDomain:NetworkErrorDomain code:NetworkErrorCode userInfo:@{NetworkError:NetworkErrorInfo}]];
+        return [RACSignal error:[NSError errorWithDomain:KNetworkErrorDomain code:KNetworkErrorCode userInfo:@{KNetworkError:KNetworkErrorInfo}]];
     }
     return [[RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
         [request startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
@@ -21,18 +21,18 @@
                 if ([response.code isEqualToString:CODE_SUCCESS]) { // 请求成功
                     [subscriber sendNext:[resultClass mj_objectWithKeyValues:response.data]];
                 } else { // 请求信息有误
-                    [subscriber sendError:[NSError errorWithDomain:NetworkRequestErrorDomain code:NetworkRequestErrorCode userInfo:@{NetworkRequestError: response.msg}]];
+                    [subscriber sendError:[NSError errorWithDomain:KNetworkRequestErrorDomain code:KNetworkRequestErrorCode userInfo:@{KNetworkRequestError: response.msg}]];
                 }
             } else { // 泛型为空
                 if ([response.code isEqualToString:CODE_SUCCESS]) { // 请求成功
                     [subscriber sendNext:response.data];
                 } else { // 请求信息有误
-                    [subscriber sendError:[NSError errorWithDomain:NetworkRequestErrorDomain code:NetworkRequestErrorCode userInfo:@{NetworkRequestError: response.msg}]];
+                    [subscriber sendError:[NSError errorWithDomain:KNetworkRequestErrorDomain code:KNetworkRequestErrorCode userInfo:@{KNetworkRequestError: response.msg}]];
                 }
             }
             [subscriber sendCompleted];
         } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
-            [subscriber sendError:[NSError errorWithDomain:NetworkFailureDomain code:NetworkFailureCode userInfo:@{NetworkFailure:NetworkErrorInfo}]];
+            [subscriber sendError:[NSError errorWithDomain:KNetworkFailureDomain code:KNetworkFailureCode userInfo:@{KNetworkFailure:KNetworkErrorInfo}]];
         }];
         return [RACDisposable disposableWithBlock:^{
             [request stop];
@@ -44,7 +44,7 @@
 + (RACSignal *)rac_BatchAction:(YTKBatchRequest *)batchRequest resultClasses:(NSArray<Class> *)resultClasses {
     // TODO 判断网络状态,不可用返回
     if (0 != 0) {
-        return [RACSignal error:[NSError errorWithDomain:NetworkError code:NetworkErrorCode userInfo:@{NetworkError:NetworkErrorInfo}]];
+        return [RACSignal error:[NSError errorWithDomain:KNetworkError code:KNetworkErrorCode userInfo:@{KNetworkError:KNetworkErrorInfo}]];
     }
     return [[RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
         [batchRequest startWithCompletionBlockWithSuccess:^(YTKBatchRequest * _Nonnull batchRequest) {
@@ -58,20 +58,20 @@
                     if ([response.code isEqualToString:CODE_SUCCESS]) {
                         [results addObject:[clazz mj_objectWithKeyValues:response.data]];
                     } else {
-                        [subscriber sendError:[NSError errorWithDomain:NetworkRequestErrorDomain code:NetworkRequestErrorCode userInfo:@{NetworkRequestError:response.msg}]];
+                        [subscriber sendError:[NSError errorWithDomain:KNetworkRequestErrorDomain code:KNetworkRequestErrorCode userInfo:@{KNetworkRequestError:response.msg}]];
                     }
                 } else { // 泛型为空
                     if ([response.code isEqualToString:CODE_SUCCESS]) {
                         [results addObject:response.data];
                     } else {
-                        [subscriber sendError:[NSError errorWithDomain:NetworkRequestErrorDomain code:NetworkRequestErrorCode userInfo:@{NetworkRequestError:response.msg}]];
+                        [subscriber sendError:[NSError errorWithDomain:KNetworkRequestErrorDomain code:KNetworkRequestErrorCode userInfo:@{KNetworkRequestError:response.msg}]];
                     }
                 }
             }
             [subscriber sendNext:results];
             [subscriber sendCompleted];
         } failure:^(YTKBatchRequest * _Nonnull batchRequest) {
-            [subscriber sendError:[NSError errorWithDomain:NetworkFailureDomain code:NetworkFailureCode userInfo:@{NetworkFailure:NetworkFailureInfo}]];
+            [subscriber sendError:[NSError errorWithDomain:KNetworkFailureDomain code:KNetworkFailureCode userInfo:@{KNetworkFailure:KNetworkFailureInfo}]];
         }];
         return [RACDisposable disposableWithBlock:^{
             [batchRequest stop];

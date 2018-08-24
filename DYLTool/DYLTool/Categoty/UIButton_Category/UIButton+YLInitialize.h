@@ -32,4 +32,12 @@
                           target:(id)target
                         selector:(SEL)action;
 
+
+/**
+ 仿今日头条分享弹出动画
+
+ @param delay 延迟时间
+ */
+- (void)shake:(NSTimeInterval)delay;
+
 @end

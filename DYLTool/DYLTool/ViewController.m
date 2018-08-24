@@ -21,6 +21,10 @@
 #import "TestCollectionController.h"
 #import "YLAlertController.h"
 #import "YLNavController.h"
+#import "YLShareView.h"
+#import "YLTestCircleController.h"
+#import "TestDragCollectionController.h"
+#import "TestBezierPathController.h"
 
 #import "PresentingAnimationController.h"
 #import "DismissingAnimationController.h"
@@ -53,7 +57,7 @@
 
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, KNavAndStatusHeight, KScreenWidth, KScreenHeight) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _tableView.rowHeight = 44.0f;
         _tableView.delegate = self;
         _tableView.dataSource = self;
@@ -64,7 +68,7 @@
 
 - (NSArray *)data {
     if (!_data) {
-        _data = @[@"HXPhotoPicker", @"TZImagePickerController", @"YLInputView", @"TestCABasicAnimation", @"TestThread", @"TestTableView", @"QRCodeScan", @"TestLottie", @"TestScrollView", @"TestCollectionView", @"TestAlertController", @"TestNavController"];
+        _data = @[@"HXPhotoPicker", @"TZImagePickerController", @"YLInputView", @"TestCABasicAnimation", @"TestThread", @"TestTableView", @"QRCodeScan", @"TestLottie", @"TestScrollView", @"TestCollectionView", @"TestAlertController", @"TestNavController", @"TestYLShareView", @"TestCircleView", @"TestDragCollection", @"TestFilterController",@"TestBezierPath"];
     }
     return _data;
 }
@@ -169,6 +173,36 @@
         {
             YLNavController *nav = [[YLNavController alloc] initWithViewModel:nil];
             [self.navigationController pushViewController:nav animated:YES];
+        }
+            break;
+        case 12:
+        {
+            YLShareView *shareView = [[YLShareView alloc] init];
+            [shareView showShareView];
+        }
+            break;
+        case 13:
+        {
+            YLTestCircleController *vc = [[YLTestCircleController alloc] initWithViewModel:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 14:
+        {
+            TestDragCollectionController *vc = [[TestDragCollectionController alloc] initWithViewModel:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 15:
+        {
+            TestFilterViewController *vc = [[TestFilterViewController alloc] initWithViewModel:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 16:
+        {
+            TestBezierPathController *vc = [[TestBezierPathController alloc] initWithViewModel:nil];
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
         default:
