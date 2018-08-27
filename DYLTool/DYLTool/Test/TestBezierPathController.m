@@ -53,7 +53,7 @@
     CAShapeLayer * circle = [CAShapeLayer layer];
     circle.frame = self.view.bounds;
     //
-    UIBezierPath  * circlePath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds)) radius:100 startAngle:0 endAngle:2*M_PI clockwise:YES];
+    UIBezierPath  * circlePath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds)) radius:100 startAngle:M_PI / 4 endAngle:M_PI / 2 clockwise:YES];
     circle.path = circlePath.CGPath;
     circle.strokeColor = [UIColor blueColor].CGColor;
     circle.fillColor = nil;
@@ -76,7 +76,7 @@
     group.removedOnCompletion = NO;
     group.fillMode = kCAFillModeForwards;
     group.animations = @[strokeStartAnimation,strokeEndAnimation,rotationAnimation];
-    [circle addAnimation:group forKey:nil];
+//    [circle addAnimation:group forKey:nil];
 }
 
 @end

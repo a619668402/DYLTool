@@ -64,7 +64,6 @@
 		0D317F412108556B005CD288 /* YLCoreTextUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D317F402108556B005CD288 /* YLCoreTextUtils.m */; };
 		0D36E89C212E53E200EF1DD1 /* YLCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D36E89B212E53E200EF1DD1 /* YLCircleView.m */; };
 		0D36E89F212E556C00EF1DD1 /* YLTestCircleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D36E89E212E556C00EF1DD1 /* YLTestCircleController.m */; };
-		0D36E8A2212E922F00EF1DD1 /* YLCircleLodingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D36E8A1212E922F00EF1DD1 /* YLCircleLodingView.m */; };
 		0D3D418721086E7600F9A763 /* YLTopFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D418621086E7600F9A763 /* YLTopFilterView.m */; };
 		0D3D418B2108726D00F9A763 /* YLTopFilterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D418A2108726D00F9A763 /* YLTopFilterViewModel.m */; };
 		0D3D418E2108758100F9A763 /* TestFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D418D2108758100F9A763 /* TestFilterViewController.m */; };
@@ -262,8 +261,6 @@
 		0D36E89B212E53E200EF1DD1 /* YLCircleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLCircleView.m; sourceTree = "<group>"; };
 		0D36E89D212E556C00EF1DD1 /* YLTestCircleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLTestCircleController.h; sourceTree = "<group>"; };
 		0D36E89E212E556C00EF1DD1 /* YLTestCircleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLTestCircleController.m; sourceTree = "<group>"; };
-		0D36E8A0212E922F00EF1DD1 /* YLCircleLodingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLCircleLodingView.h; sourceTree = "<group>"; };
-		0D36E8A1212E922F00EF1DD1 /* YLCircleLodingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLCircleLodingView.m; sourceTree = "<group>"; };
 		0D3D418521086E7600F9A763 /* YLTopFilterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLTopFilterView.h; sourceTree = "<group>"; };
 		0D3D418621086E7600F9A763 /* YLTopFilterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLTopFilterView.m; sourceTree = "<group>"; };
 		0D3D41892108726D00F9A763 /* YLTopFilterViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLTopFilterViewModel.h; sourceTree = "<group>"; };
@@ -603,13 +600,6 @@
 			path = UIView_Category;
 			sourceTree = "<group>";
 		};
-		0D193E56212BCD320081DE9C /* MenuView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MenuView;
-			sourceTree = "<group>";
-		};
 		0D1DE5D221002AE700C46C24 /* AlertView */ = {
 			isa = PBXGroup;
 			children = (
@@ -692,8 +682,6 @@
 			children = (
 				0D36E89A212E53E200EF1DD1 /* YLCircleView.h */,
 				0D36E89B212E53E200EF1DD1 /* YLCircleView.m */,
-				0D36E8A0212E922F00EF1DD1 /* YLCircleLodingView.h */,
-				0D36E8A1212E922F00EF1DD1 /* YLCircleLodingView.m */,
 			);
 			path = CircleView;
 			sourceTree = "<group>";
@@ -991,7 +979,6 @@
 			isa = PBXGroup;
 			children = (
 				0D36E899212E53CB00EF1DD1 /* CircleView */,
-				0D193E56212BCD320081DE9C /* MenuView */,
 				0D62B47B212A986600A59A6C /* ShareView */,
 				0D62B47A212A643C00A59A6C /* YLProgressHUD */,
 				0D4108BC212669E800B2B4A8 /* PasswordView */,
@@ -1334,7 +1321,6 @@
 				0D4108BF21266A1A00B2B4A8 /* YLPassWordView.m in Sources */,
 				0D60AC1F2105EA89004C7DFA /* YLButton.m in Sources */,
 				0D077FBC210979B9009773AB /* NSAttributedString+YLExt.m in Sources */,
-				0D36E8A2212E922F00EF1DD1 /* YLCircleLodingView.m in Sources */,
 				0D24275F20E376C20040FE23 /* BaseViewModel.m in Sources */,
 				0D04E77020BD0A8B0040C4AF /* NSString+YLBase64.m in Sources */,
 				0D41A3CB211AFC50002E5493 /* PresentingAnimationController.m in Sources */,
