@@ -11,3 +11,11 @@
 @interface TestBezierPathController : BaseViewController
 
 @end
+
+@interface Father : NSObject
+
+@end
+
+@interface Son : Father
+
+@end
