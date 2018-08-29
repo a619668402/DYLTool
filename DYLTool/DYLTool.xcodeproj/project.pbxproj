@@ -97,6 +97,9 @@
 		0D7906EB211987D30024DB90 /* TestScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7906EA211987D30024DB90 /* TestScrollController.m */; };
 		0D920A83211BD9DD004FF3EF /* UIGestureRecognizer+YLBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D920A82211BD9DD004FF3EF /* UIGestureRecognizer+YLBlock.m */; };
 		0D920A86211BDECF004FF3EF /* UIView+YLExtendTouchRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D920A85211BDECF004FF3EF /* UIView+YLExtendTouchRect.m */; };
+		0D9FD8CA21350607008C053F /* TestKVOKVCController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9FD8C921350607008C053F /* TestKVOKVCController.m */; };
+		0D9FD8CD213506A8008C053F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9FD8CC213506A8008C053F /* Person.m */; };
+		0D9FD8D021352498008C053F /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9FD8CF21352498008C053F /* Student.m */; };
 		0DA8B06D210ABB0500B0EBFC /* TestHXPhotoPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8B06C210ABB0500B0EBFC /* TestHXPhotoPicker.m */; };
 		0DA8B070210ABB2500B0EBFC /* TestTZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8B06F210ABB2500B0EBFC /* TestTZImagePickerController.m */; };
 		0DA8B074210AC78400B0EBFC /* YLNiNeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8B073210AC78400B0EBFC /* YLNiNeView.m */; };
@@ -322,6 +325,12 @@
 		0D920A82211BD9DD004FF3EF /* UIGestureRecognizer+YLBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+YLBlock.m"; sourceTree = "<group>"; };
 		0D920A84211BDECF004FF3EF /* UIView+YLExtendTouchRect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+YLExtendTouchRect.h"; sourceTree = "<group>"; };
 		0D920A85211BDECF004FF3EF /* UIView+YLExtendTouchRect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+YLExtendTouchRect.m"; sourceTree = "<group>"; };
+		0D9FD8C821350607008C053F /* TestKVOKVCController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestKVOKVCController.h; sourceTree = "<group>"; };
+		0D9FD8C921350607008C053F /* TestKVOKVCController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestKVOKVCController.m; sourceTree = "<group>"; };
+		0D9FD8CB213506A8008C053F /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		0D9FD8CC213506A8008C053F /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		0D9FD8CE21352498008C053F /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		0D9FD8CF21352498008C053F /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		0DA8B06B210ABB0500B0EBFC /* TestHXPhotoPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestHXPhotoPicker.h; sourceTree = "<group>"; };
 		0DA8B06C210ABB0500B0EBFC /* TestHXPhotoPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestHXPhotoPicker.m; sourceTree = "<group>"; };
 		0DA8B06E210ABB2500B0EBFC /* TestTZImagePickerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTZImagePickerController.h; sourceTree = "<group>"; };
@@ -741,6 +750,8 @@
 				0D2C899D212F9D0E00BD4E96 /* TestDragCollectionController.m */,
 				0D2C89A2212FDD3100BD4E96 /* TestBezierPathController.h */,
 				0D2C89A3212FDD3100BD4E96 /* TestBezierPathController.m */,
+				0D9FD8C821350607008C053F /* TestKVOKVCController.h */,
+				0D9FD8C921350607008C053F /* TestKVOKVCController.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -757,6 +768,10 @@
 		0D41A3C0211AD713002E5493 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0D9FD8CB213506A8008C053F /* Person.h */,
+				0D9FD8CC213506A8008C053F /* Person.m */,
+				0D9FD8CE21352498008C053F /* Student.h */,
+				0D9FD8CF21352498008C053F /* Student.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1341,6 +1356,7 @@
 				0D5C8BB72112F190001033CF /* UIButton+YLInitialize.m in Sources */,
 				0D1959F020E9C798009237A9 /* MacrosConstant.m in Sources */,
 				0D4108C72126C3AE00B2B4A8 /* UIViewController+YLNavConfig.m in Sources */,
+				0D9FD8CD213506A8008C053F /* Person.m in Sources */,
 				0D3D418B2108726D00F9A763 /* YLTopFilterViewModel.m in Sources */,
 				0D1609AC20F48E8C004FCF88 /* CommonFooterView.m in Sources */,
 				0DA8B077210ACBD600B0EBFC /* YLNineCollectionViewCell.m in Sources */,
@@ -1403,10 +1419,12 @@
 				0D7906E821197F480024DB90 /* UIView+YLCornerRadius.m in Sources */,
 				0DFD021321070A9000A6B70D /* YLFrameParserConfig.m in Sources */,
 				0D53F40620E0D6DB00B07B50 /* UIImageView+YLLoadImg.m in Sources */,
+				0D9FD8CA21350607008C053F /* TestKVOKVCController.m in Sources */,
 				0DFABE3720A59B7300876945 /* AppDelegate.m in Sources */,
 				0D53F41420E0FAAD00B07B50 /* UIImage+YLTool.m in Sources */,
 				0DD0039520E2305A00CB6B5D /* BaseTableViewCell.m in Sources */,
 				0D0A97DD21100C0500C63065 /* TestInputViewController.m in Sources */,
+				0D9FD8D021352498008C053F /* Student.m in Sources */,
 				0D5C8BB42112EFD8001033CF /* TestCustomOperation.m in Sources */,
 				0D41A3BF211AA2DD002E5493 /* KAuthorityUtil.m in Sources */,
 				0D17F68220B80C0E0082D67D /* UIColor+YLCategory.m in Sources */,

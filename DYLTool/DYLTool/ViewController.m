@@ -25,6 +25,7 @@
 #import "YLTestCircleController.h"
 #import "TestDragCollectionController.h"
 #import "TestBezierPathController.h"
+#import "TestKVOKVCController.h"
 
 #import "PresentingAnimationController.h"
 #import "DismissingAnimationController.h"
@@ -68,7 +69,7 @@
 
 - (NSArray *)data {
     if (!_data) {
-        _data = @[@"HXPhotoPicker", @"TZImagePickerController", @"YLInputView", @"TestCABasicAnimation", @"TestThread", @"TestTableView", @"QRCodeScan", @"TestLottie", @"TestScrollView", @"TestCollectionView", @"TestAlertController", @"TestNavController", @"TestYLShareView", @"TestCircleView", @"TestDragCollection", @"TestFilterController",@"TestBezierPath"];
+        _data = @[@"HXPhotoPicker", @"TZImagePickerController", @"YLInputView", @"TestCABasicAnimation", @"TestThread", @"TestTableView", @"QRCodeScan", @"TestLottie", @"TestScrollView", @"TestCollectionView", @"TestAlertController", @"TestNavController", @"TestYLShareView", @"TestCircleView", @"TestDragCollection", @"TestFilterController",@"TestBezierPath", @"TestKVOKVC"];
     }
     return _data;
 }
@@ -202,6 +203,12 @@
         case 16:
         {
             TestBezierPathController *vc = [[TestBezierPathController alloc] initWithViewModel:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 17:
+        {
+            TestKVOKVCController *vc = [[TestKVOKVCController alloc] initWithViewModel:nil];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
