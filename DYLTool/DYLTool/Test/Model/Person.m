@@ -39,7 +39,12 @@
 }
 
 - (NSString *)getname {
-    return _name;
+//    return _name;
+    return nil;
+}
+
+- (NSString *)getname1 {
+    return name;
 }
 
 + (BOOL)accessInstanceVariablesDirectly {

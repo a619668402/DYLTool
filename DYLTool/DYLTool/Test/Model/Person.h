@@ -11,15 +11,18 @@
 
 @interface Person : NSObject
 {
-//    NSString *name;
+    NSString *name;
+//    NSString *_name;
 }
-@property (nonatomic, copy, readwrite) NSString *name;
+//@property (nonatomic, copy, readwrite) NSString *name;
 
 @property (nonatomic, strong, readonly) Student *student;
 
 @property (nonatomic, strong, readonly) NSMutableArray *testArray;
 
 - (NSString *)getname;
+
+- (NSString *)getname1;
 
 - (void)addItem;
 

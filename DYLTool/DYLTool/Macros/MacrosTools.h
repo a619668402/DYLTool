@@ -71,14 +71,33 @@
 #define KNavAndStatusHeight self.navigationController.navigationBar.frame.size.height + [[UIApplication sharedApplication] statusBarFrame].size.height
 
 /**
+ 判断是否是ipad
+ */
+#define ISPad ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+/**
  判断是否是iPhoneX
  */
-#define IS_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
-
+#define IS_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) && !ISPad : NO)
 /**
- 安全距离(iPhoneX 安全区距离底部34个像素)
+ 判断iPHoneXr
  */
-#define KSafeBottomMargin (IS_iPhoneX ? 34.f : 0.f)
+#define IS_PhoneXr ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) && !ISPad : NO)
+/**
+ 判断iPhoneXs
+ */
+#define IS_PhoneXs ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) && !ISPad : NO)
+/**
+ 判断iPhoneXs Max
+ */
+#define IS_PhoneXs_Max ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size) && !ISPad : NO)
+/**
+ 安全距离(iPhoneX, iPhoneXS, iPhoneXR, iPhoneXS_MAX 安全区距离底部34个像素)
+ */
+#define KSafeBottomMargin ((IS_iPhoneX == YES || IS_PhoneXr == YES || IS_PhoneXs == YES || IS_PhoneXs_Max == YES)? 34.f : 0.f)
+/**
+ Tabbar高度,(iPhoneX, iPhoneXS, iPhoneXR, iPhoneXS_MAX Tabbar高度等于自身高度 + 安全距离)
+ */
+#define KTabarAndSafeHeight ((IS_iPhoneX == YES || IS_PhoneXr == YES || IS_PhoneXs == YES || IS_PhoneXs_Max == YES) ? 83.0 : 49.0)
 
 // Application 对象
 #define KApplication [UIApplication sharedApplication]

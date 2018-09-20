@@ -55,15 +55,23 @@
     KLog(@"testArray = %@", [p mutableArrayValueForKey:@"testArray"]);
      */
     
+    /*
     self.p = [Person new];
     self.p.name = @"age1";
     self.p1 = [Person new];
     self.p1.name = @"age2";
     NSKeyValueObservingOptions options = NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld;
     [self.p addObserver:self forKeyPath:@"name" options:options context:@"测试消息"];
+    */
     
+    Person *p1 = [[Person alloc] init];
+    [p1 setValue:@"zhangsan" forKey:@"name"];
+    KLog(@"%@", [p1 valueForKey:@"name"]);
+    KLog(@"%@", [p1 getname]);
+    KLog(@"%@", [p1 getname1]);
 }
 
+/*
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     KLog(@"%@----%@", change, context);
 }
@@ -75,6 +83,29 @@
 
 - (void)yl_initViews {
     [super yl_initViews];
+    
+    UIButton *test = [UIButton buttonWithType:UIButtonTypeCustom];
+    test.frame = CGRectMake(0, KNavAndStatusHeight, 60, 35);
+    test.titleLabel.font = [UIFont systemFontOfSize:14.f];
+    [test setTitle:@"Test" forState:UIControlStateNormal];
+    [test setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [test addTarget:self action:@selector(_btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:test];
 }
 
+- (void)_btnClick:(UIButton *)btn {
+    Person *person = [[Person alloc] init];
+    person.name = @"Jack";
+    unsigned int count = 0;
+    Ivar *ivars = class_copyIvarList([person class], &count);
+    for (int i = 0; i < count; i ++) {
+        Ivar ivar = ivars[i];
+        KLog(@"--- %@ : ", [NSString stringWithUTF8String:ivar_getName(ivar)]);
+    }
+    Ivar ivar = class_getInstanceVariable([person class], "_name");
+    object_setIvar(person, ivar, @"DYL");
+    KLog(@"%@  || %@", person.name, object_getIvar(person, ivar));
+    free(ivars);
+}
+*/
 @end

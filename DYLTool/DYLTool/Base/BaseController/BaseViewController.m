@@ -32,7 +32,12 @@
     @weakify(viewController);
     [[viewController rac_signalForSelector:@selector(viewDidLoad)] subscribeNext:^(RACTuple * _Nullable x) {
         @strongify(viewController);
+        // 绑定 ViewModel
         [viewController bindViewModel];
+        // 赋默认值
+        [viewController yl_initValues];
+        // 初始化控件
+        [viewController yl_initViews];
     }];
     return viewController;
 }
@@ -68,10 +73,13 @@
 #pragma mark ----- 生命周期方法 -----
 - (void)viewDidLoad {
     [super viewDidLoad];
+    KLog(@"ParentViewController-------");
+    /*
     // 赋默认值
     [self yl_initValues];
     // 初始化控件
     [self yl_initViews];
+     */
 }
 
 - (void)viewWillAppear:(BOOL)animated {

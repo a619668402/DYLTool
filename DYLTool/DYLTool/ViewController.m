@@ -26,6 +26,9 @@
 #import "TestDragCollectionController.h"
 #import "TestBezierPathController.h"
 #import "TestKVOKVCController.h"
+#import "TestNetworkController.h"
+#import "TestWCDBController.h"
+#import "TestOpenGLESController.h"
 
 #import "PresentingAnimationController.h"
 #import "DismissingAnimationController.h"
@@ -69,7 +72,8 @@
 
 - (NSArray *)data {
     if (!_data) {
-        _data = @[@"HXPhotoPicker", @"TZImagePickerController", @"YLInputView", @"TestCABasicAnimation", @"TestThread", @"TestTableView", @"QRCodeScan", @"TestLottie", @"TestScrollView", @"TestCollectionView", @"TestAlertController", @"TestNavController", @"TestYLShareView", @"TestCircleView", @"TestDragCollection", @"TestFilterController",@"TestBezierPath", @"TestKVOKVC"];
+        _data = @[@"HXPhotoPicker", @"TZImagePickerController", @"YLInputView", @"TestCABasicAnimation", @"TestThread", @"TestTableView", @"QRCodeScan", @"TestLottie", @"TestScrollView", @"TestCollectionView", @"TestAlertController", @"TestNavController", @"TestYLShareView", @"TestCircleView", @"TestDragCollection", @"TestFilterController",@"TestBezierPath", @"TestKVOKVC", @"TestNetwork", @"TestWCDB",
+            @"TestOpenGLES"];
     }
     return _data;
 }
@@ -164,10 +168,10 @@
                 KLogFunc;
             }]];
             
-            YLAlertController *vc = [[YLAlertController alloc] init];
-            vc.transitioningDelegate = self;
-            vc.modalPresentationStyle = UIModalPresentationCustom;
-            [self.navigationController presentViewController:vc animated:YES completion:nil];
+//            YLAlertController *vc = [[YLAlertController alloc] init];
+//            vc.transitioningDelegate = self;
+//            vc.modalPresentationStyle = UIModalPresentationCustom;
+//            [self.navigationController presentViewController:vc animated:YES completion:nil];
         }
             break;
         case 11:
@@ -209,6 +213,26 @@
         case 17:
         {
             TestKVOKVCController *vc = [[TestKVOKVCController alloc] initWithViewModel:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 18:
+        {
+            TestNetworkController *vc = [[TestNetworkController alloc] initWithViewModel:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 19:
+        {
+            TestWCDBController *vc = [[TestWCDBController alloc] initWithViewModel:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 20:
+        {
+//            TestOpenGLESController *vc = [[TestOpenGLESController alloc] initWithViewModel:nil];
+//            [self.navigationController pushViewController:vc animated:YES];
+            TestOpenGLESController *vc = [[TestOpenGLESController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;

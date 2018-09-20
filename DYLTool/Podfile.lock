@@ -30,6 +30,9 @@ PODS:
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
   - TZImagePickerController (2.2.3)
+  - WCDB (1.0.6):
+    - WCDB/sqlcipher (= 1.0.6)
+  - WCDB/sqlcipher (1.0.6)
   - YTKNetwork (2.0.4):
     - AFNetworking (~> 3.0)
   - YYKeyboardManager (1.0.1)
@@ -47,6 +50,7 @@ DEPENDENCIES:
   - ReactiveObjC (~> 3.1.0)
   - RSKImageCropper (~> 2.1.0)
   - TZImagePickerController (~> 2.2.2)
+  - WCDB (~> 1.0.6)
   - YTKNetwork
   - YYKeyboardManager (~> 1.0.1)
 
@@ -65,9 +69,10 @@ SPEC CHECKSUMS:
   RSKImageCropper: 0d0c6d8525a2381f03fde32a47c6703817a2feed
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   TZImagePickerController: 5374a30df056b33428802c8112ed44011fe2596a
+  WCDB: 4d2926bf695b2e00d785b50afd32c2dcc8cbbd98
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
   YYKeyboardManager: ff53d2e80d1808567a7f004028bd200d9469a89f
 
-PODFILE CHECKSUM: 825e75f874f0afeca4396b0d7306b5b44bce2045
+PODFILE CHECKSUM: f762608111338b34d3dade8ab01de19e93b58851
 
 COCOAPODS: 1.4.0
