@@ -14,7 +14,6 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - FDFullscreenPopGesture (1.1)
   - HXPhotoPicker (2.2.0):
     - SDWebImage (~> 4.4.1)
   - IQKeyboardManager (6.1.1)
@@ -38,7 +37,6 @@ PODS:
   - YYKeyboardManager (1.0.1)
 
 DEPENDENCIES:
-  - FDFullscreenPopGesture (~> 1.1)
   - HXPhotoPicker (~> 2.2.0)
   - IQKeyboardManager (~> 6.1.1)
   - JPFPSStatus (~> 0.1.1)
@@ -56,7 +54,6 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   HXPhotoPicker: 31be3e2dbd4c93f911b641aac1b15dc6691fa654
   IQKeyboardManager: 79c57795f5c2408d259d37b9da2ed07efcbb5225
   JPFPSStatus: 03f32aa3d4d7d0c5bf56f6f3e7cf8b7280a5f52c
@@ -73,6 +70,6 @@ SPEC CHECKSUMS:
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
   YYKeyboardManager: ff53d2e80d1808567a7f004028bd200d9469a89f
 
-PODFILE CHECKSUM: f762608111338b34d3dade8ab01de19e93b58851
+PODFILE CHECKSUM: 54614c8a31f387a78ae0dc6895b37066c0941028
 
 COCOAPODS: 1.4.0

@@ -10,10 +10,11 @@
  *********************************************/
 #import <UIKit/UIKit.h>
 #import "BaseControllerProtocol.h"
+#import "BaseNavController.h"
 #import "YLProgressHUD.h"
 #import "BaseViewModel.h"
 
-@interface BaseViewController : UIViewController<BaseControllerProtocol, UINavigationControllerDelegate>
+@interface BaseViewController : UIViewController<BaseControllerProtocol, BaseNavigationControllerDelegate>
 
 - (instancetype)init DEPRECATED_MSG_ATTRIBUTE("use initWithParameter: instead");
 

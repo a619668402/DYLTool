@@ -7,8 +7,9 @@
 //
 
 #import "BaseNavController.h"
+#import "TestChangeNavController.h"
 
-@interface BaseNavController ()
+@interface BaseNavController ()<UINavigationControllerDelegate>
 
 /// 导航栏分割线
 @property (nonatomic, weak, readwrite) UIImageView *navigationBottomLine;
@@ -30,7 +31,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.delegate = self;
     // 初始化
     [self _setup];
 }
@@ -79,6 +80,14 @@
 
 #pragma mark ************* override Method End  *************
 
+#pragma mark ************* NavigationControllerDelegate Start *************
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    BOOL isHideNav = [viewController isKindOfClass:[TestChangeNavController class]];
+    KLog(@"----isHideNav = %d", isHideNav);
+    [self setNavigationBarHidden:isHideNav animated:animated];
+}
+#pragma mark ************* NavigationControllerDelegate End   *************
+
 #pragma mark ************* public Method Start *************
 - (void)showNavigationBottomLine {
     self.navigationBottomLine.hidden = NO;
@@ -89,7 +98,6 @@
 }
 #pragma mark ************* public Method End  *************
 
-
 #pragma mark ************* private Method Start *************
 - (void)_back {
     [self popViewControllerAnimated:YES];
@@ -97,6 +105,11 @@
 
 - (void)_setup {
     [self _setupNavigationBarBottomLine];
+    // 添加边缘滑动手势
+    id target = self.interactivePopGestureRecognizer.delegate;
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:target action:@selector(handleNavigationTransition:)];
+    [self.view addGestureRecognizer:pan];
+    self.interactivePopGestureRecognizer.enabled = NO;
 }
 
 - (UIImageView *)_findHairlineImageViewUnder:(UIView *)view {
@@ -131,9 +144,9 @@
     [appearance setTranslucent:YES]; // 必须设置为YES
     // 设置导航栏样式
     [appearance setBarStyle:UIBarStyleDefault];
-    // 设置导航栏文字按钮选染色
+    // 设置导航栏文字按钮渲染色
     [appearance setTintColor:[UIColor whiteColor]];
-     // 设置导航栏背景选染色
+     // 设置导航栏背景渲染色
     CGFloat rgb = 0.1f;
     [appearance setBarTintColor:rgbA(rgb, rgb, rgb, 0.65f)];
     // 设置文字属性

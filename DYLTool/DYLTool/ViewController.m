@@ -29,6 +29,7 @@
 #import "TestNetworkController.h"
 #import "TestWCDBController.h"
 #import "TestOpenGLESController.h"
+#import "TestChangeNavController.h"
 
 #import "PresentingAnimationController.h"
 #import "DismissingAnimationController.h"
@@ -73,7 +74,7 @@
 - (NSArray *)data {
     if (!_data) {
         _data = @[@"HXPhotoPicker", @"TZImagePickerController", @"YLInputView", @"TestCABasicAnimation", @"TestThread", @"TestTableView", @"QRCodeScan", @"TestLottie", @"TestScrollView", @"TestCollectionView", @"TestAlertController", @"TestNavController", @"TestYLShareView", @"TestCircleView", @"TestDragCollection", @"TestFilterController",@"TestBezierPath", @"TestKVOKVC", @"TestNetwork", @"TestWCDB",
-            @"TestOpenGLES"];
+            @"TestOpenGLES", @"TestChangeNav"];
     }
     return _data;
 }
@@ -233,6 +234,12 @@
 //            TestOpenGLESController *vc = [[TestOpenGLESController alloc] initWithViewModel:nil];
 //            [self.navigationController pushViewController:vc animated:YES];
             TestOpenGLESController *vc = [[TestOpenGLESController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 21:
+        {
+            TestChangeNavController *vc = [[TestChangeNavController alloc] initWithViewModel:nil];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;

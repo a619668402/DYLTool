@@ -19,6 +19,7 @@
 #import "NSString+YLPredicate.h"
 #import "NSString+YLDisplayTime.h"
 #import "NSAttributedString+YLExt.h"
+#import "NSMutableAttributedString+YLTool.h"
 
 #import "UIColor+YLCategory.h"                // 颜色相关
 

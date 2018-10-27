@@ -78,4 +78,39 @@ UIColor *rgbA(CGFloat red, CGFloat green, CGFloat blue, CGFloat alpha);
  */
 + (UIColor *)colorRGBonvertToHSB:(UIColor*)color withAlphaDelta:(CGFloat)delta;
 
+/**
+ 获取当前UIColor对象里面的透明色值
+
+ @return 透明通道色值,值范围0.0 - 1.0
+ */
+- (CGFloat)yl_alpha;
+
+/**
+ 获取当前UIColor对象里面的红色色值
+
+ @return 红色通道色值,值范围0.0 - 1.0
+ */
+- (CGFloat)yl_red;
+
+/**
+ 获取当前UIColor对象里面蓝色色值
+
+ @return 蓝色通道色值,值范围0.0 - 1.0
+ */
+- (CGFloat)yl_blue;
+
+/**
+ 获取当前UIColor对象里面绿色色值
+
+ @return 绿色通道色值,值范围0.0 - 1.0
+ */
+- (CGFloat)yl_green;
+
+/**
+ 随机颜色
+
+ @return <#return value description#>
+ */
++ (UIColor *)yl_randomColor;
+
 @end

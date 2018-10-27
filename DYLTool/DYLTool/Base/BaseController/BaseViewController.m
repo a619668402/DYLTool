@@ -65,15 +65,12 @@
     self.isDisplay = NO;
     self.extendedLayoutIncludesOpaqueBars = YES;
     // 手势关闭 Controller
-    self.fd_interactivePopDisabled = YES;
-    // 通过代理隐藏导航栏
-//    self.navigationController.delegate = self;
+//    self.fd_interactivePopDisabled = YES;
 }
 
 #pragma mark ----- 生命周期方法 -----
 - (void)viewDidLoad {
     [super viewDidLoad];
-    KLog(@"ParentViewController-------");
     /*
     // 赋默认值
     [self yl_initValues];
@@ -100,7 +97,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [self.navigationController setNavigationBarHidden:self.viewModel.prefersNavigationBarHidden animated:YES];
+//    [self.navigationController setNavigationBarHidden:self.viewModel.prefersNavigationBarHidden animated:YES];
     if ([self isMovingToParentViewController]) {
         self.snapshot = [self.navigationController.view snapshotViewAfterScreenUpdates:NO];
     }
@@ -113,7 +110,7 @@
     KLog(@"-------- %@ 已释放 ---------", name);
 }
 
-/* 在子 Controller 中设置
+/* 在 BaseNavController 中设置
 #pragma mark ----- UINavigationController Delegate -----
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     // 判断要显示的控制器是自己

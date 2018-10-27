@@ -9,8 +9,7 @@
                     常量类
  *********************************************/
 #import <Foundation/Foundation.h>
-
-/// Block
+#pragma mark ************* Block Start *************
 typedef void (^VoidBlock)(void);
 typedef BOOL (^BoolBlock)(void);
 typedef int(^IntBlock)(void);
@@ -32,7 +31,9 @@ typedef BOOL(^BoolBlock_id)(id);
 typedef int(^IntBlock_id)(id);
 typedef id(^IDBlock_id)(id);
 
+#pragma mark ************* Block End   *************
 
+#pragma mark ************* NetWork Define(网络相关定义) Start *************
 /// 网络请求相关定义
 FOUNDATION_EXTERN NSString * const KNetworkErrorDomain;
 FOUNDATION_EXTERN NSInteger const KNetworkErrorCode;
@@ -48,15 +49,19 @@ FOUNDATION_EXTERN NSString * const KNetworkRequestErrorDomain;
 FOUNDATION_EXTERN NSInteger const KNetworkRequestErrorCode;
 FOUNDATION_EXTERN NSString * const KNetworkRequestError;
 /*
-FOUNDATION_EXTERN NSString *const CODE_SUCCESS;
-FOUNDATION_EXTERN NSString *const CODE_LACKPARAMETERERROR;
-FOUNDATION_EXTERN NSString *const CODE_PASSWORDERROR;
-FOUNDATION_EXTERN NSString *const CODE_VERIFYERROR;
-FOUNDATION_EXTERN NSString *const CODE_ACCOUNTERROR;
-FOUNDATION_EXTERN NSString *const CODE_NOAUTHORITYERROR;
-FOUNDATION_EXTERN NSString *const CODE_SYSTEMERROR;
-FOUNDATION_EXTERN NSString *const CODE_LOGICERROR;
-FOUNDATION_EXTERN NSString *const CODE_TOKENERROR;
-*/
+ FOUNDATION_EXTERN NSString *const CODE_SUCCESS;
+ FOUNDATION_EXTERN NSString *const CODE_LACKPARAMETERERROR;
+ FOUNDATION_EXTERN NSString *const CODE_PASSWORDERROR;
+ FOUNDATION_EXTERN NSString *const CODE_VERIFYERROR;
+ FOUNDATION_EXTERN NSString *const CODE_ACCOUNTERROR;
+ FOUNDATION_EXTERN NSString *const CODE_NOAUTHORITYERROR;
+ FOUNDATION_EXTERN NSString *const CODE_SYSTEMERROR;
+ FOUNDATION_EXTERN NSString *const CODE_LOGICERROR;
+ FOUNDATION_EXTERN NSString *const CODE_TOKENERROR;
+ */
+#pragma mark ************* NetWork Define(网络相关定义) End   *************
+
+#pragma mark ************* 全局变量 Start *************
 /// 全局变量
 FOUNDATION_EXTERN CGFloat const KGlobleLineHeight; // 分割线高度
+#pragma mark ************* 全局变量 End   *************

@@ -66,6 +66,16 @@
 ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)] ? CGSizeMake([UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale,[UIScreen mainScreen].nativeBounds.size.height/[UIScreen mainScreen].nativeScale) : [UIScreen mainScreen].bounds.size)
 
 /**
+ 获取屏幕 Scale
+ */
+#define kScreenScale ([[UIScreen mainScreen] scale])
+
+/**
+ 状态栏高度
+ */
+#define KStatusHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+
+/**
  状态栏+导航栏高度
  */
 #define KNavAndStatusHeight self.navigationController.navigationBar.frame.size.height + [[UIApplication sharedApplication] statusBarFrame].size.height

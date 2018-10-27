@@ -76,6 +76,45 @@
     return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:alpha];
 }
 
+- (CGFloat)yl_alpha {
+    CGFloat a;
+    if ([self getRed:0 green:0 blue:0 alpha:&a]) {
+        return a;
+    }
+    return 0;
+}
+
+- (CGFloat)yl_red {
+    CGFloat r;
+    if ([self getRed:&r green:0 blue:0 alpha:0]) {
+        return r;
+    }
+    return 0;
+}
+
+- (CGFloat)yl_blue {
+    CGFloat b;
+    if ([self getRed:0 green:0 blue:&b alpha:0]) {
+        return b;
+    }
+    return 0;
+}
+
+- (CGFloat)yl_green {
+    CGFloat g;
+    if ([self getRed:0 green:&g blue:0 alpha:0]) {
+        return g;
+    }
+    return 0;
+}
+
++ (UIColor *)yl_randomColor {
+    CGFloat red = (arc4random() % 255 / 255.0);
+    CGFloat green = (arc4random() % 255 / 255.0);
+    CGFloat blue = (arc4random() % 255 / 255.0);
+    return [UIColor colorWithRed:red green:green blue:blue alpha:1];
+}
+
 @end
 
 UIColor *rgb(CGFloat red, CGFloat green, CGFloat blue)
