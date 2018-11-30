@@ -31,7 +31,7 @@
     YLPassWordView *pswView = [[YLPassWordView alloc] initWithFrame:CGRectMake(10, btn.yl_height + btn.yl_y, KScreenWidth - 20, 40)];
     [self.view addSubview:pswView];
     
-//    [self createInputView];
+    [self createInputView];
 }
 
 

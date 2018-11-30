@@ -35,8 +35,8 @@
 - (void)yl_initViews {
     [super yl_initViews];
     [self _createBtn];
-//    [self.view addSubview:self.nineView];
-    [self.view addSubview:self.photoView];
+    [self.view addSubview:self.nineView];
+//    [self.view addSubview:self.photoView];
 }
 
 - (void)_createBtn {

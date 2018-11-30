@@ -53,6 +53,7 @@
 
 /**
  是否需要在 viewDidLoad 中获取数据, default is YES
+ BaseTableController 如果开启下拉刷新,此选项要关闭,否则会导致进入页面时重复获取数据
  */
 @property (nonatomic, assign, readwrite) BOOL shouldRequestRemoteDataOnViewDidLoad;
 

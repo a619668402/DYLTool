@@ -21,6 +21,7 @@
     
     self.page = 1;
     self.pageSize = 10;
+    self.shouldRequestRemoteDataOnViewDidLoad = NO;
     
     self.requestRemoteDataCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(NSNumber *page) {
         // 当对象将要释放的时候 取消网络请求
