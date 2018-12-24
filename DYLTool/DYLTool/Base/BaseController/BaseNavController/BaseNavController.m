@@ -106,10 +106,12 @@
 - (void)_setup {
     [self _setupNavigationBarBottomLine];
     // 添加边缘滑动手势
+    /*
     id target = self.interactivePopGestureRecognizer.delegate;
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:target action:@selector(handleNavigationTransition:)];
     [self.view addGestureRecognizer:pan];
     self.interactivePopGestureRecognizer.enabled = NO;
+     */
 }
 
 - (UIImageView *)_findHairlineImageViewUnder:(UIView *)view {

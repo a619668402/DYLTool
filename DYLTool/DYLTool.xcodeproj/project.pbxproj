@@ -113,6 +113,7 @@
 		0D9FD8CA21350607008C053F /* TestKVOKVCController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9FD8C921350607008C053F /* TestKVOKVCController.m */; };
 		0D9FD8CD213506A8008C053F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9FD8CC213506A8008C053F /* Person.m */; };
 		0D9FD8D021352498008C053F /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9FD8CF21352498008C053F /* Student.m */; };
+		0D9FF19121CCA04B00A3E221 /* TestScrollView_1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9FF19021CCA04A00A3E221 /* TestScrollView_1.m */; };
 		0DA8B06D210ABB0500B0EBFC /* TestHXPhotoPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8B06C210ABB0500B0EBFC /* TestHXPhotoPicker.m */; };
 		0DA8B070210ABB2500B0EBFC /* TestTZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8B06F210ABB2500B0EBFC /* TestTZImagePickerController.m */; };
 		0DA8B074210AC78400B0EBFC /* YLNiNeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8B073210AC78400B0EBFC /* YLNiNeView.m */; };
@@ -368,6 +369,8 @@
 		0D9FD8CC213506A8008C053F /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		0D9FD8CE21352498008C053F /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		0D9FD8CF21352498008C053F /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		0D9FF18F21CCA04A00A3E221 /* TestScrollView_1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestScrollView_1.h; sourceTree = "<group>"; };
+		0D9FF19021CCA04A00A3E221 /* TestScrollView_1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestScrollView_1.m; sourceTree = "<group>"; };
 		0DA8B06B210ABB0500B0EBFC /* TestHXPhotoPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestHXPhotoPicker.h; sourceTree = "<group>"; };
 		0DA8B06C210ABB0500B0EBFC /* TestHXPhotoPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestHXPhotoPicker.m; sourceTree = "<group>"; };
 		0DA8B06E210ABB2500B0EBFC /* TestTZImagePickerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTZImagePickerController.h; sourceTree = "<group>"; };
@@ -811,6 +814,8 @@
 				0D282364214777FD00FE0977 /* TestOpenGLESController.m */,
 				0D4C5171215C7A2D00F0E5ED /* TestChangeNavController.h */,
 				0D4C5172215C7A2D00F0E5ED /* TestChangeNavController.m */,
+				0D9FF18F21CCA04A00A3E221 /* TestScrollView_1.h */,
+				0D9FF19021CCA04A00A3E221 /* TestScrollView_1.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -1419,6 +1424,7 @@
 				0D60AC1B2105E307004C7DFA /* UIButton+YLLayout.m in Sources */,
 				0D218428210EC741008A4EB6 /* YLInputView.m in Sources */,
 				0DFABE3A20A59B7300876945 /* ViewController.m in Sources */,
+				0D9FF19121CCA04B00A3E221 /* TestScrollView_1.m in Sources */,
 				0D1609B220F49BE1004FCF88 /* TestCommonViewModel.m in Sources */,
 				0D4B6693213FB6FF00FC5730 /* CompanyInfo.mm in Sources */,
 				0DA8B070210ABB2500B0EBFC /* TestTZImagePickerController.m in Sources */,
