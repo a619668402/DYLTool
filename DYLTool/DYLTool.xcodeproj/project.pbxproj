@@ -66,6 +66,9 @@
 		0D317F3B21081CF5005CD288 /* image_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D317F3921081CF5005CD288 /* image_1.jpg */; };
 		0D317F3E21085530005CD288 /* YLCoreTextLinkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D317F3D21085530005CD288 /* YLCoreTextLinkData.m */; };
 		0D317F412108556B005CD288 /* YLCoreTextUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D317F402108556B005CD288 /* YLCoreTextUtils.m */; };
+		0D340B0C21E86ABD00EF0A3D /* YLTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D340B0B21E86ABD00EF0A3D /* YLTableView.m */; };
+		0D340B1121E87BC200EF0A3D /* YLTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D340B1021E87BC200EF0A3D /* YLTableController.m */; };
+		0D340B1421E87EBA00EF0A3D /* YLScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D340B1321E87EBA00EF0A3D /* YLScrollController.m */; };
 		0D36E89C212E53E200EF1DD1 /* YLCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D36E89B212E53E200EF1DD1 /* YLCircleView.m */; };
 		0D36E89F212E556C00EF1DD1 /* YLTestCircleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D36E89E212E556C00EF1DD1 /* YLTestCircleController.m */; };
 		0D3724EF2154DC6C006A7E05 /* NSMutableAttributedString+YLTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3724EE2154DC6C006A7E05 /* NSMutableAttributedString+YLTool.m */; };
@@ -279,6 +282,12 @@
 		0D317F3D21085530005CD288 /* YLCoreTextLinkData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLCoreTextLinkData.m; sourceTree = "<group>"; };
 		0D317F3F2108556B005CD288 /* YLCoreTextUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLCoreTextUtils.h; sourceTree = "<group>"; };
 		0D317F402108556B005CD288 /* YLCoreTextUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLCoreTextUtils.m; sourceTree = "<group>"; };
+		0D340B0A21E86ABD00EF0A3D /* YLTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLTableView.h; sourceTree = "<group>"; };
+		0D340B0B21E86ABD00EF0A3D /* YLTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLTableView.m; sourceTree = "<group>"; };
+		0D340B0F21E87BC200EF0A3D /* YLTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLTableController.h; sourceTree = "<group>"; };
+		0D340B1021E87BC200EF0A3D /* YLTableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLTableController.m; sourceTree = "<group>"; };
+		0D340B1221E87EBA00EF0A3D /* YLScrollController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLScrollController.h; sourceTree = "<group>"; };
+		0D340B1321E87EBA00EF0A3D /* YLScrollController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLScrollController.m; sourceTree = "<group>"; };
 		0D36E89A212E53E200EF1DD1 /* YLCircleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLCircleView.h; sourceTree = "<group>"; };
 		0D36E89B212E53E200EF1DD1 /* YLCircleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLCircleView.m; sourceTree = "<group>"; };
 		0D36E89D212E556C00EF1DD1 /* YLTestCircleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLTestCircleController.h; sourceTree = "<group>"; };
@@ -324,7 +333,7 @@
 		0D53CC182117F45100F5F84E /* KQRCodeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KQRCodeController.m; sourceTree = "<group>"; };
 		0D53CC1B211805E800F5F84E /* scanSuccess.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = scanSuccess.wav; sourceTree = "<group>"; };
 		0D53CC1D211853EC00F5F84E /* TestLottieController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLottieController.h; sourceTree = "<group>"; };
-		0D53CC1E211853EC00F5F84E /* TestLottieController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLottieController.m; sourceTree = "<group>"; };
+		0D53CC1E211853EC00F5F84E /* TestLottieController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLottieController.m; sourceTree = "<group>"; wrapsLines = 0; };
 		0D53CC212118556400F5F84E /* areas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = areas.json; sourceTree = "<group>"; };
 		0D53CC232118556F00F5F84E /* jolly_walker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jolly_walker.json; sourceTree = "<group>"; };
 		0D53CC252118570000F5F84E /* laugh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = laugh.json; sourceTree = "<group>"; };
@@ -730,6 +739,26 @@
 			path = TestImage;
 			sourceTree = "<group>";
 		};
+		0D340B0D21E86AD400EF0A3D /* YLTableView */ = {
+			isa = PBXGroup;
+			children = (
+				0D340B0A21E86ABD00EF0A3D /* YLTableView.h */,
+				0D340B0B21E86ABD00EF0A3D /* YLTableView.m */,
+			);
+			path = YLTableView;
+			sourceTree = "<group>";
+		};
+		0D340B0E21E87B9C00EF0A3D /* ScrollView 嵌套处理 */ = {
+			isa = PBXGroup;
+			children = (
+				0D340B0F21E87BC200EF0A3D /* YLTableController.h */,
+				0D340B1021E87BC200EF0A3D /* YLTableController.m */,
+				0D340B1221E87EBA00EF0A3D /* YLScrollController.h */,
+				0D340B1321E87EBA00EF0A3D /* YLScrollController.m */,
+			);
+			path = "ScrollView 嵌套处理";
+			sourceTree = "<group>";
+		};
 		0D36E899212E53CB00EF1DD1 /* CircleView */ = {
 			isa = PBXGroup;
 			children = (
@@ -762,6 +791,7 @@
 		0D3D418F21088F9700F9A763 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				0D340B0E21E87B9C00EF0A3D /* ScrollView 嵌套处理 */,
 				0D3D549D214117E60017201C /* Category */,
 				0D41A3C8211AFC34002E5493 /* Animate */,
 				0D41A3C1211AD719002E5493 /* View */,
@@ -1083,6 +1113,7 @@
 		0DD0039C20E2335200CB6B5D /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				0D340B0D21E86AD400EF0A3D /* YLTableView */,
 				0D36E899212E53CB00EF1DD1 /* CircleView */,
 				0D62B47B212A986600A59A6C /* ShareView */,
 				0D62B47A212A643C00A59A6C /* YLProgressHUD */,
@@ -1416,9 +1447,11 @@
 				0D0487B620ECC1F9005BFC65 /* TestSearchController_1.m in Sources */,
 				0DFD021921070B6900A6B70D /* YLCoreTextData.m in Sources */,
 				0D26552120F33F68004E5366 /* BaseCommonViewModel.m in Sources */,
+				0D340B1121E87BC200EF0A3D /* YLTableController.m in Sources */,
 				0D41A3C7211ADA3C002E5493 /* TestCollectionViewCell.m in Sources */,
 				0D4B6690213FB54F00FC5730 /* TestWCDBController.mm in Sources */,
 				0D5C8BB02112BBEE001033CF /* TestThreadController.m in Sources */,
+				0D340B0C21E86ABD00EF0A3D /* YLTableView.m in Sources */,
 				0D282365214777FD00FE0977 /* TestOpenGLESController.m in Sources */,
 				0D04E77420BD0C870040C4AF /* UIFont+YLFontSize.m in Sources */,
 				0D60AC1B2105E307004C7DFA /* UIButton+YLLayout.m in Sources */,
@@ -1469,6 +1502,7 @@
 				0D17F67320B808160082D67D /* NSString+YLDisplayTime.m in Sources */,
 				0D3724EF2154DC6C006A7E05 /* NSMutableAttributedString+YLTool.m in Sources */,
 				0DD0036220E1EBBB00CB6B5D /* UIScrollView+YLRefresh.m in Sources */,
+				0D340B1421E87EBA00EF0A3D /* YLScrollController.m in Sources */,
 				0D1DE5D521002B3F00C46C24 /* YLAlertMessageView.m in Sources */,
 				0D2C899E212F9D0E00BD4E96 /* TestDragCollectionController.m in Sources */,
 				0DFABE4520A59B7300876945 /* main.m in Sources */,

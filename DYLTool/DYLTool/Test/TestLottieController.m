@@ -13,6 +13,10 @@
 
 @property (nonatomic, strong) LOTAnimationView *lottieLogo;
 
+@property (nonatomic, strong, readwrite) UILabel *label;
+
+@property (nonatomic, strong, readwrite) CADisplayLink *cadislpay;
+
 @end
 
 @implementation TestLottieController
@@ -20,11 +24,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.label = [[UILabel alloc] initWithFrame:CGRectMake(50, 300, 100, 50)];
+    self.label.text = @"20";
+    self.label.textColor = [UIColor blackColor];
+    self.label.font = [UIFont systemFontOfSize:20];
+    [self.view addSubview:self.label];
+    
+    self.cadislpay = [CADisplayLink displayLinkWithTarget:self selector:@selector(_refreshLabel)];
+    [self.cadislpay addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+    self.cadislpay.frameInterval = 1;
+    
+}
+
+- (void)_refreshLabel {
+    NSInteger currentNUmber = self.label.text.integerValue;
+    self.label.text = [NSString stringWithFormat:@"%ld", ++currentNUmber];
 }
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-    CGRect lottieRect = CGRectMake(0, KNavAndStatusHeight, KScreenWidth, KScreenWidth);
+    CGRect lottieRect = CGRectMake(0, KNavAndStatusHeight, 100, 100);
     self.lottieLogo.frame = lottieRect;
 }
 
@@ -36,6 +55,8 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self.lottieLogo pause];
+    [self.cadislpay invalidate];
+    self.cadislpay = nil;
 }
 
 - (void)yl_initValues {

@@ -37,15 +37,15 @@
     
     self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, KNavAndStatusHeight, KScreenWidth, 200)];
     [self.view addSubview:self.scrollView];
-    self.scrollView.contentSize = CGSizeMake(KScreenWidth, 200 * 3);
+    self.scrollView.contentSize = CGSizeMake(KScreenWidth * 3, 200);
     self.scrollView.pagingEnabled = YES;
     self.scrollView.scrollEnabled = YES;
     self.scrollView.delegate = self;
     self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.showsVerticalScrollIndicator = NO;
     [self _addChildViews];
-
-    
+    self.currentIndex = 1;
+    /*
     self.scrollView1 = [[UIScrollView alloc] initWithFrame:CGRectMake(0, self.scrollView.yl_bottom + 50, KScreenWidth, 200)];
 //    self.scrollView1.pagingEnabled = YES;
     self.scrollView1.scrollEnabled = YES;
@@ -70,6 +70,7 @@
             [weakself.scrollView setContentOffset:CGPointMake(0, self.scrollView.contentOffset.y + 200) animated:YES];
         });
     });
+     */
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -78,7 +79,6 @@
 }
 
 - (void)_addChildViews {
-    /*
     self.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 200)];
     [self.scrollView addSubview:self.leftView];
   
@@ -87,8 +87,7 @@
     
     self.rightView = [[UIView alloc] initWithFrame:CGRectMake(KScreenWidth * 2, 0, KScreenWidth, 200)];
     [self.scrollView addSubview:self.rightView];
-     */
-    
+    /*
     self.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 200)];
     [self.scrollView addSubview:self.leftView];
     
@@ -97,10 +96,12 @@
     
     self.rightView = [[UIView alloc] initWithFrame:CGRectMake(0, 200 * 2, KScreenWidth, 200)];
     [self.scrollView addSubview:self.rightView];
+     */
 }
 
 - (void)setScrollViewContentOffsetCenter {
-    [self.scrollView setContentOffset:CGPointMake(0, 200) animated:NO];
+//    [self.scrollView setContentOffset:CGPointMake(0, 200) animated:NO];
+    [self.scrollView setContentOffset:CGPointMake(KScreenWidth, 0) animated:NO];
 }
 
 - (void)setCurrentIndex:(NSInteger)currentIndex {
@@ -116,28 +117,25 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    CGFloat radio = scrollView.contentOffset.y / 200;
+    CGFloat radio = scrollView.contentOffset.x / 200;
     KLog(@"-----%f", radio);
     
     if (radio < 0.15) {
         CGPoint offset = scrollView.contentOffset;
-        if (offset.y > CGRectGetWidth(scrollView.frame)) {
+        if (offset.x > CGRectGetWidth(scrollView.frame)) {
             self.currentIndex = (self.currentIndex + 1) % self.dataSource.count;
-        } else if (offset.y < CGRectGetWidth(scrollView.frame)) {
+        } else if (offset.x < CGRectGetWidth(scrollView.frame)) {
             self.currentIndex = (self.currentIndex - 1 + self.dataSource.count) % self.dataSource.count;
         }
     }
-    if (radio > 1.985) {
+    if (radio > 2.985) {
         CGPoint offset = scrollView.contentOffset;
-        if (offset.y > CGRectGetWidth(scrollView.frame)) {
+        if (offset.x > CGRectGetWidth(scrollView.frame)) {
             self.currentIndex = (self.currentIndex + 1) % self.dataSource.count;
-        } else if (offset.y < CGRectGetWidth(scrollView.frame)) {
+        } else if (offset.x < CGRectGetWidth(scrollView.frame)) {
             self.currentIndex = (self.currentIndex - 1 + self.dataSource.count) % self.dataSource.count;
         }
     }
-}
-
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
 }
 
 - (NSMutableArray *)dataSource {
