@@ -46,6 +46,8 @@
 
 + (UIImage *)yl_imageWithColor:(UIColor *)color size:(CGSize)size cornerRadius:(CGFloat)cornetRadius;
 
++ (UIImage *)yl_screenShotImageFromView:(UIView *)view;
+
 /**
  绘制一张图片并以UIImage的形式返回
 

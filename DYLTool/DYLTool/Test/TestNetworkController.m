@@ -49,12 +49,18 @@
     self.img = [[UIImageView alloc] initWithFrame:CGRectMake(0, KNavAndStatusHeight + 80, KScreenWidth, 200)];
     self.img.contentMode = UIViewContentModeScaleToFill;
     [self.view addSubview:self.img];
-    
+    // 图标编码是&#xe625，需要转成\U0000e625
     UILabel *iconLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 180, 200, 50)];
     iconLabel.textColor = black_color;
-    iconLabel.font = [UIFont systemFontOfSize:20.f];
-    iconLabel.text = @"\U000f0343";
+    iconLabel.font = [UIFont fontWithName:@"iconfont" size:20.f];
+    iconLabel.text = @"\U0000e625";
     [self.view addSubview:iconLabel];
+   
+   UILabel *iconLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(20, 300, 200, 50)];
+   iconLabel1.textColor = red_color;
+   iconLabel1.font = [UIFont fontWithName:@"iconfont" size:20.f];
+   iconLabel1.text = @"\U0000e626";
+   [self.view addSubview:iconLabel1];
 }
 
 - (void)_testBtnClick:(UIButton *)sender {

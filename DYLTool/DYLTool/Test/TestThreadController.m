@@ -21,6 +21,8 @@
 
 @property (nonatomic, strong) UIButton *centerBtn;
 
+@property (nonatomic, strong) UIView *tempView;
+
 @end
 
 @implementation TestThreadController
@@ -37,6 +39,23 @@
     [self.view addSubview:self.customOperationBtn];
     [self.view addSubview:self.gcdBtn];
     [self.view addSubview:self.centerBtn];
+    
+    self.tempView = [UIView new];
+    self.tempView.backgroundColor = red_color;
+    [self.view addSubview:self.tempView];
+    
+    KWeakSelf(self);
+    [self.centerBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(weakself.view.mas_centerX).offset(0);
+        make.centerY.equalTo(weakself.view.mas_centerY).offset(0);
+        make.size.mas_equalTo(CGSizeMake(80, 80));
+    }];
+    
+    [self.tempView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(weakself.centerBtn.mas_bottom).offset(5);
+        make.left.right.equalTo(weakself.view).offset(0);
+        make.height.mas_equalTo(20);
+    }];
 }
 
 - (void)_threadSelector {
@@ -105,7 +124,7 @@
             break;
         case 4:
         {
-            dispatch_semaphore_t semaphore = dispatch_semaphore_create(5);
+            dispatch_semaphore_t semaphore = dispatch_semaphore_create(10);
             dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
             for (int i = 0; i < 100; i ++) {
                 dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
@@ -125,17 +144,29 @@
 - (UIButton *)centerBtn {
     if (!_centerBtn) {
         _centerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _centerBtn.bounds = CGRectMake(0, 0, 50, 50);
-        _centerBtn.center = self.view.center;
+//        _centerBtn.bounds = CGRectMake(0, 0, 50, 50);
+//        _centerBtn.center = self.view.center;
         _centerBtn.backgroundColor = [UIColor blackColor];
         _centerBtn.touchExtendInset = UIEdgeInsetsMake(-20, -20, -20, -20);
+        @weakify(self);
         [[_centerBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             KLogFunc;
+            _centerBtn.selected = !_centerBtn.selected;
+            @strongify(self);
+            [self.view setNeedsUpdateConstraints];
+            [UIView animateWithDuration:0.5 animations:^{
+                [self.centerBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+                    make.width.mas_equalTo(_centerBtn.selected ? 200 : 100);
+                    make.height.mas_equalTo(_centerBtn.selected ? 200 : 100);
+                    make.centerY.equalTo(self.view.mas_centerY).offset(0);
+                    make.centerX.equalTo(self.view.mas_centerX).offset(0);
+                }];
+                [self.view layoutIfNeeded];
+            }];
         }];
     }
     return _centerBtn;
 }
-
 
 - (UIButton *)gcdBtn {
     if (!_gcdBtn) {

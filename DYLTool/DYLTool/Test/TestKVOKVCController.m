@@ -7,7 +7,7 @@
 //
 
 #import "TestKVOKVCController.h"
-
+#import <StoreKit/StoreKit.h>
 #import "Person.h"
 
 @interface TestKVOKVCController ()
@@ -26,6 +26,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if (@available(iOS 10.3, *)) {
+        [SKStoreReviewController requestReview];
+    } else {
+    }
 }
 
 - (void)yl_initValues {

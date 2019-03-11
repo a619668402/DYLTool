@@ -105,4 +105,15 @@
     return imageOut;
 }
 
++ (UIImage *)yl_screenShotImageFromView:(UIView *)view {
+    CGRect screenRect = [view bounds];
+    //    UIGraphicsBeginImageContext(screenRect.size);
+    UIGraphicsBeginImageContextWithOptions(screenRect.size, YES, 0);
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    [view.layer renderInContext:ctx];
+    UIImage * image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
 @end

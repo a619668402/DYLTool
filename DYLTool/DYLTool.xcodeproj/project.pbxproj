@@ -66,6 +66,8 @@
 		0D317F3B21081CF5005CD288 /* image_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D317F3921081CF5005CD288 /* image_1.jpg */; };
 		0D317F3E21085530005CD288 /* YLCoreTextLinkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D317F3D21085530005CD288 /* YLCoreTextLinkData.m */; };
 		0D317F412108556B005CD288 /* YLCoreTextUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D317F402108556B005CD288 /* YLCoreTextUtils.m */; };
+		0D332E4822262F6A002B91C9 /* TestMetalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D332E4722262F69002B91C9 /* TestMetalController.m */; };
+		0D332E5222263D91002B91C9 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D332E5122263D91002B91C9 /* MetalKit.framework */; };
 		0D340B0C21E86ABD00EF0A3D /* YLTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D340B0B21E86ABD00EF0A3D /* YLTableView.m */; };
 		0D340B1121E87BC200EF0A3D /* YLTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D340B1021E87BC200EF0A3D /* YLTableController.m */; };
 		0D340B1421E87EBA00EF0A3D /* YLScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D340B1321E87EBA00EF0A3D /* YLScrollController.m */; };
@@ -76,6 +78,7 @@
 		0D3D418B2108726D00F9A763 /* YLTopFilterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D418A2108726D00F9A763 /* YLTopFilterViewModel.m */; };
 		0D3D418E2108758100F9A763 /* TestFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D418D2108758100F9A763 /* TestFilterViewController.m */; };
 		0D3D54A321411BE90017201C /* UIViewController+TestSwizee.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D54A221411BE90017201C /* UIViewController+TestSwizee.m */; };
+		0D3FED40222F604200D231AD /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D3FED3F222F604200D231AD /* AssetsLibrary.framework */; };
 		0D4108BF21266A1A00B2B4A8 /* YLPassWordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4108BE21266A1A00B2B4A8 /* YLPassWordView.m */; };
 		0D4108C22126A8EA00B2B4A8 /* YLNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4108C12126A8EA00B2B4A8 /* YLNavController.m */; };
 		0D4108C42126AB4100B2B4A8 /* lakeside_sunset.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D4108C32126AB4100B2B4A8 /* lakeside_sunset.png */; };
@@ -85,6 +88,9 @@
 		0D41A3C7211ADA3C002E5493 /* TestCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D41A3C6211ADA3C002E5493 /* TestCollectionViewCell.m */; };
 		0D41A3CB211AFC50002E5493 /* PresentingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D41A3CA211AFC50002E5493 /* PresentingAnimationController.m */; };
 		0D41A3CE211AFE38002E5493 /* DismissingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D41A3CD211AFE38002E5493 /* DismissingAnimationController.m */; };
+		0D442AC12227B5F90053E651 /* TestCoreAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D442AC02227B5F90053E651 /* TestCoreAnimationController.m */; };
+		0D442AC42227BB880053E651 /* TestReflectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D442AC32227BB880053E651 /* TestReflectionView.m */; };
+		0D442AC72227C8820053E651 /* TestScrollLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D442AC62227C8820053E651 /* TestScrollLayer.m */; };
 		0D4B6690213FB54F00FC5730 /* TestWCDBController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0D4B668F213FB54F00FC5730 /* TestWCDBController.mm */; };
 		0D4B6693213FB6FF00FC5730 /* CompanyInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0D4B6692213FB6FF00FC5730 /* CompanyInfo.mm */; };
 		0D4C5173215C7A2D00F0E5ED /* TestChangeNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4C5172215C7A2D00F0E5ED /* TestChangeNavController.m */; };
@@ -106,11 +112,18 @@
 		0D60AC1F2105EA89004C7DFA /* YLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D60AC1E2105EA89004C7DFA /* YLButton.m */; };
 		0D62B479212A632500A59A6C /* UIViewController+YLToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D62B478212A632400A59A6C /* UIViewController+YLToast.m */; };
 		0D62B47E212A988100A59A6C /* YLShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D62B47D212A988100A59A6C /* YLShareView.m */; };
+		0D663215222E0FE4009E5236 /* TestAVFoundationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D663214222E0FE4009E5236 /* TestAVFoundationController.m */; };
+		0D663217222E1060009E5236 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D663216222E1060009E5236 /* AVFoundation.framework */; };
+		0D66321E222E114E009E5236 /* 1.wmv in Resources */ = {isa = PBXBuildFile; fileRef = 0D66321D222E114E009E5236 /* 1.wmv */; };
+		0D663220222E1D14009E5236 /* login_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0D66321F222E1D14009E5236 /* login_video.mp4 */; };
+		0D663223222E2662009E5236 /* TestPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D663222222E2662009E5236 /* TestPlayerView.m */; };
+		0D663226222E66A2009E5236 /* TestCaptureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D663225222E66A2009E5236 /* TestCaptureController.m */; };
 		0D73F64E215B2492000AB345 /* UINavigationController+YLNavigationBarTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D73F64D215B2492000AB345 /* UINavigationController+YLNavigationBarTransition.m */; };
 		0D73F654215B81B6000AB345 /* UINavigationBar+YLTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D73F653215B81B6000AB345 /* UINavigationBar+YLTransition.m */; };
 		0D77972C213CED1E003BA600 /* TestNetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D77972B213CED1E003BA600 /* TestNetworkController.m */; };
 		0D7906E821197F480024DB90 /* UIView+YLCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7906E721197F480024DB90 /* UIView+YLCornerRadius.m */; };
 		0D7906EB211987D30024DB90 /* TestScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7906EA211987D30024DB90 /* TestScrollController.m */; };
+		0D915BFA221E422400ABE7E7 /* TestMakeVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D915BF9221E422400ABE7E7 /* TestMakeVideoController.m */; };
 		0D920A83211BD9DD004FF3EF /* UIGestureRecognizer+YLBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D920A82211BD9DD004FF3EF /* UIGestureRecognizer+YLBlock.m */; };
 		0D920A86211BDECF004FF3EF /* UIView+YLExtendTouchRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D920A85211BDECF004FF3EF /* UIView+YLExtendTouchRect.m */; };
 		0D9FD8CA21350607008C053F /* TestKVOKVCController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9FD8C921350607008C053F /* TestKVOKVCController.m */; };
@@ -143,6 +156,8 @@
 		0DD003B520E233B900CB6B5D /* RACNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD003AE20E233B900CB6B5D /* RACNetWork.m */; };
 		0DD003B620E233B900CB6B5D /* RequestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD003B020E233B900CB6B5D /* RequestTool.m */; };
 		0DEE546120CA942C00749A2C /* UIView+YLCurrentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEE546020CA942C00749A2C /* UIView+YLCurrentViewController.m */; };
+		0DF1016222237CDD00A5D944 /* AnimateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1016122237CDD00A5D944 /* AnimateView.m */; };
+		0DF1016822237FB600A5D944 /* TestAnimateLabelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1016722237FB600A5D944 /* TestAnimateLabelController.m */; };
 		0DF4188020C93CFF004A8E11 /* UIImage+YLCompressImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF4187F20C93CFF004A8E11 /* UIImage+YLCompressImage.m */; };
 		0DFABE3720A59B7300876945 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFABE3620A59B7300876945 /* AppDelegate.m */; };
 		0DFABE3A20A59B7300876945 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFABE3920A59B7300876945 /* ViewController.m */; };
@@ -282,6 +297,10 @@
 		0D317F3D21085530005CD288 /* YLCoreTextLinkData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLCoreTextLinkData.m; sourceTree = "<group>"; };
 		0D317F3F2108556B005CD288 /* YLCoreTextUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLCoreTextUtils.h; sourceTree = "<group>"; };
 		0D317F402108556B005CD288 /* YLCoreTextUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLCoreTextUtils.m; sourceTree = "<group>"; };
+		0D332E4622262F69002B91C9 /* TestMetalController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMetalController.h; sourceTree = "<group>"; };
+		0D332E4722262F69002B91C9 /* TestMetalController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMetalController.m; sourceTree = "<group>"; };
+		0D332E492226302E002B91C9 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		0D332E5122263D91002B91C9 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		0D340B0A21E86ABD00EF0A3D /* YLTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLTableView.h; sourceTree = "<group>"; };
 		0D340B0B21E86ABD00EF0A3D /* YLTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLTableView.m; sourceTree = "<group>"; };
 		0D340B0F21E87BC200EF0A3D /* YLTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLTableController.h; sourceTree = "<group>"; };
@@ -302,6 +321,8 @@
 		0D3D418D2108758100F9A763 /* TestFilterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestFilterViewController.m; sourceTree = "<group>"; };
 		0D3D54A121411BE90017201C /* UIViewController+TestSwizee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TestSwizee.h"; sourceTree = "<group>"; };
 		0D3D54A221411BE90017201C /* UIViewController+TestSwizee.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TestSwizee.m"; sourceTree = "<group>"; };
+		0D3FED3F222F604200D231AD /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		0D3FED41222FBB7000D231AD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		0D4108BD21266A1A00B2B4A8 /* YLPassWordView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLPassWordView.h; sourceTree = "<group>"; };
 		0D4108BE21266A1A00B2B4A8 /* YLPassWordView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLPassWordView.m; sourceTree = "<group>"; };
 		0D4108C02126A8EA00B2B4A8 /* YLNavController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLNavController.h; sourceTree = "<group>"; };
@@ -319,6 +340,12 @@
 		0D41A3CA211AFC50002E5493 /* PresentingAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentingAnimationController.m; sourceTree = "<group>"; };
 		0D41A3CC211AFE38002E5493 /* DismissingAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DismissingAnimationController.h; sourceTree = "<group>"; };
 		0D41A3CD211AFE38002E5493 /* DismissingAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DismissingAnimationController.m; sourceTree = "<group>"; };
+		0D442ABF2227B5F80053E651 /* TestCoreAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCoreAnimationController.h; sourceTree = "<group>"; };
+		0D442AC02227B5F90053E651 /* TestCoreAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCoreAnimationController.m; sourceTree = "<group>"; };
+		0D442AC22227BB880053E651 /* TestReflectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestReflectionView.h; sourceTree = "<group>"; };
+		0D442AC32227BB880053E651 /* TestReflectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestReflectionView.m; sourceTree = "<group>"; };
+		0D442AC52227C8820053E651 /* TestScrollLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestScrollLayer.h; sourceTree = "<group>"; };
+		0D442AC62227C8820053E651 /* TestScrollLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestScrollLayer.m; sourceTree = "<group>"; };
 		0D4B668E213FB54F00FC5730 /* TestWCDBController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestWCDBController.h; sourceTree = "<group>"; };
 		0D4B668F213FB54F00FC5730 /* TestWCDBController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TestWCDBController.mm; sourceTree = "<group>"; };
 		0D4B6691213FB6FF00FC5730 /* CompanyInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompanyInfo.h; sourceTree = "<group>"; };
@@ -357,6 +384,15 @@
 		0D62B478212A632400A59A6C /* UIViewController+YLToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YLToast.m"; sourceTree = "<group>"; };
 		0D62B47C212A988100A59A6C /* YLShareView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLShareView.h; sourceTree = "<group>"; };
 		0D62B47D212A988100A59A6C /* YLShareView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLShareView.m; sourceTree = "<group>"; };
+		0D663213222E0FE4009E5236 /* TestAVFoundationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAVFoundationController.h; sourceTree = "<group>"; };
+		0D663214222E0FE4009E5236 /* TestAVFoundationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAVFoundationController.m; sourceTree = "<group>"; };
+		0D663216222E1060009E5236 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0D66321D222E114E009E5236 /* 1.wmv */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.wmv; sourceTree = "<group>"; };
+		0D66321F222E1D14009E5236 /* login_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = login_video.mp4; sourceTree = "<group>"; };
+		0D663221222E2662009E5236 /* TestPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestPlayerView.h; sourceTree = "<group>"; };
+		0D663222222E2662009E5236 /* TestPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestPlayerView.m; sourceTree = "<group>"; };
+		0D663224222E66A2009E5236 /* TestCaptureController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCaptureController.h; sourceTree = "<group>"; };
+		0D663225222E66A2009E5236 /* TestCaptureController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCaptureController.m; sourceTree = "<group>"; };
 		0D73F64C215B2492000AB345 /* UINavigationController+YLNavigationBarTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+YLNavigationBarTransition.h"; sourceTree = "<group>"; };
 		0D73F64D215B2492000AB345 /* UINavigationController+YLNavigationBarTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+YLNavigationBarTransition.m"; sourceTree = "<group>"; };
 		0D73F651215B3C81000AB345 /* MacrosDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacrosDefines.h; sourceTree = "<group>"; };
@@ -368,6 +404,8 @@
 		0D7906E721197F480024DB90 /* UIView+YLCornerRadius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+YLCornerRadius.m"; sourceTree = "<group>"; };
 		0D7906E9211987D30024DB90 /* TestScrollController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestScrollController.h; sourceTree = "<group>"; };
 		0D7906EA211987D30024DB90 /* TestScrollController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestScrollController.m; sourceTree = "<group>"; };
+		0D915BF8221E422400ABE7E7 /* TestMakeVideoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMakeVideoController.h; sourceTree = "<group>"; };
+		0D915BF9221E422400ABE7E7 /* TestMakeVideoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMakeVideoController.m; sourceTree = "<group>"; };
 		0D920A81211BD9DD004FF3EF /* UIGestureRecognizer+YLBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+YLBlock.h"; sourceTree = "<group>"; };
 		0D920A82211BD9DD004FF3EF /* UIGestureRecognizer+YLBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+YLBlock.m"; sourceTree = "<group>"; };
 		0D920A84211BDECF004FF3EF /* UIView+YLExtendTouchRect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+YLExtendTouchRect.h"; sourceTree = "<group>"; };
@@ -436,6 +474,10 @@
 		0DD003B820E241D600CB6B5D /* UIViewController+YLToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YLToast.h"; sourceTree = "<group>"; };
 		0DEE545F20CA942C00749A2C /* UIView+YLCurrentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+YLCurrentViewController.h"; sourceTree = "<group>"; };
 		0DEE546020CA942C00749A2C /* UIView+YLCurrentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+YLCurrentViewController.m"; sourceTree = "<group>"; };
+		0DF1016022237CDD00A5D944 /* AnimateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimateView.h; sourceTree = "<group>"; };
+		0DF1016122237CDD00A5D944 /* AnimateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimateView.m; sourceTree = "<group>"; };
+		0DF1016622237FB600A5D944 /* TestAnimateLabelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAnimateLabelController.h; sourceTree = "<group>"; };
+		0DF1016722237FB600A5D944 /* TestAnimateLabelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAnimateLabelController.m; sourceTree = "<group>"; };
 		0DF4187E20C93CFF004A8E11 /* UIImage+YLCompressImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+YLCompressImage.h"; sourceTree = "<group>"; };
 		0DF4187F20C93CFF004A8E11 /* UIImage+YLCompressImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YLCompressImage.m"; sourceTree = "<group>"; };
 		0DFABE3220A59B7300876945 /* DYLTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYLTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -475,6 +517,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D3FED40222F604200D231AD /* AssetsLibrary.framework in Frameworks */,
+				0D663217222E1060009E5236 /* AVFoundation.framework in Frameworks */,
+				0D332E5222263D91002B91C9 /* MetalKit.framework in Frameworks */,
 				0D282362214777C900FE0977 /* QuartzCore.framework in Frameworks */,
 				0D282360214777B600FE0977 /* OpenGLES.framework in Frameworks */,
 				B37BA84E1208E2716E7D567F /* libPods-DYLTool.a in Frameworks */,
@@ -846,6 +891,18 @@
 				0D4C5172215C7A2D00F0E5ED /* TestChangeNavController.m */,
 				0D9FF18F21CCA04A00A3E221 /* TestScrollView_1.h */,
 				0D9FF19021CCA04A00A3E221 /* TestScrollView_1.m */,
+				0D915BF8221E422400ABE7E7 /* TestMakeVideoController.h */,
+				0D915BF9221E422400ABE7E7 /* TestMakeVideoController.m */,
+				0DF1016622237FB600A5D944 /* TestAnimateLabelController.h */,
+				0DF1016722237FB600A5D944 /* TestAnimateLabelController.m */,
+				0D332E4622262F69002B91C9 /* TestMetalController.h */,
+				0D332E4722262F69002B91C9 /* TestMetalController.m */,
+				0D442ABF2227B5F80053E651 /* TestCoreAnimationController.h */,
+				0D442AC02227B5F90053E651 /* TestCoreAnimationController.m */,
+				0D663213222E0FE4009E5236 /* TestAVFoundationController.h */,
+				0D663214222E0FE4009E5236 /* TestAVFoundationController.m */,
+				0D663224222E66A2009E5236 /* TestCaptureController.h */,
+				0D663225222E66A2009E5236 /* TestCaptureController.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -890,6 +947,14 @@
 				0D2C89A0212FA03D00BD4E96 /* TestDragCell.m */,
 				0D51A901214A4377007AF3AB /* TestCustomView.h */,
 				0D51A902214A4377007AF3AB /* TestCustomView.m */,
+				0DF1016022237CDD00A5D944 /* AnimateView.h */,
+				0DF1016122237CDD00A5D944 /* AnimateView.m */,
+				0D442AC22227BB880053E651 /* TestReflectionView.h */,
+				0D442AC32227BB880053E651 /* TestReflectionView.m */,
+				0D442AC52227C8820053E651 /* TestScrollLayer.h */,
+				0D442AC62227C8820053E651 /* TestScrollLayer.m */,
+				0D663221222E2662009E5236 /* TestPlayerView.h */,
+				0D663222222E2662009E5236 /* TestPlayerView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -971,6 +1036,15 @@
 			path = ShareView;
 			sourceTree = "<group>";
 		};
+		0D66321C222E114E009E5236 /* movie */ = {
+			isa = PBXGroup;
+			children = (
+				0D66321F222E1D14009E5236 /* login_video.mp4 */,
+				0D66321D222E114E009E5236 /* 1.wmv */,
+			);
+			path = movie;
+			sourceTree = "<group>";
+		};
 		0D73F64F215B2553000AB345 /* NavigationTransition */ = {
 			isa = PBXGroup;
 			children = (
@@ -1025,6 +1099,7 @@
 		0DD0037620E22FCA00CB6B5D /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				0D66321C222E114E009E5236 /* movie */,
 				0D26C527213E389800DCC80C /* iconfont.ttf */,
 				0D53CC202118552B00F5F84E /* Json */,
 				0D53CC1A211805BF00F5F84E /* wav */,
@@ -1284,6 +1359,11 @@
 		809E12473584C127C818626C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0D3FED41222FBB7000D231AD /* StoreKit.framework */,
+				0D3FED3F222F604200D231AD /* AssetsLibrary.framework */,
+				0D663216222E1060009E5236 /* AVFoundation.framework */,
+				0D332E5122263D91002B91C9 /* MetalKit.framework */,
+				0D332E492226302E002B91C9 /* Metal.framework */,
 				0D282361214777C900FE0977 /* QuartzCore.framework */,
 				0D28235F214777B500FE0977 /* OpenGLES.framework */,
 				C9FB24F52CB7A67865C7B9E3 /* libPods-DYLTool.a */,
@@ -1357,6 +1437,7 @@
 				0D53CC1C211805E900F5F84E /* scanSuccess.wav in Resources */,
 				0DFABE4220A59B7300876945 /* LaunchScreen.storyboard in Resources */,
 				0D26C528213E389800DCC80C /* iconfont.ttf in Resources */,
+				0D66321E222E114E009E5236 /* 1.wmv in Resources */,
 				0DFD02212107312900A6B70D /* jsonFile.txt in Resources */,
 				0D53CC262118570000F5F84E /* laugh.json in Resources */,
 				0D53CC242118556F00F5F84E /* jolly_walker.json in Resources */,
@@ -1366,6 +1447,7 @@
 				0DFABE3D20A59B7300876945 /* Main.storyboard in Resources */,
 				0D53CC222118556400F5F84E /* areas.json in Resources */,
 				0D317F3B21081CF5005CD288 /* image_1.jpg in Resources */,
+				0D663220222E1D14009E5236 /* login_video.mp4 in Resources */,
 				0D279D9B211195D200D9F3F7 /* iOS 动画.md in Resources */,
 				0DD0037920E22FEE00CB6B5D /* tabbarBkg_5x49@2x.png in Resources */,
 			);
@@ -1445,6 +1527,7 @@
 				0D24275B20E375E40040FE23 /* KRouter.m in Sources */,
 				0D317F3E21085530005CD288 /* YLCoreTextLinkData.m in Sources */,
 				0D0487B620ECC1F9005BFC65 /* TestSearchController_1.m in Sources */,
+				0D442AC12227B5F90053E651 /* TestCoreAnimationController.m in Sources */,
 				0DFD021921070B6900A6B70D /* YLCoreTextData.m in Sources */,
 				0D26552120F33F68004E5366 /* BaseCommonViewModel.m in Sources */,
 				0D340B1121E87BC200EF0A3D /* YLTableController.m in Sources */,
@@ -1465,15 +1548,18 @@
 				0DFD021C210711BF00A6B70D /* YLDisplayView.m in Sources */,
 				0DFD021621070B1A00A6B70D /* YLFrameParser.m in Sources */,
 				0DD0036C20E218BB00CB6B5D /* UITextView+YLMaxLength.m in Sources */,
+				0DF1016222237CDD00A5D944 /* AnimateView.m in Sources */,
 				0D4108BF21266A1A00B2B4A8 /* YLPassWordView.m in Sources */,
 				0D60AC1F2105EA89004C7DFA /* YLButton.m in Sources */,
 				0D077FBC210979B9009773AB /* NSAttributedString+YLExt.m in Sources */,
 				0D51A903214A4377007AF3AB /* TestCustomView.m in Sources */,
+				0D915BFA221E422400ABE7E7 /* TestMakeVideoController.m in Sources */,
 				0D24275F20E376C20040FE23 /* BaseViewModel.m in Sources */,
 				0D04E77020BD0A8B0040C4AF /* NSString+YLBase64.m in Sources */,
 				0D41A3CB211AFC50002E5493 /* PresentingAnimationController.m in Sources */,
 				0DD003B120E233B900CB6B5D /* BaseRequest.m in Sources */,
 				0D317F412108556B005CD288 /* YLCoreTextUtils.m in Sources */,
+				0DF1016822237FB600A5D944 /* TestAnimateLabelController.m in Sources */,
 				0D1609A020F46443004FCF88 /* CommonSwitchItemViewModel.m in Sources */,
 				0DA8B06D210ABB0500B0EBFC /* TestHXPhotoPicker.m in Sources */,
 				0D1609AF20F49B46004FCF88 /* TestCommonViewController.m in Sources */,
@@ -1501,6 +1587,7 @@
 				0DD0039420E2305A00CB6B5D /* YLProgressHUD.m in Sources */,
 				0D17F67320B808160082D67D /* NSString+YLDisplayTime.m in Sources */,
 				0D3724EF2154DC6C006A7E05 /* NSMutableAttributedString+YLTool.m in Sources */,
+				0D663226222E66A2009E5236 /* TestCaptureController.m in Sources */,
 				0DD0036220E1EBBB00CB6B5D /* UIScrollView+YLRefresh.m in Sources */,
 				0D340B1421E87EBA00EF0A3D /* YLScrollController.m in Sources */,
 				0D1DE5D521002B3F00C46C24 /* YLAlertMessageView.m in Sources */,
@@ -1509,6 +1596,7 @@
 				0D26551E20F33E01004E5366 /* BaseCommonController.m in Sources */,
 				0D0487AA20EC9D6F005BFC65 /* BaseNavigationControllerStack.m in Sources */,
 				0D279D9E2111B3AE00D9F3F7 /* TestBasicAnimationController.m in Sources */,
+				0D332E4822262F6A002B91C9 /* TestMetalController.m in Sources */,
 				0DD003B620E233B900CB6B5D /* RequestTool.m in Sources */,
 				0D077FC421097E9A009773AB /* NSDictionary+YLSafe.m in Sources */,
 				0DD0035F20E1D68B00CB6B5D /* UIBarButtonItem+YLExtension.m in Sources */,
@@ -1541,14 +1629,18 @@
 				0D1609A920F489CD004FCF88 /* CommonHeaderView.m in Sources */,
 				0D17F66D20B804170082D67D /* NSString+YLPredicate.m in Sources */,
 				0DD0039720E2305A00CB6B5D /* BaseTabBarController.m in Sources */,
+				0D442AC72227C8820053E651 /* TestScrollLayer.m in Sources */,
 				0D0487AF20ECA1EE005BFC65 /* BaseViewModelServiceImpl.m in Sources */,
+				0D663215222E0FE4009E5236 /* TestAVFoundationController.m in Sources */,
 				0D41A3C4211AD731002E5493 /* TestCollectionController.m in Sources */,
 				0D077FC021097C17009773AB /* NSArray+YLSafe.m in Sources */,
 				0D17F66720B7F5870082D67D /* NSString+YLMD5.m in Sources */,
 				0D17F67020B807870082D67D /* NSString+YLSafe.m in Sources */,
 				0DD0039B20E230C200CB6B5D /* BaseWebController.m in Sources */,
 				0D53CC192117F45100F5F84E /* KQRCodeController.m in Sources */,
+				0D663223222E2662009E5236 /* TestPlayerView.m in Sources */,
 				0DD0036820E2130300CB6B5D /* UITextField+YLMaxLength.m in Sources */,
+				0D442AC42227BB880053E651 /* TestReflectionView.m in Sources */,
 				0D53CC152117EB5200F5F84E /* KQRCodeUtil.m in Sources */,
 				0D2C89A1212FA03D00BD4E96 /* TestDragCell.m in Sources */,
 				0D056D2420E4904B00953C86 /* BaseNavController.m in Sources */,

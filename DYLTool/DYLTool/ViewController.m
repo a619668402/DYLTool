@@ -32,6 +32,12 @@
 #import "TestChangeNavController.h"
 #import "Test/TestScrollView_1.h"
 #import "YLScrollController.h"
+#import "Test/TestMakeVideoController.h"
+#import "Test/TestAnimateLabelController.h"
+#import "Test/TestMetalController.h"
+#import "Test/TestCoreAnimationController.h"
+#import "Test/TestAVFoundationController.h"
+#import "Test/TestCaptureController.h"
 
 #import "PresentingAnimationController.h"
 #import "DismissingAnimationController.h"
@@ -76,7 +82,7 @@
 - (NSArray *)data {
     if (!_data) {
         _data = @[@"HXPhotoPicker", @"TZImagePickerController", @"YLInputView", @"TestCABasicAnimation", @"TestThread", @"TestTableView", @"QRCodeScan", @"TestLottie", @"TestScrollView", @"TestCollectionView", @"TestAlertController", @"TestNavController", @"TestYLShareView", @"TestCircleView", @"TestDragCollection", @"TestFilterController",@"TestBezierPath", @"TestKVOKVC", @"TestNetwork", @"TestWCDB",
-            @"TestOpenGLES", @"TestChangeNav", @"TestScrollView", @"ScrollView 嵌套"];
+                  @"TestOpenGLES", @"TestChangeNav", @"TestScrollView", @"ScrollView 嵌套", @"动画合成视频", @"AnimateLabel", @"TestMetal", @"TestCoreAnimation", @"TestAVFoundation", @"TestCaptureController"];
     }
     return _data;
 }
@@ -254,6 +260,42 @@
         case 23:
         {
             YLScrollController *vc = [[YLScrollController alloc] initWithViewModel:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 24:
+        {
+            TestMakeVideoController *vc = [[TestMakeVideoController alloc] initWithViewModel:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 25:
+        {
+            TestAnimateLabelController *vc = [[TestAnimateLabelController alloc] initWithViewModel:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 26:
+        {
+            TestMetalController *vc = [[TestMetalController alloc] initWithViewModel:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 27:
+        {
+            TestCoreAnimationController *vc = [[TestCoreAnimationController alloc] initWithViewModel:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 28:
+        {
+            TestAVFoundationController *vc = [[TestAVFoundationController alloc] initWithViewModel:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 29:
+        {
+            TestCaptureController *vc = [[TestCaptureController alloc] initWithViewModel:nil];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
